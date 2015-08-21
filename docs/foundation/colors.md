@@ -16,14 +16,14 @@ These are the primary colors used for UI elements. The primary colors have seman
         <div class="pl-palette-value">#004C97</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color:#007A33;"></div>
+        <div class="pl-palette-preview" style="background-color:#008139;"></div>
         <div class="pl-palette-variable">@brand-success</div>
-        <div class="pl-palette-value">#007A33</div>
+        <div class="pl-palette-value">#008139</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color:#009CDE;"></div>
+        <div class="pl-palette-preview" style="background-color:#1596d1;"></div>
         <div class="pl-palette-variable">@brand-info</div>
-        <div class="pl-palette-value">#009CDE</div>
+        <div class="pl-palette-value">#1596D1</div>
     </div>
     <div class="pl-palette-color">
         <div class="pl-palette-preview" style="background-color:#F3D54E;"></div>
@@ -31,9 +31,9 @@ These are the primary colors used for UI elements. The primary colors have seman
         <div class="pl-palette-value">#F3D54E</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color:#A6192E;"></div>
+        <div class="pl-palette-preview" style="background-color:#ac2b37;"></div>
         <div class="pl-palette-variable">@brand-danger</div>
-        <div class="pl-palette-value">#A6192E</div>
+        <div class="pl-palette-value">#AC2B37</div>
     </div>
 </div>
 {:/nomarkdown}
@@ -82,12 +82,12 @@ This is the full USPTO color palette. However, many of these are rarely used for
 {::nomarkdown}
 <div class="pl-palette">
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #4E131E;"></div>
-        <div class="pl-palette-value">#4E131E</div>
+        <div class="pl-palette-preview" style="background-color: #643335;"></div>
+        <div class="pl-palette-value">#643335</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #A6192E;"></div>
-        <div class="pl-palette-value">#A6192E</div>
+        <div class="pl-palette-preview" style="background-color: #AC2B37;"></div>
+        <div class="pl-palette-value">#AC2B37</div>
     </div>
     <div class="pl-palette-color">
         <div class="pl-palette-preview" style="background-color: #E4002B;"></div>
@@ -100,34 +100,34 @@ This is the full USPTO color palette. However, many of these are rarely used for
 </div>
 <div class="pl-palette">
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #003865;"></div>
-        <div class="pl-palette-value">#003865</div>
+        <div class="pl-palette-preview" style="background-color: #164469;"></div>
+        <div class="pl-palette-value">#164469</div>
     </div>
     <div class="pl-palette-color">
         <div class="pl-palette-preview" style="background-color: #004C97;"></div>
         <div class="pl-palette-value">#004C97</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #009CDE;"></div>
-        <div class="pl-palette-value">#009CDE</div>
+        <div class="pl-palette-preview" style="background-color: #1596D1;"></div>
+        <div class="pl-palette-value">#1596D1</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #9BB8D3;"></div>
-        <div class="pl-palette-value">#9BB8D3</div>
+        <div class="pl-palette-preview" style="background-color: #97B8D4;"></div>
+        <div class="pl-palette-value">#97B8D4</div>
     </div>
 </div>
 <div class="pl-palette">
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #004C23;"></div>
-        <div class="pl-palette-value">#004C23</div>
+        <div class="pl-palette-preview" style="background-color: #215732;"></div>
+        <div class="pl-palette-value">#215732</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #007A33;"></div>
-        <div class="pl-palette-value">#007A33</div>
+        <div class="pl-palette-preview" style="background-color: #008139;"></div>
+        <div class="pl-palette-value">#008139</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #7A9A01;"></div>
-        <div class="pl-palette-value">#7A9A01</div>
+        <div class="pl-palette-preview" style="background-color: #88A620;"></div>
+        <div class="pl-palette-value">#88A620</div>
     </div>
     <div class="pl-palette-color">
         <div class="pl-palette-preview" style="background-color: #D4EB8E;"></div>
@@ -140,12 +140,12 @@ This is the full USPTO color palette. However, many of these are rarely used for
         <div class="pl-palette-value">#3C1053</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #671E75;"></div>
-        <div class="pl-palette-value">#671E75</div>
+        <div class="pl-palette-preview" style="background-color: #6B2F75;"></div>
+        <div class="pl-palette-value">#6B2F75</div>
     </div>
     <div class="pl-palette-color">
-        <div class="pl-palette-preview" style="background-color: #BB16A3;"></div>
-        <div class="pl-palette-value">#BB16A3</div>
+        <div class="pl-palette-preview" style="background-color: #AB3388;"></div>
+        <div class="pl-palette-value">#AB3388</div>
     </div>
     <div class="pl-palette-color">
         <div class="pl-palette-preview" style="background-color: #C9B1D0;"></div>

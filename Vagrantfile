@@ -12,7 +12,6 @@ Vagrant.configure(2) do |config|
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-    vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     vb.memory = 2048
     vb.cpus = 4
   end
@@ -30,7 +29,6 @@ Vagrant.configure(2) do |config|
 
   # Provision with salt
   config.vm.provision :salt do |salt|
-    salt.bootstrap_options = "-P"
     salt.minion_config = "salt/minion"
     salt.run_highstate = true
     salt.verbose = true

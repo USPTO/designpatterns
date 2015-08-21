@@ -29,9 +29,6 @@ __To be scheduled__
 - Tags
 - Lists
 - File upload
-- Dashboard Widgets (dashlets/cards)
-- Add visual guide for notification placement
-- Add red form highlights for multiple checkboxes and other text-heavy form elements
 - Writing style guide (mod OCCO's for pattern library - See https://design.atlassian.com/2.1/product/foundations/writing-style)
 
 __v2.0 Releases (TBD)__

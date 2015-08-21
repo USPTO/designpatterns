@@ -1,4 +1,4 @@
-/usr/local/node_modules:
+/tmp/node_modules:
   file.directory:
     - user: vagrant
     - group: vagrant
@@ -9,11 +9,11 @@
 symmount:
   mount.mounted:
     - name: /vagrant/node_modules
-    - device: /usr/local/node_modules
+    - device: /tmp/node_modules
     - fstype: None
     - opts:
       - bind
-    - user: root
+    - user: vagrant
     - require:
-       - file: /usr/local/node_modules
+       - file: /tmp/node_modules
        - file: /vagrant/node_modules

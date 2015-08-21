@@ -43,7 +43,7 @@ There are two primary ways to help:
 ##### Making changes to the repository
 - All changes and contributions should be done in a fork. [Learn how](https://guides.github.com/activities/forking/#fork).
 - Create a pull request for changes that you want merged.  [Learn how](https://help.github.com/articles/using-pull-requests/#initiating-the-pull-request).
-- Core repository owners/writers (select few) will review, discuss, approve, and merge pull requests. Depending on the size of the changes, additional review via meetings/emails may be necessary. Learn how [here](https://help.github.com/articles/merging-a-pull-request/) or [here](https://help.github.com/articles/using-pull-requests/#managing-pull-requests).
+- Core repository owners/writers (select few) will review, discuss, approve, and merge pull requests. Depending on the size of the changes, additional review via meetings/emails may be necessary. Learn how [here](https://help.github.com/articles/merging-a-pull-request/ and) or [here](https://help.github.com/articles/using-pull-requests/#managing-pull-requests).
 - If decisions are made in meetings/emails, details/decisions should be added to the relevant github issue as comments when possible to ensure that the decisions/changes/reasons are tracked and documented.
 
 
