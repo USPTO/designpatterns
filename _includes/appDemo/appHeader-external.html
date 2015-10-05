@@ -1,0 +1,19 @@
+<header class="uspto-header uspto-header--external">
+    <div class="uspto-header__top">
+        <div class="container {% if include.fluid %}container--fluid{% endif %} uspto-header">
+            <div class="uspto-header__top__logo uspto-logo-svg"></div>
+            <ul class="uspto-header__top__links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uspto-header__middle">
+        <div class="container {% if include.fluid %}container--fluid{% endif %}">
+            <a id="main" tabindex="-1"></a>
+            <!-- <h1 class="uspto-header__middle__title">{{include.title}}</h1> -->
+            <h1 class="h2 uspto-header__middle__title"><small>{{ include.pgTitle }}</small>{{ include.subTitle }}</h1>
+        </div>
+    </div>
+</header>

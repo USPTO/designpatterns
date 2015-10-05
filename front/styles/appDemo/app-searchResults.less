@@ -1,0 +1,79 @@
+/* ========================================================================
+ * Search results styles
+ * ======================================================================== */
+
+.input-search {
+    width: auto;
+    @media (min-width: 640px) {
+        width: 400px;
+    }
+}
+
+.results-header {
+    line-height: 24px;
+    margin-bottom: 15px;
+    h4 {
+        margin-top: 20px;
+        @media (min-width: 768px) {
+            margin-top: 9px;
+        }
+    }
+    @media (min-width: 768px) {
+        margin-bottom: 6px;
+    }
+}
+
+.filters {
+    form {
+        margin-top: 18px;
+    }
+    &.open {
+        form {
+            margin-top: 3px;
+        }
+    }
+    a[data-toggle="collapse"] {
+        display: block;
+    }
+}
+
+.btn-pgActions {
+    position: absolute;
+    right: 0;
+    top: -27px;
+    .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+    @media (min-width: 768px) {
+        float: right;
+        position: relative;
+        top: 0;
+    }
+}
+
+.table-actions {
+    margin-bottom: 5px;
+    .btn-link {
+        display: inline-block;
+        margin-right: 5px;
+        padding-left: 6px;
+        position: relative;
+        top: 5px;
+    }
+}
+
+.table-searchResults {
+    & > thead > tr > .sortable:hover {
+        background-color: #666;
+    }
+    th {
+        white-space: nowrap;
+    }
+    th:first-child {
+        width: 500px;
+    }
+    th:nth-child(2) {
+        width: 700px;
+    }
+}

@@ -1,0 +1,94 @@
+/* ========================================================================
+ * Base/grid application styles
+ * ======================================================================== */
+
+body {
+    background-color: #f6f6f6;
+}
+
+.row-grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.col {
+    display: table-cell;
+    vertical-align: top;
+}
+
+header .container {
+    min-width: 240px;
+}
+
+main,
+header .container-fluid {
+    width: 100%;
+}
+
+main {
+    padding-bottom: 100px;
+}
+
+.container-full {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container-switch {
+    transition: width 0.5s;
+}
+
+.main-wrapper {
+    background-color: #FFF;
+}
+
+.main-content {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        display: table-cell;
+    }
+}
+
+.morrisChart svg {
+    width: 100%;
+}
+
+abbr[title], abbr[data-original-title] {
+    border-bottom-width: 0;
+}
+
+.pg-header {
+    padding: 18px 9px 9px;
+    h2 {
+        float: none;
+        margin: 0 0 5px;
+        small {
+            color: #808080;
+            display: block;
+            font-weight: 400;
+            margin: 3px 0 0; 
+        }
+    }
+    .actions, .share {
+        margin: 10px 0 15px;
+    }
+    @media (min-width: 768px) {
+        h2 {
+            float: left;
+        }
+        .actions, .share {
+            float: right;            
+        }
+        .share {
+            margin: 0;            
+        }
+    }
+}
+
+.pg-actions {
+    position: relative;
+}

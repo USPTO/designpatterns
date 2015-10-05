@@ -1,0 +1,247 @@
+---
+title: "Dashboard"
+layout: null
+preview: true
+---
+{% include appDemo/app-head.html  title="Dashboard" fluid="true" %}
+
+
+<div class="skipLinks alert-info">
+   <a class="sr-only focusable" href="#main">Skip to main content</a>
+   <a class="sr-only focusable" href="#contentNav">Skip to content navigation</a>
+   <a class="sr-only focusable" href="#supportInfo">Skip to supporting information</a>
+</div>
+{% include appDemo/appHeader.html %}    
+
+<main class="container-fluid container-full container-switch">
+    <div class="main-wrapper row-grid">
+        <nav class="app-sidebar dashboards">
+            <a id="contentNav" tabindex="-1"></a>
+            <div class="close-sidebar keyline-bottom clearfix">
+                <button class="btn-closeSidebar pull-right btn btn-sm btn-default btn-hover" type="button"><i class="icon icon-angle-double-left"></i> Close</button>
+            </div>
+            <ul class="nav nav-stacked" role="tab-list">
+                <li role="presentation" class="category"><i class="icon icon-dashboard"></i> Dashboards</li>
+                <li role="presentation" class="active"><a role="tab" href="#">Systems summary</a></li>
+                <li role="presentation"><a role="tab" href="#">System A</a></li>
+                <li role="presentation"><a role="tab" href="#">System B</a></li>
+                <li role="presentation"><a role="tab" href="#">System C</a></li>
+                <li role="presentation" class="category"><i class="icon icon-bar-chart"></i> Reports</li>
+                <li role="presentation"><a role="tab" href="#">Fees and transactions</a></li>
+                <li role="presentation"><a role="tab" href="#">Trends</a></li>
+                <li role="presentation"><a role="tab" href="#">Disposition</a></li>
+                <li role="presentation"><a role="tab" href="#">Custom</a></li>
+            </ul>
+        </nav>
+        <div class="col">
+            <div class="row-grid">
+                <div class="main-content col keyline-left">
+                    <a id="main" tabindex="-1"></a>
+                    <div class="padding-2 keyline-bottom clearfix">
+                        <div class="pull-left">
+                            <a class="link-sidebar" href="#void"><i class="icon icon-columns"></i>Dashboards &amp; Reports</a>
+                            <h2 class="margin-top-0">Systems summary</h2>
+                            <dl class="dl-inline clearfix margin-bottom-1">
+                                <dt>Status</dt>
+                                <dd>3 systems reporting</dd>
+                                <dt>Data</dt>
+                                <dd><span class="label label-success subtle">Complete</span></dd>
+                            </dl>
+                        </div>
+                        <div class="meta-filedApps">
+                            <div class="margin-top-0 text-muted">Total filings</div>
+                            <span class="h1 margin-0">10,201</span>
+                        </div>
+                    </div>
+                    <div class="padding-2">
+                        <h3 class="margin-top-0">Filing history <span class="small">Jan. - Dec. 2015</span></h3>
+                        <div class="morrisChart" id="balance-chart" style="overflow: hidden; height: 200px;"></div>
+                    </div>
+                    <div class="padding-2 keyline-top">
+                        <h3 class="margin-top-0">Recent applications</h3>
+                        <div class="table-responsive">
+                            <table class="table-recentApps table table-striped table-inverse margin-top-1">
+                                <thead>
+                                    <tr>
+                                        <th>Filing Date</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+                                        <th class="text-right">Fees</th>
+                                        <th class="text-center">Processing Step</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>May 1, 2015</td>
+                                        <td>Update technical data</td>
+                                        <td><span class="label label-success subtle">Accepted</span></td>
+                                        <td class="text-right"><strong>$5,432</strong></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-default btn-xs" type="button">Demote</button>
+                                            <button class="btn btn-default btn-xs" type="button" data-toggle="modal" data-target="#modal-confirmPromote">Promote</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 3, 2015</td>
+                                        <td>Permit for testing on public land</td>
+                                        <td><span class="label label-warning subtle">Returned</span></td>
+                                        <td class="text-right"><strong>$2,137</strong></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-default btn-xs" type="button">Demote</button>
+                                            <button class="btn-promote btn btn-default btn-xs" type="button" data-toggle="modal" data-target="#modal-confirmPromote">Promote</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 13, 2015</td>
+                                        <td>Addendum to Code 83.1a</td>
+                                        <td><span class="label label-danger subtle">Rejected</span></td>
+                                        <td class="text-right"><strong><strike>$5,212</strike></strong></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-default btn-xs" type="button">Demote</button>
+                                            <button class="btn-promote btn btn-default btn-xs" type="button" data-toggle="modal" data-target="#modal-confirmPromote">Promote</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 22, 2015</td>
+                                        <td>Request for evaluation</td>
+                                        <td><span class="label label-info subtle">Submitted</span></td>
+                                        <td class="text-right"><strong>$22.23</strong></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-default btn-xs" type="button">Demote</button>
+                                            <button class="btn-promote btn btn-default btn-xs" type="button" data-toggle="modal" data-target="#modal-confirmPromote">Promote</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 24, 2015</td>
+                                        <td>Request for change of ownership</td>
+                                        <td><span class="label label-primary subtle">Processing</span></td>
+                                        <td class="text-right"><strong>$1,232.90</strong></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-default btn-xs" type="button">Demote</button>
+                                            <button class="btn-promote btn btn-default btn-xs" type="button" data-toggle="modal" data-target="#modal-confirmPromote">Promote</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feb 1, 2015</td>
+                                        <td>New development within private bandwidth</td>
+                                        <td><span class="label label-info subtle">Submitted</span></td>
+                                        <td class="text-right"><strong>$5,432</strong></td>
+                                        <td class="text-center">
+                                            <button class="btn btn-default btn-xs" type="button">Demote</button>
+                                            <button class="btn btn-default btn-xs" type="button" data-toggle="modal" data-target="#modal-confirmPromote">Promote</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <aside class="aside padding-2 keyline-left dashboards">
+                    <a id="supportInfo" tabindex="-1"></a>
+                    <h3 class="margin-top-0">System resources</h3>
+                    <h4 class="h6 text-uppercase text-muted">Data</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#void">Data dictionary</a></li>
+                        <li><a href="#void">API manager</a></li>
+                    </ul>
+                    <h4 class="h6 text-uppercase text-muted">Reference</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#void" data-toggle="modal" data-target="#modal-extSite">Wiki<span class="icon icon-external-link"></span></a></li>
+                        <li><a href="#void" data-toggle="modal" data-target="#modal-extSite">Glossary<span class="icon icon-external-link"></span></a></li>
+                    </ul>
+                    
+                </aside>
+                
+            </div>
+        </div>
+    </div>
+    {% include appDemo/modal-confirmPromote.html %}
+    {% include appDemo/modal-appSettings.html %}
+    <div aria-labelledby="hd-extSite" role="dialog" tabindex="-1" id="modal-extSite" class="modal fade in" aria-hidden="true">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                        <span id="hd-extSite" class="h4 modal-title">You are leaving the Application Monitor Demo application.</span>
+                    </div>
+                    <div class="modal-body">
+                        <p>We have provided a link to this site because it has information that may be of interest to our users. The United States Patent and Trademark Office does not necessarily endorse the views expressed or the facts presented on this site. Further, the United States Patent and Trademark Office does not endorse any commercial products that may be advertised or available on this site. We hope your visit was informative and enjoyable.</p>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <a id="link-extSite" href="https://www.commerce.gov/" target="_blank"><b>Go to the link</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+   
+
+{% include appDemo/app-footerScripts.html %}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script>
+new Morris.Area({
+    element: 'balance-chart',
+    data: [{
+        date: '2015-01-1',
+        balance: 4232
+    }, {
+        date: '2015-02-1',
+        balance: 5132
+    }, {
+        date: '2015-03-1',
+        balance: 2231
+    }, {
+        date: '2015-04-1',
+        balance: 5211
+    }, {
+        date: '2015-05-1',
+        balance: 6348
+    }, {
+        date: '2015-06-1',
+        balance: 5043
+    }, {
+        date: '2015-07-1',
+        balance: 3929
+    }, {
+        date: '2015-08-1',
+        balance: 1348
+    }, {
+        date: '2015-09-1',
+        balance: 3929
+    }, {
+        date: '2015-10-1',
+        balance: 4239
+    }, {
+        date: '2015-11-1',
+        balance: 2582
+    }, {
+        date: '2015-12-1',
+        balance: 4201
+    }],
+    lineColors: ["rgba(0, 76, 151, 1)"],
+    fillOpacity: 0.1,
+    xkey: 'date',
+    ykeys: ['balance'],
+    labels: ['Filed'],
+    resize: true,
+    xLabelFormat: function(x) {
+        return new Date(x).toString().split(' ')[1];
+    },
+    dateFormat: function(x) {
+        return new Date(x).toString().split(' ')[1];
+    }
+});
+
+$('.link-sidebar').click(function(e) {
+    e.preventDefault();
+    $('.app-sidebar').toggleClass('open');
+});
+
+$('.btn-closeSidebar').click(function(e) {
+    e.preventDefault();
+    $('.app-sidebar').removeClass('open');
+});
+
+</script>

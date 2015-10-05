@@ -1,0 +1,88 @@
+---
+title: "Create new account"
+layout: null
+preview: true
+---
+{% include appDemo/app-head.html bodyClass="main-wrapper" %}
+
+<div class="skipLinks alert-info">
+   <a class="sr-only focusable" href="#main">Skip to main content</a>   
+</div>
+{% include appDemo/appHeader-external.html pgTitle="Application Monitor" subTitle="Create new account" %}
+
+<main class="form-createAcct container">
+    <div class="row">
+        <div class="col-sm-12">        
+            <ol class="nav-steps">
+                <li class="active" style="width:33.3%">
+                    <span>Verify employee credentials</span>
+                </li>
+                <li style="width:33.3%">
+                    <span>Enter contact information</span>
+                </li>
+                <li style="width:33.3%" class="">
+                    <span>Confirm system access</span>
+                </li>
+            </ol>
+            <form class="form-horizontal" role="form">
+                <div class="form-group margin-top-1">
+                    <div class="col-sm-12">
+                        <span class="help-block">* indicates required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="form-group-heading margin-top-0">
+                            <h2 class="h4 margin-top-0">USPTO employee credentials</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4 required" for="em12">USPTO email address</label>
+                    <div class="col-sm-8"><input type="email" class="form-control form-control-width-md" id="em12" value="john.smith@gmail.com" required aria-required="true"></div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4 required" for="eid12">Employee ID</label> 
+                    <div class="col-sm-8">
+                       <input type="text" class="form-control form-control-width-md" id="eid12" value="238942a" required aria-required="true" aria-describedby="help-empID">
+                       <a id="help-empID" class="link-helper" href="#">Find my Employee ID</a> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="form-group-heading">
+                            <h2 class="h4">Username and password</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4 required" for="txt-username">Username</label>
+                    <div class="col-sm-8"><input type="text" class="form-control form-control-width-md" id="txt-username" required aria-required="true"></div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4 required" for="txt-pwd">Password</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control form-control-width-md" id="txt-pwd" required aria-required="true" aria-describedby="help-pwd">
+                        <span  id="help-pwd" class="help-block">(Minimum of 10 characters)</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox col-sm-offset-4 col-sm-8">
+                        <label>
+                            <input type="checkbox" name="useragreement" id="chk-agree">I accept the <a href="#void">User Agreement</a> and <a href="#void">Privacy Policy</a>.</label>
+                    </div>
+                </div>
+            </form>
+            <div class="form-ft keyline-top">
+                <a class="btn btn-default" href="signin.html">Cancel</a>
+                <div class="pull-right">
+                    <button class="btn btn-primary" disabled="disabled">Setup account and continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include appDemo/app-footerScripts.html %}
+
+

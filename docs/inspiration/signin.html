@@ -1,0 +1,46 @@
+---
+title: "Sign in"
+layout: null
+hidden: false
+preview: true
+---
+{% include appDemo/app-head.html %}
+<div class="skipLinks alert-info">
+   <a class="sr-only focusable" href="#main">Skip to main content</a>   
+</div>
+{% include appDemo/appHeader-external.html %}
+<main class="container panel-login center-block">
+    <div class="panel panel-default margin-top-3">
+        <a id="main" tabindex="-1"></a>
+        <h2 class="margin-top-0 text-center">Application Monitor</h2>
+        <p class="help-block text-center">Sign in with your application account.</p>
+        <form role="form" class="margin-top-4">
+            <div class="form-group">
+                <label class="control-label" for="Username">Username</label>
+                <input type="text" class="form-control" id="Username">
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="passwordInput">Password</label>
+                <input type="password" class="form-control" id="passwordInput">
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="dashboard.html">Sign in</a>
+            </div>
+            <div class="form-group clearfix">
+                <div class="margin-0 pull-left checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+                <div class="pull-right">
+                    <a href="">Forgot password?</a>
+                </div>
+            </div>
+        </form>        
+    </div>
+    <div class="panel-ft center-block">
+        <a class="link-newAcct" href="createAcct-step1.html">Create new account</a>
+    </div>    
+</main>
+
+{% include appDemo/app-footerScripts.html %}

@@ -1,0 +1,169 @@
+---
+title: "User profile"
+layout: null
+preview: true
+---
+{% include appDemo/app-head.html title="Search" fluid="true" %}
+
+<div class="skipLinks alert-info">
+   <a class="sr-only focusable" href="#main">Skip to main content</a>
+   <a class="sr-only focusable" href="#contentNav">Skip to content navigation</a>   
+</div>
+{% include appDemo/appHeader.html %}
+<main class="container-fluid container-full container-switch">
+    <div class="keyline-bottom">
+        <a id="main" tabindex="-1"></a>
+        <div class="keyline-bottom">
+            <div class="container-fluid">
+                <div class="pg-header clearfix">
+                    <h2>Jane Smith <small class="h5">Motion Designer</small></h2>
+                    
+                    <div class="actions">
+                        <button class="btn btn-default">Actions &nbsp; <span class="caret"></span></button>
+                        <button class="btn btn-primary"><i class="icon icon-inverse icon-comments-o" style="margin-right: 8px;"></i>Message</button>
+                    </div>                    
+                </div>
+                <a id="contentNav" tabindex="-1"></a>
+                <ul class="nav nav-tabs" role="tablist" style="border-bottom: 0; padding-left: 8px;">
+                    <li class="active"><a data-toggle="tab" role="tab" href="#">Account</a></li>
+                    <li><a data-toggle="tab" role="tab" href="#">Audit history</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-wrapper row-grid">
+            <div class="app-sidebar userSettings">
+                <div class="close-sidebar keyline-bottom clearfix">
+                    <button class="btn-closeSidebar pull-right btn btn-sm btn-default btn-hover"><i class="icon icon-angle-double-left"></i> Close</button>
+                </div>
+                <ul role="tab-list" class="nav nav-stacked ">
+                    <li class="category" role="presentation">General</li>
+                    <li role="presentation" class="active"><a href="#" role="tab">System sources</a></li>
+                    <li role="presentation"><a href="#" role="tab">Reports</a></li>
+                    <li role="presentation"><a href="#" role="tab">Favorites</a></li>
+                    <li class="category" role="presentation">System</li>
+                    <li role="presentation"><a href="#" role="tab">Notifications</a></li>
+                    <li role="presentation"><a href="#" role="tab">API Manager</a></li>
+                    <li role="presentation"><a href="#" role="tab">SSH keys</a></li>
+                </ul>
+            </div>
+            <div class="col keyline-left">
+                <div class="panel-body">
+                    <a href="#void" class="link-sidebar"><i class="icon icon-columns"></i>Settings</a>
+                    <div class="clearfix" style="margin-bottom: 10px;">
+                        <h3 class="h4" style="margin-top: 6px; float: left;">System sources</h3>
+                        <ul role="tablist" style="margin-left: 8px;" class="nav nav-pills pull-left">
+                            <li class="active"><a data-toggle="tab" role="tab" href="#">Active</a></li>
+                            <li><a data-toggle="tab" role="tab" href="#">Available</a></li>
+                        </ul>
+                    </div>
+                    <div class="table-actions">
+                        <div class="btn-group">
+                            <button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Pause reporting"><i class="icon icon-pause"></i></button>
+                            <button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Stop reporting"><i class="icon icon-stop"></i></button>
+                            <button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Remove system"><i class="icon icon-trash"></i></button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More &nbsp;<span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li role="presentation"><a href="">Report data errors</a></li>
+                              <li role="presentation"><a href="">Send maintenance request</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-inverse">
+                            <thead>
+                                <tr>
+                                    <th style="width: 28px;">
+                                        <input type="checkbox" indeterminate="" title="Select all rows">
+                                    </th>
+                                    <th>System</th>
+                                    <th>Status</th>
+                                    <th>Description</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" title="Select row">
+                                    </td>
+                                    <td>Payments</td>
+                                    <td><span class="label label-success subtle">Reporting</span></td>
+                                    
+                                    <td>Fee payment processing</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>
+                                        <input type="checkbox" checked="" title="Select row">
+                                    </td>
+                                    <td>Invoice</td>
+                                    <td><span class="label label-warning subtle">Paused</span></td>
+                                    
+                                    <td>Invoice generation and processing</td>
+                                    <td>Subscriber</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>
+                                        <input type="checkbox" checked="" title="Select row">
+                                    </td>
+                                    <td>TCAI</td>
+                                    <td><span class="label label-danger subtle">Not reporting</span></td>
+                                    
+                                    <td>Technology Capture and Inventory</td>
+                                    <td>Super Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" disabled="" title="Select row">
+                                    </td>
+                                    <td>EMAU</td>
+                                    <td><span class="label label-info subtle">Ready</span></td>
+                                    <td>Archived applications</td>
+                                    <td>Subscriber</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include appDemo/modal-appSettings.html %}
+</main>
+
+
+
+
+
+
+{% include appDemo/app-footerScripts.html %}
+
+<script>
+    
+    var windowWidth = $(window).width();
+
+    $(window).resize(function(){
+        if ($(window).width() !== windowWidth) {
+
+            windowWidth = $(window).width();
+
+            $('.app-sidebar').removeClass('open');
+            $('.btn-pgActions, .btn-displayOpts, .pager').removeClass('hide');
+        }
+    });
+
+
+    $('.link-sidebar').click(function(e) {
+        e.preventDefault();        
+        $('.app-sidebar').toggleClass('open');
+        $('.btn-pgActions').toggleClass('hide');
+    });
+
+    $('.btn-closeSidebar').click(function(e) {
+        e.preventDefault();        
+        $('.app-sidebar').removeClass('open');
+        $('.btn-pgActions').removeClass('hide');
+    });     
+</script>

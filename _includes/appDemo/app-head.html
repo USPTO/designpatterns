@@ -8,7 +8,7 @@
         <meta name="description" content="{{page.description}}">
         <meta name="keywords" contnet="{{page.keywords}}">
 
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#004c97">
 
         <meta property="og:title" content="{{page.title}}">
@@ -21,10 +21,11 @@
         <![endif]-->
 
         <link href="{{site.baseurl}}/generated/styles/vendor.css" rel="stylesheet"/>
-        <link href="{{site.baseurl}}/generated/styles/main.css" rel="stylesheet"/>        
+        <link href="{{site.baseurl}}/generated/styles/main.css" rel="stylesheet"/>
+        <link href="{{site.baseurl}}/generated/styles/appDemo.min.css" rel="stylesheet"/>        
 
     </head>
-    <body>
+    <body class="{{include.bodyClass}}">
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->

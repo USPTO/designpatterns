@@ -1,0 +1,43 @@
+/* ========================================================================
+ * Dashboard styles
+ * ======================================================================== */
+
+.aside {
+    border-top: 1px solid #DDD;
+    display: block;
+    float: left;
+    width: 100%;
+    @media (min-width: 1024px) {
+        border-top: none;
+        display: table-cell;
+        float: none;
+        width: 225px;
+    }
+}
+
+.link-dashboards {
+    display: inline-block;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.table-recentApps td:last-child {
+    white-space: nowrap;
+}
+
+.meta-filedApps {
+    clear: both;
+    float: none;
+    @media (min-width: 768px) {
+        clear: none;
+        float: right;
+    }
+}
+
+.aside.dashboards {
+    .icon-external-link {
+        margin-left: 5px;
+    }
+}

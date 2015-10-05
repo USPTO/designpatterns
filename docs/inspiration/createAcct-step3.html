@@ -1,0 +1,67 @@
+---
+title: "Create new account"
+layout: null
+hidden: true
+preview: true
+---
+{% include appDemo/app-head.html bodyClass="main-wrapper" %}
+
+<div class="skipLinks alert-info">
+   <a class="sr-only focusable" href="#main">Skip to main content</a>   
+</div>
+{% include appDemo/appHeader-external.html pgTitle="Application Monitor" subTitle="Create new account" %}
+<main class="form-createAcct container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ol class="nav-steps">
+                <li style="width:33.3%">
+                    <span>Verify employee credentials</span>
+                </li>
+                <li style="width:33.3%">
+                    <span>Enter contact information</span>
+                </li>
+                <li class="active" style="width:33.3%" class="">
+                    <span>Confirm system access</span>
+                </li>
+            </ol> 
+            <h2 class="h4">Assigned systems</h2>           
+            <p>Please review the list below and verify your role within your assigned systems.</p>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>System</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Read only</td>
+                        <td>Patent logistics</td>                        
+                    </tr>
+                    <tr>
+                        <td>Admin</td>
+                        <td>Patent fees and accounting</td>                        
+                    </tr>
+                    <tr>
+                        <td>Read, edit</td>
+                        <td>Patent legacy</td>                        
+                    </tr>
+                    <tr>
+                        <td>Read only</td>
+                        <td>Patent test and evaluation</td>                        
+                    </tr>
+                    <tr>
+                        <td>Admin</td>
+                        <td>Patent remdiation</td>                        
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-ft keyline-top">
+                    <a class="btn btn-default" href="createAcct-step2.html">Back</a>
+                    <a class="btn btn-primary pull-right" href="signin.html">Create account</a>
+                </div>
+        </div>
+    </div>
+</main>
+
+{% include appDemo/app-footerScripts.html %}

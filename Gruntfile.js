@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['front/scripts/{,*/}*.js'],
-                tasks: ['jshint', 'concat:mainjs']
+                tasks: ['jshint', 'concat:mainjs', 'concat:appDemojs']
             },
             less: {
                 files: ['usptostrap/less/**/*.less', 'front/styles/**/*.less'],
@@ -78,6 +78,7 @@ module.exports = function (grunt) {
             options: {
                 paths: ['usptostrap/less', 'bower_components'],
                 compress: true
+                //sourceMap: true
             },
             dist: {
                 files: [{
@@ -92,6 +93,12 @@ module.exports = function (grunt) {
                     src: ['pattern-library.less'],
                     dest: '<%= paths.assets %>/styles',
                     ext: '.css'
+                }, {
+                    expand: true,
+                    cwd: 'front/styles/appDemo',
+                    src: ['appDemo.less'],
+                    dest: '<%= paths.assets %>/styles',
+                    ext: '.min.css'
                 }]
             }
         },
@@ -164,6 +171,11 @@ module.exports = function (grunt) {
             mainjs: {
                 src: ['front/scripts/main.js'],
                 dest: '<%= paths.assets %>/scripts/main.js'
+            },
+            // appDemo js
+            appDemojs: {
+                src: ['front/scripts/appDemo.js'],
+                dest: '<%= paths.assets %>/scripts/appDemo.js'
             },
             // vendor css
             vendorcss: {

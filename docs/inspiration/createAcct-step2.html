@@ -1,0 +1,150 @@
+---
+title: "Create new account"
+layout: null
+hidden: true
+preview: true
+---
+{% include appDemo/app-head.html bodyClass="main-wrapper" %}
+
+<div class="skipLinks alert-info">
+   <a class="sr-only focusable" href="#main">Skip to main content</a>   
+</div>
+{% include appDemo/appHeader-external.html pgTitle="Application Monitor" subTitle="Create new account" %}
+<main class="form-createAcct container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ol class="nav-steps">
+                <li style="width:33.3%">
+                    <span>Verify employee credentials</span>
+                </li>
+                <li class="active" style="width:33.3%">
+                    <span>Enter contact information</span>
+                </li>
+                <li style="width:33.3%" class="">
+                    <span>Confirm system access</span>
+                </li>
+            </ol>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="alert alert-danger">
+                            <i class="alert-icon alert-icon-danger"></i>There are 2 fields missing required information.
+                            <ul>
+                                <li><a class="link-errField" href="#fn12">First name can not be empty</a></li>
+                                <li><a class="link-errField" href="#phone12">Phone number can not be empty</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group margin-top-1">
+                    <div class="col-sm-12">
+                        <span class="help-block">* indicates required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="form-group-heading margin-top-0">
+                            <h2 class="h4 margin-top-0">Contact information</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="s2id_autogen1">Title</label>
+                    <div class="col-sm-9">
+                        <select class="form-control select2 form-control-width-md" id="t12">
+                            <option value="">Select</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Miss">Miss</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group has-error">
+                    <label class="control-label col-sm-3 required" for="fn12">First name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="fn12" required aria-required="true" aria-describedby="help-fn">
+                        <span id="help-fn" class="help-block">This field is required.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="mn12">Middle name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="mn12">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 required" for="ln12">Last name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="ln12" required aria-required="true">                        
+                    </div>
+                </div>
+                <div class="form-group has-error">
+                    <label class="control-label col-sm-3 required" for="phone12">Phone number</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="phone12" required aria-required="true" aria-describedby="help-phone help-phoneErr" data-inputmask="'mask': '999-999-9999', 'placeholder': 'ˍ'">
+                        <span id="help-phone" class="help-block">(format: 202-999-9999)</span>
+                        <span id="help-phoneErr" class="help-block">This field is required.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="form-group-heading">
+                            <h2 class="h4">Address</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 required" for="s2id_autogen2">Country</label>
+                    <div class="col-sm-9">
+                        <select class="form-control select2 form-control-width-md" id="country12" required aria-required="true">
+                            <option value="Mr.">United States</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 required" for="adline1">Address line 1</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="adline1" required aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="adline2">Address line 2</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="adline2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 required" for="city12">City</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="city12" required aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 required" for="s2id_autogen3">State</label>
+                    <div class="col-sm-9">
+                        <select id="si12" class="form-control form-control-width-md select2" required aria-required="true">
+                            <option>AL</option>
+                            <option>AK</option>
+                            <option>AZ</option>
+                            <option>AR</option>
+                            <option>CA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 required" for="zipcode12">Zip code</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-width-md" id="zipcode12" required aria-required="true">
+                    </div>
+                </div>
+            </form>
+            <div class="form-ft keyline-top">
+                <a class="btn btn-default" href="createAcct-step1.html">Back</a>
+                <a class="btn btn-primary pull-right" href="createAcct-step3.html">Continue</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% include appDemo/app-footerScripts.html %}

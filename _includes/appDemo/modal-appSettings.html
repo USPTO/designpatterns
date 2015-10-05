@@ -1,0 +1,43 @@
+<div id="modal-appSettings" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="hd-appSettings">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="hd-appSettings">Application settings</h4>
+            </div>
+            <div class="modal-body">
+                <div class="btn-group nav-settings">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Notifications <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="#">Notifications</a></li>
+                        <li><a href="#">Tracked Systems</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li class="disabled"><a href="#">Favorites</a></li>
+                    </ul>
+                </div>
+                
+                <form role="form" class="form-horizontal" style="margin-left: 20px;">
+                <p>Select notification types you would like to receive:</p>
+                    <div class="checkbox">
+                      <label><input type="checkbox" checked value="option1" id="chk1" name="optionsCheckboxes">System alerts</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" checked value="option1" id="chk2" name="optionsCheckboxes">New system added or removed</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="option1" id="chk3" name="optionsCheckboxes">Report completion</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="option1" id="chk4" name="optionsCheckboxes">Data thresholds</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="pull-left btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" type="button" data-dismiss="modal">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
