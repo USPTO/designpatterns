@@ -52,11 +52,43 @@ title: "Icons"
 - For performance, create icon bundles containing only used icons
 - The source SVG files are available on Github
 
-<span class="text-muted">These icons are derived from [Font Awesome](http://fortawesome.github.io/Font-Awesome/) 4.2.0.</span>
+<span class="text-muted">These icons are derived from [Font Awesome](http://fortawesome.github.io/Font-Awesome/) 4.4.0.</span>
 
 &nbsp;
 
+
 </div>
+<div class="pl-pattern">
+### USPTO Intellectual Property Symbols
+
+{::nomarkdown}
+<div class="row pl-icon-list sec-ip-symbols">
+    <div class="col-md-3 col-sm-4"><i class="icon icon-utility-patent"></i> icon-utility-patent</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-patent-pending"></i> icon-patent-pending</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-plant-patent"></i> icon-plant-patent</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-pro-se"></i> icon-pro-se</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-invention"></i> icon-invention</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-maker"></i> icon-maker</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-intellectual-property"></i> icon-intellectual-property</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-design-patent"></i> icon-design-patent</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-prior-art"></i> icon-prior-art</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-small-inventor"></i> icon-small-inventor</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-large-inventor"></i> icon-large-inventor</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-infringement"></i> icon-infringement</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-trade-secret"></i> icon-trade-secret</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-micro-entity-inventor"></i> icon-micro-entity-inventor</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-service-mark"></i> icon-service-mark</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-counterfeit"></i> icon-counterfeit</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-ptotrademark"></i> icon-ptotrademark</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-stem"></i> icon-stem</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-pro-bono"></i> icon-pro-bono</div>
+</div>
+<div class="pull-right text-muted">Download the original SVG/PNG files at <a href="https://thenounproject.com/USPTO/" target="_blank">thenounproject.com/USPTO</a></div>
+{:/nomarkdown}
+<br/>
+</div>
+
+
 <div class="pl-pattern">
 ### Web application icons
 
@@ -73,12 +105,18 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-asterisk"></i> icon-asterisk</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-at"></i> icon-at</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-automobile"></i> icon-automobile <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-balance-scale"></i> icon-balance-scale</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-ban"></i> icon-ban</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bank"></i> icon-bank <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bar-chart"></i> icon-bar-chart</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bar-chart-o"></i> icon-bar-chart-o <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-barcode"></i> icon-barcode</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bars"></i> icon-bars</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-battery-0"></i> icon-battery-0 <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-battery-1"></i> icon-battery-1 <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-battery-2"></i> icon-battery-2 <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-battery-3"></i> icon-battery-3 <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-battery-4"></i> icon-battery-4 <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-beer"></i> icon-beer</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bell"></i> icon-bell</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bell-o"></i> icon-bell-o</div>
@@ -87,6 +125,7 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-bicycle"></i> icon-bicycle</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-binoculars"></i> icon-binoculars</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-birthday-cake"></i> icon-birthday-cake</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-black-tie"></i> icon-black-tie</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-bolt"></i> icon-bolt</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-bomb"></i> icon-bomb</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-book"></i> icon-book</div>
@@ -103,6 +142,10 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-calculator"></i> icon-calculator</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-calendar"></i> icon-calendar</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-calendar-o"></i> icon-calendar-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-calendar-check-o"></i> icon-calendar-check-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-calendar-minus-o"></i> icon-calendar-minus-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-calendar-plus-o"></i> icon-calendar-plus-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-calendar-times-o"></i> icon-calendar-times-o</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-camera"></i> icon-camera</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-camera-retro"></i> icon-camera-retro</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-car"></i> icon-car</div>
@@ -136,6 +179,8 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-comment-o"></i> icon-comment-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-comments"></i> icon-comments</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-comments-o"></i> icon-comments-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-commenting"></i> icon-commenting</div>        
+    <div class="col-md-3 col-sm-4"><i class="icon icon-commenting-o"></i> icon-commenting-o</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-compass"></i> icon-compass</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-copyright"></i> icon-copyright</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-credit-card"></i> icon-credit-card</div>
@@ -201,19 +246,35 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-gavel"></i> icon-gavel</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-gear"></i> icon-gear <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-gears"></i> icon-gears <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-genderless"></i> icon-genderless</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-gift"></i> icon-gift</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-glass"></i> icon-glass</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-globe"></i> icon-globe</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-graduation-cap"></i> icon-graduation-cap</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-group"></i> icon-group <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-hdd-o"></i> icon-hdd-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-grab-o"></i> icon-hand-grab-o <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-lizard-o"></i> icon-hand-lizard-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-paper-o"></i> icon-hand-paper-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-peace-o"></i> icon-hand-peace-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-pointer-o"></i> icon-hand-pointer-o</div>
+    <!--<div class="col-md-3 col-sm-4"><i class="icon icon-hand-rock-o"></i> icon-hand-rock-o</div>-->
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-scissors-o"></i> icon-hand-scissors-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-spock-o"></i> icon-hand-spock-o</div>
+    <!--<div class="col-md-3 col-sm-4"><i class="icon icon-hand-stop-o"></i> icon-hand-stop-o</div>-->
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hand-pointer-o"></i> icon-hand-pointer-o</div>                         
     <div class="col-md-3 col-sm-4"><i class="icon icon-headphones"></i> icon-headphones</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-heart"></i> icon-heart</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-heart-o"></i> icon-heart-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-history"></i> icon-history</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-home"></i> icon-home</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hourglass"></i> icon-hourglass</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hourglass-1"></i> icon-hourglass-1 <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hourglass-2"></i> icon-hourglass-2 <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-hourglass-3"></i> icon-hourglass-3 <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-image"></i> icon-image <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-inbox"></i> icon-inbox</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-industry"></i> icon-industry</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-info"></i> icon-info</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-info-circle"></i> icon-info-circle</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-institution"></i> icon-institution <span class="text-muted">(alias)</span></div>
@@ -241,6 +302,10 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-mail-reply-all"></i> icon-mail-reply-all <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-male"></i> icon-male</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-map-marker"></i> icon-map-marker</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-map"></i> icon-map</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-map-o"></i> icon-map-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-map-pin"></i> icon-map-pin</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-map-signs"></i> icon-map-signs</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-meh-o"></i> icon-meh-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-microphone"></i> icon-microphone</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-microphone-slash"></i> icon-microphone-slash</div>
@@ -285,6 +350,7 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-random"></i> icon-random</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-recycle"></i> icon-recycle</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-refresh"></i> icon-refresh</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-registered"></i> icon-registered</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-remove"></i> icon-remove <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-reorder"></i> icon-reorder <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-reply"></i> icon-reply</div>
@@ -292,7 +358,7 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-retweet"></i> icon-retweet</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-road"></i> icon-road</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-rocket"></i> icon-rocket</div>
-    <div class="col-md-3 col-sm-4"><i class="icon icon-rss"></i> icon-rss</div>
+    <!--<div class="col-md-3 col-sm-4"><i class="icon icon-rss"></i> icon-rss</div>-->
     <div class="col-md-3 col-sm-4"><i class="icon icon-rss-square"></i> icon-rss-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-search"></i> icon-search</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-search-minus"></i> icon-search-minus</div>
@@ -335,6 +401,8 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-star-half-full"></i> icon-star-half-full <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-star-half-o"></i> icon-star-half-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-star-o"></i> icon-star-o</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-sticky-note"></i> icon-sticky-note</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-sticky-note-o"></i> icon-sticky-note-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-suitcase"></i> icon-suitcase</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-sun-o"></i> icon-sun-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-support"></i> icon-support <span class="text-muted">(alias)</span></div>
@@ -344,6 +412,7 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-tags"></i> icon-tags</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-tasks"></i> icon-tasks</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-taxi"></i> icon-taxi</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-television"></i> icon-television</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-terminal"></i> icon-terminal</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-thumb-tack"></i> icon-thumb-tack</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-thumbs-down"></i> icon-thumbs-down</div>
@@ -361,6 +430,7 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-toggle-on"></i> icon-toggle-on</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-toggle-right"></i> icon-toggle-right <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-toggle-up"></i> icon-toggle-up <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-trademark"></i> icon-trademark</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-trash"></i> icon-trash</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-trash-o"></i> icon-trash-o</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-tree"></i> icon-tree</div>
@@ -460,7 +530,9 @@ title: "Icons"
 {::nomarkdown}
 <div class="row pl-icon-list">
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-amex"></i> icon-cc-amex</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-cc-diners-club"></i> icon-cc-diners-club</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-discover"></i> icon-cc-discover</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-cc-jcb"></i> icon-cc-jcb</div>      
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-mastercard"></i> icon-cc-mastercard</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-paypal"></i> icon-cc-paypal</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-stripe"></i> icon-cc-stripe</div>
@@ -535,8 +607,10 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-chain"></i> icon-chain <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-chain-broken"></i> icon-chain-broken</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-clipboard"></i> icon-clipboard</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-clone"></i> icon-clone</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-columns"></i> icon-columns</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-copy"></i> icon-copy <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-i-cursor"></i> icon-i-cursor</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cut"></i> icon-cut <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-dedent"></i> icon-dedent <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-eraser"></i> icon-eraser</div>
@@ -555,6 +629,9 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-list-alt"></i> icon-list-alt</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-list-ol"></i> icon-list-ol</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-list-ul"></i> icon-list-ul</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-mouse-pointer"></i> icon-mouse-pointer</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-object-group"></i> icon-object-group</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-object-ungroup"></i> icon-object-ungroup</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-outdent"></i> icon-outdent</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-paperclip"></i> icon-paperclip</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-paragraph"></i> icon-paragraph</div>
@@ -674,7 +751,9 @@ title: "Icons"
 
 {::nomarkdown}
 <div class="row pl-icon-list">
+    <div class="col-md-3 col-sm-4"><i class="icon icon-px"></i> icon-px</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-adn"></i> icon-adn</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-amazon"></i> icon-amazon</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-android"></i> icon-android</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-angellist"></i> icon-angellist</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-apple"></i> icon-apple</div>
@@ -685,12 +764,17 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-bitcoin"></i> icon-bitcoin <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-btc"></i> icon-btc</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-amex"></i> icon-cc-amex</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-cc-diners-club"></i> icon-cc-diners-club</div>     
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-discover"></i> icon-cc-discover</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-cc-jcb"></i> icon-cc-jcb</div> 
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-mastercard"></i> icon-cc-mastercard</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-paypal"></i> icon-cc-paypal</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-stripe"></i> icon-cc-stripe</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-cc-visa"></i> icon-cc-visa</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-chrome"></i> icon-chrome</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-codepen"></i> icon-codepen</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-contao"></i> icon-contao</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-creative-commons"></i> icon-creative-commons</div>        
     <div class="col-md-3 col-sm-4"><i class="icon icon-css3"></i> icon-css3</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-delicious"></i> icon-delicious</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-deviantart"></i> icon-deviantart</div>
@@ -699,11 +783,17 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-dropbox"></i> icon-dropbox</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-drupal"></i> icon-drupal</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-empire"></i> icon-empire</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-expeditedssl"></i> icon-expeditedssl</div>      
     <div class="col-md-3 col-sm-4"><i class="icon icon-facebook"></i> icon-facebook</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-facebook-square"></i> icon-facebook-square</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-firefox"></i> icon-firefox</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-flickr"></i> icon-flickr</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-fonticons"></i> icon-fonticons</div>    
     <div class="col-md-3 col-sm-4"><i class="icon icon-foursquare"></i> icon-foursquare</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-ge"></i> icon-ge <span class="text-muted">(alias)</span></div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-get-pocket"></i> icon-get-pocket</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-gg"></i> icon-gg</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-gg-circle"></i> icon-gg-circle</div>      
     <div class="col-md-3 col-sm-4"><i class="icon icon-git"></i> icon-git</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-git-square"></i> icon-git-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-github"></i> icon-github</div>
@@ -715,8 +805,10 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-google-plus-square"></i> icon-google-plus-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-google-wallet"></i> icon-google-wallet</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-hacker-news"></i> icon-hacker-news</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-houzz"></i> icon-houzz</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-html5"></i> icon-html5</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-instagram"></i> icon-instagram</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-internet-explorer"></i> icon-internet-explorer</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-ioxhost"></i> icon-ioxhost</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-joomla"></i> icon-joomla</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-jsfiddle"></i> icon-jsfiddle</div>
@@ -727,7 +819,12 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-linux"></i> icon-linux</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-maxcdn"></i> icon-maxcdn</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-meanpath"></i> icon-meanpath</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-odnoklassniki"></i> icon-odnoklassniki</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-odnoklassniki-square"></i> icon-odnoklassniki-square</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-opencart"></i> icon-opencart</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-openid"></i> icon-openid</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-opera"></i> icon-opera</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-optin-monster"></i> icon-optin-monster</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-pagelines"></i> icon-pagelines</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-paypal"></i> icon-paypal</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-pied-piper"></i> icon-pied-piper</div>
@@ -740,6 +837,7 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-reddit"></i> icon-reddit</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-reddit-square"></i> icon-reddit-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-renren"></i> icon-renren</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-safari"></i> icon-safari</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-share-alt"></i> icon-share-alt</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-share-alt-square"></i> icon-share-alt-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-skype"></i> icon-skype</div>
@@ -755,22 +853,26 @@ title: "Icons"
     <div class="col-md-3 col-sm-4"><i class="icon icon-stumbleupon-circle"></i> icon-stumbleupon-circle</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-tencent-weibo"></i> icon-tencent-weibo</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-trello"></i> icon-trello</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-tripadvisor"></i> icon-tripadvisor</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-tumblr"></i> icon-tumblr</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-tumblr-square"></i> icon-tumblr-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-twitch"></i> icon-twitch</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-twitter"></i> icon-twitter</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-twitter-square"></i> icon-twitter-square</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-vimeo"></i> icon-vimeo</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-vimeo-square"></i> icon-vimeo-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-vine"></i> icon-vine</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-vk"></i> icon-vk</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-wechat"></i> icon-wechat <span class="text-muted">(alias)</span></div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-weibo"></i> icon-weibo</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-weixin"></i> icon-weixin</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-wikipedia-w"></i> icon-wikipedia-w</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-windows"></i> icon-windows</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-wordpress"></i> icon-wordpress</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-xing"></i> icon-xing</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-xing-square"></i> icon-xing-square</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-yahoo"></i> icon-yahoo</div>
+    <div class="col-md-3 col-sm-4"><i class="icon icon-y-combinator"></i> icon-y-combinator</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-yelp"></i> icon-yelp</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-youtube"></i> icon-youtube</div>
     <div class="col-md-3 col-sm-4"><i class="icon icon-youtube-play"></i> icon-youtube-play</div>
@@ -798,4 +900,6 @@ title: "Icons"
 {:/nomarkdown}
 <br/>
 </div>
+
+
 
