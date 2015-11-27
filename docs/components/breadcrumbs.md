@@ -20,27 +20,35 @@ Depending on the complexity of the navigational hierarchy and the type of page o
 
 {::nomarkdown}
 <div class="pl-preview">
-<ol class="breadcrumb">
-  <li class="active">Home</li>
-</ol>
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li class="active">Library</li>
-</ol>
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
-  <li class="active">Data</li>
-</ol>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+	  <li class="active" aria-level="1">Home</li>
+	</ol>
+</nav>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+	  <li aria-level="1"><a href="#">Home</a></li>
+	  <li class="active" aria-level="2">Library</li>
+	</ol>
+</nav>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+	  <li aria-level="1"><a href="#">Home</a></li>
+	  <li aria-level="2"><a href="#">Library</a></li>
+	  <li class="active" aria-level="3">Data</li>
+	</ol>
+</nav>
 </div>
 {:/nomarkdown}
 
 {% highlight html %}
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
-  <li class="active">Data</li>
-</ol>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li aria-level="1"><a href="#">Home</a></li>
+    <li aria-level="2"><a href="#">Library</a></li>
+    <li aria-level="3" class="active">Data</li>
+  </ol>
+</nav>
 {% endhighlight %}
 
 </div>

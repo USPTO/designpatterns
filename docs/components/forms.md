@@ -44,21 +44,21 @@ Field widths should communicate the expected or max length of content. Use consi
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label" for="fw2">Medium (default)</label>
+    <label class="col-sm-3 control-label" for="fw3">Medium (default)</label>
     <div class="col-sm-9">
-        <input type="text" class="form-control-width-md form-control" id="fw2" value="250px" >
+        <input type="text" class="form-control-width-md form-control" id="fw3" value="250px" >
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label" for="fw2">Large</label>
+    <label class="col-sm-3 control-label" for="fw4">Large</label>
     <div class="col-sm-9">
-        <input type="text" class="form-control-width-lg form-control" value="350px" id="fw2" >
+        <input type="text" class="form-control-width-lg form-control" value="350px" id="fw4" >
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label" for="fw2">Fill</label>
+    <label class="col-sm-3 control-label" for="fw5">Fill</label>
     <div class="col-sm-9">
-        <input type="text" class="form-control-width-fill form-control" value="100%" id="fw2" >
+        <input type="text" class="form-control-width-fill form-control" value="100%" id="fw5" >
     </div>
   </div>
 </form>
@@ -292,14 +292,14 @@ __Don't__
     <div class="form-group has-error">
       <label for="em9" class="col-sm-3 control-label required">Invalid</label>
       <div class="col-sm-9">
-        <input type="email" class="form-control form-control-width-md" id="em9" value="john.smith@gmail" required aria-required="true">
+        <input type="email" class="form-control form-control-width-md" id="em9" value="john.smith@gmail" required aria-required="true" aria-invalid="true">
         <span class="help-block">This email address is not valid.</span>
       </div>
     </div>
     <div class="form-group has-error">
       <label for="pw9" class="col-sm-3 control-label required">Required</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control form-control-width-md" required aria-required="true" id="pw9" >
+        <input type="text" class="form-control form-control-width-md" required aria-required="true" id="pw9" aria-invalid="true">
         <span class="help-block">This field is required.</span>
       </div>
     </div>
@@ -318,14 +318,14 @@ __Don't__
     <div class="form-group has-error">
       <label for="em9" class="col-sm-3 control-label required">Invalid</label>
       <div class="col-sm-9">
-        <input type="email" class="form-control form-control-width-md" id="em9" value="john.smith@gmail" required aria-required="true">
+        <input type="email" class="form-control form-control-width-md" id="em9" value="john.smith@gmail" required aria-required="true" aria-invalid="true">
         <span class="help-block">This email address is not valid.</span>
       </div>
     </div>
     <div class="form-group has-error">
       <label for="pw9" class="col-sm-3 control-label required">Required</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control form-control-width-md" required aria-required="true" id="pw9" >
+        <input type="text" class="form-control form-control-width-md" required aria-required="true" id="pw9" aria-invalid="true">
         <span class="help-block">This field is required.</span>
       </div>
     </div>
@@ -665,7 +665,8 @@ These examples show various form configurations.
    <div class="form-group">
     <label for="si12" class="col-sm-3 control-label required">State</label>
     <div class="col-sm-9">
-        <select id="si12" required aria-required="true" class="form-control-width-xs select2 form-control">
+        <select id="si12" required aria-required="true" class="form-control-width-sm select2 form-control">
+          <option value="" disabled selected hidden>Select</option>
           <option>AL</option>
           <option>AK</option>
           <option>AZ</option>
@@ -676,7 +677,7 @@ These examples show various form configurations.
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">Shipping</label>
+    <span class="col-sm-3 control-label">Shipping</span>
     <div class="col-sm-9">
       <div class="radio">
         <label><input type="radio" name="opr2" id="opr21" value="option1" checked>UPS</label>
@@ -702,9 +703,9 @@ These examples show various form configurations.
 {% highlight html %}
 <form class="form-horizontal" role="form">
   <div class="form-group">
-    <label for="em12" class="col-sm-3 control-label">Email</label>
+    <label for="em13" class="col-sm-3 control-label">Email</label>
     <div class="col-sm-9">
-      <input type="email" class="form-control form-control-width-md" id="em12">
+      <input type="email" class="form-control form-control-width-md" id="em13">
       <span class="help-block">Your email will be used to log in.</span>
     </div>
   </div>
@@ -724,6 +725,7 @@ These examples show various form configurations.
     <label for="si12" class="col-sm-3 control-label required">State</label>
     <div class="col-sm-9">
         <select required aria-required="true" id="si12" class="form-control form-control-width-md">
+          <option value="" disabled selected hidden>Select</option>
           <option>AL</option>
           <option>AK</option>
           <option>AZ</option>
@@ -733,7 +735,7 @@ These examples show various form configurations.
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">Shipping</label>
+    <span class="col-sm-3 control-label">Shipping</span>
     <div class="col-sm-9">
       <div class="radio">
         <label><input type="radio" name="opr2" id="opr21" value="option1" checked>UPS</label>
@@ -770,24 +772,25 @@ These examples show various form configurations.
 <div class="" style="max-width: 450px;">
     <form role="form" class="col-sm-offset-3" style="max-width: 350px;">
       <div class="form-group">
-        <div class="alert alert-danger">
+        <div class="alert alert-danger" role="alert">
           <i class="alert-icon alert-icon-danger"></i>Please fix the 3 errors.
         </div>
       </div>
       <div class="form-group has-error">
-        <label class="control-label required" for="em12">USPTO email address</label>
-        <input type="email" class="form-control" id="em12" value="john.smith@gmail.com" required aria-required="true">
+        <label class="control-label required" for="em14">USPTO email address</label>
+        <input type="email" class="form-control" id="em14" value="john.smith@gmail.com" required aria-required="true" aria-invalid="true">
         <span class="help-block">Email must end with uspto.gov.</span>
       </div>
       <div class="form-group has-error" >
         <label class="control-label required" for="eid12">Employee ID</label> <a href="#" class="pull-right">Find my Employee ID</a>
-        <input type="text" class="form-control" id="eid12" value="238942a" required aria-required="true">
+        <input type="text" class="form-control" id="eid12" value="238942a" required aria-required="true" aria-invalid="true">
         <span class="help-block">Employee ID must be numeric.</span>
       </div>
       <div class="form-group">
         <label class="control-label required" for="t12">Title</label>
         <div>
             <select class="select2 form-control-width-sm form-control" id="t12" required aria-required="true">
+              <option value="" disabled selected hidden>Select</option>
               <option value="Mr.">Mr.</option>
               <option value="Mrs.">Mrs.</option>
               <option value="Miss">Miss</option>
@@ -800,7 +803,7 @@ These examples show various form configurations.
       </div>
       <div class="form-group has-error">
         <label class="control-label required" for="mn12">Middle name</label>
-        <input type="text" class="form-control" id="mn12" required aria-required="true">
+        <input type="text" class="form-control" id="mn12" required aria-required="true" aria-invalid="true">
         <span class="help-block">This field is required.</span>
       </div>
       <div class="form-group">
@@ -819,6 +822,7 @@ These examples show various form configurations.
       <div class="form-group">
         <label class="control-label required" for="country12">Country</label>
         <select class="select2 form-control" id="country12" required aria-required="true">
+          <option value="" disabled selected hidden>Select</option>
           <option value="Mr.">United States</option>
         </select>
       </div>
@@ -863,8 +867,8 @@ These examples show various form configurations.
     </div>
   </div>
   <div class="form-group has-error">
-    <label class="control-label required" for="em12">USPTO email address</label>
-    <input type="email" class="form-control" id="em12" value="john.smith@gmail.com" required aria-required="true">
+    <label class="control-label required" for="em15">USPTO email address</label>
+    <input type="email" class="form-control" id="em15" value="john.smith@gmail.com" required aria-required="true">
     <span class="help-block">Email must end with uspto.gov.</span>
   </div>
   <div class="form-group has-error" >
@@ -875,6 +879,7 @@ These examples show various form configurations.
   <div class="form-group">
     <label class="control-label required" for="t12">Title</label>
     <select class="form-control" id="t12" required aria-required="true">
+      <option value="" disabled selected hidden>Select</option>
       <option value="Mr.">Mr.</option>
       <option value="Mrs.">Mrs.</option>
       <option value="Miss">Miss</option>
@@ -905,6 +910,7 @@ These examples show various form configurations.
   <div class="form-group">
     <label class="control-label required" for="country12">Country</label>
     <select class="form-control" id="country12" required aria-required="true">
+      <option value="" disabled selected hidden>Select</option>
       <option value="Mr.">United States</option>
     </select>
   </div>

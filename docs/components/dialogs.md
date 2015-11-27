@@ -74,8 +74,8 @@ __Footer__
       <div class="modal-body">
           <form role="form" class="">
             <div class="form-group">
-                <label for="tb12" class="control-label">Enter a new file name</label>
-                <input type="text" class="form-control" id="tb12" value="dialogs.md">
+                <label for="tb13" class="control-label">Enter a new file name</label>
+                <input type="text" class="form-control" id="tb13" value="dialogs.md">
             </div>
         </form>
       </div>
@@ -379,8 +379,8 @@ Dialogs can prevent the user from performing actions behind/around the dialog if
       <div class="modal-body">
           <form role="form" class="">
             <div class="form-group">
-                <label for="tb12" class="control-label">Enter a new file name</label>
-                <input type="text" class="form-control" id="tb12" value="dialogs.md">
+                <label for="tb15" class="control-label">Enter a new file name</label>
+                <input type="text" class="form-control" id="tb15" value="dialogs.md">
             </div>
         </form>
       </div>

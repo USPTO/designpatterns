@@ -1,0 +1,69 @@
+{% include header.html %}
+    <header class="pl-header navbar navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="{{site.homeurl}}/index.html" class="navbar-brand"><strong>USPTO</strong> <span class="light">Design</span></a>
+                <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-inverse icon-bars"></i></button>
+                <button data-toggle="collapse" data-target="#pl-navbar-collapse" type="button" class="btn navbar-toggle collapsed"><i class="icon icon-inverse icon-angle-down"></i></button>
+            </div>
+            <div class="navbar-collapse collapse" id="pl-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li {% if page.title == 'About' %} class="active" {% endif %} >
+                        <a href="{{site.homeurl}}/index.html">About</a>
+                    </li>
+                    <li {% if page.title == 'Library' %} class="active" {% endif %} >
+                        <a href="{{site.baseurl}}/docs/index.html">Library</a>
+                    </li>
+                    <li {% if page.title == 'Resources' %} class="active" {% endif %} >
+                        <a href="{{site.baseurl}}/docs/resources.html">Resources</a>
+                    </li>
+                    <li {% if page.title == 'Guides' %} class="active" {% endif %} >
+                        <a href="{{site.baseurl}}/docs/guides/">Guides</a>
+                    </li>
+                    <li {% if page.title == 'Changelog' %} class="active" {% endif %} >
+                        <a href="{{site.baseurl}}/docs/changelog.html">Changelog</a>
+                    </li>                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ site.repository.url }}" title="View on Github" ><i class="icon icon-inverse icon-github"></i> &nbsp; View on Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="pl-container">
+        <nav class="pl-sidebar">
+            <ul class="nav nav-stacked">
+                {% for c in site.guidetypes %}
+                    <li class="category">{{c}}</li>
+                    {% for p in site.pages %}
+                        {% if p.url contains c %}
+                            {% if p.draft != true and p.hidden != true %}
+                                {% if p.preview != true or site.includePreviews == true %}
+                                    <li {% if p.url == page.url %} class="active" {% endif %} >
+                                        <a {% if c == 'inspiration' %} target="_blank" {% endif %} href="{{site.baseurl}}{{ p.url }}"> {{ p.title }} </a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </nav>
+        <section class="pl-content">
+            <noscript>
+                <div class="pl-preview-header" style="margin-bottom: 0">
+                    <div class="alert alert-danger" style="line-height: 25px;">
+                        <p>For full functionality of this site it is necessary to enable JavaScript.</p>
+                        <p>Here are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</p>
+                    </div>
+                </div>
+            </noscript>
+            {% if page.preview == true %}
+                <div class="pl-preview-header">This document is a preview.</div>
+            {% endif %}
+            {{ content }}
+        </section>
+    </div>
+{% include footer.html %}

@@ -69,28 +69,31 @@ Use vertical steps when there are 5 or more steps, when there are nested steps, 
                     <li class="disabled" role="presentation"><a role="tab"><i style="margin-left: -10px; position: relative; top: 1px; width: 14px; display: inline-block;"></i> Review</a></li>
                 </ul>
             </div>
-            <div class="panel panel-default" style="margin-left: 200px; height: 400px; max-height: 400px; overflow: auto; position: relative;">
+            <div class="panel panel-default" style="margin-left: 200px; height: 450px; max-height: 450px; overflow: auto; position: relative;">
                 <div class="panel-body">
                     <h4>Recipients <span class="pull-right" style="font-size: 13px;"><span class="text-primary">Step 2 of 6</span></span></h4>
                     <p>When the alert criteria is met, each recipient will receive an email notification.</p>
                     <hr>
                     <div class="alert alert-danger"><i class="alert-icon alert-icon-danger"></i>Fix the 1 error below.</div> 
                     <div class="form-group" style="">
+                        <label for="txt-email1">Email 1</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" value="jsmith@corp.com">
+                            <input id="txt-email1" type="text" class="form-control" value="jsmith@corp.com">
                             <div class="input-group-btn"><button class="btn btn-default"><i class="icon icon-times"></i></button></div>
                         </div>
                     </div>
                     <div class="form-group has-error" style="">
+                        <label for="txt-email2">Email 2</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" value="aharrison@corp">
+                            <input id="txt-email2" type="text" class="form-control" value="aharrison@corp">
                             <div class="input-group-btn"><button class="btn btn-default"><i class="icon icon-times"></i></button></div>
                         </div>
                         <p class="help-block">Invalid email address.</p>
                     </div>
                     <div class="form-group" style="">
+                        <label for="txt-email3">Email 3</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter an email address">
+                            <input id="txt-email3" type="text" class="form-control" placeholder="Enter an email address">
                             <div class="input-group-btn"><button class="btn btn-default">Add</button></div>
                         </div>
                     </div>
@@ -117,31 +120,33 @@ Use horizontal steps when there are 4 or less steps.
 <div class="">
     <div class="" style="max-width: 700px; margin-auto;">
         <div style="padding: 50px; overflow: auto; position: relative;">
-            <ol class="nav-steps">
-                <li  style="width:33.3%">
-                    <span>Applicant information</span>
+            <ol class="nav-steps" aria-label="Application steps">
+                <li style="width:33.3%">
+                    <a href="#void">Applicant information <span class="sr-only">step 1 of 3 is complete.</span></a>
                 </li>
                 <li class="active" style="width:33.3%">
-                    <span>Mark information</span>
+                    <a href="#void">Mark information <span class="sr-only">step 2 of 3 is the current step</span></a>
                 </li>
                 <li class="" style="width:33.3%">
-                    <span>Goods and services</span>
+                    <span>Goods and services <span class="sr-only">step 3 of 3 is incomplete</span></span>
                 </li>
             </ol>
             <h2 style="margin: 36px 0;" class="text-center">So far so good. Now, let's talk about your mark.</h2>
-            <h4>First, what type of mark is this?</h4>
             <div style="margin: 18px 0;">
                 <form class="" role="form">
                     <div class="form-group">
-                        <div class="radio">
-                            <label><input type="radio" name="optionsRadios" id="optionsRadios1" checked value="option1">Standard characters <div class="text-muted">Use this option to register a mark that is comprised of word(s), letter(s), number(s), or any combination thereof with no design element or stylization. <a href="#">Learn more.</a></div></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Special form <div class="text-muted">Use this option if you wish to register a mark that is comprised of stylized word(s), letter(s), and/or number(s), and/or a design element. <a href="#">Learn more.</a></div></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Sound mark <div class="text-muted">A non-visual mark may be a sound, a scent, or otherwise non-visual mark. <a href="#">Learn more.</a></div></label>
-                        </div>
+                        <fieldset>
+                            <legend class="h4" style="border-bottom: none">First, what type of mark is this?</legend>
+                            <div class="radio">
+                                <label><input type="radio" name="optionsRadios" id="optionsRadios1" checked value="option1">Standard characters <div class="text-muted">Use this option to register a mark that is comprised of word(s), letter(s), number(s), or any combination thereof with no design element or stylization. <a href="#">Learn more.</a></div></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Special form <div class="text-muted">Use this option if you wish to register a mark that is comprised of stylized word(s), letter(s), and/or number(s), and/or a design element. <a href="#">Learn more.</a></div></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Sound mark <div class="text-muted">A non-visual mark may be a sound, a scent, or otherwise non-visual mark. <a href="#">Learn more.</a></div></label>
+                            </div>
+                        </fieldset>
                     </div>
                 </form>
                 <div class="text-right" style="margin-top: 24px;">

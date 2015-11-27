@@ -35,6 +35,10 @@ defaults:
       path: "docs"
     values:
       layout: "pattern"
+  - scope:
+      path: "docs/guides"
+    values:
+      layout: "guide"
 
 # All email links will use this variable
 email: contactUXD@uspto.gov?subject=USPTO UI Design Library
@@ -60,3 +64,10 @@ doctypes:
   - components
   - patterns
   - inspiration
+
+guidetypes:
+  - design
+  - evaluation
+
+
+
