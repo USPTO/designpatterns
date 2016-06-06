@@ -1,0 +1,94 @@
+.ui-datepicker {
+    // extend the bootstrap dropdown-menu
+    @extend .dropdown-menu;
+    padding: 10px;
+    width: 18em;
+
+    .ui-datepicker-title {
+        font-weight: 600;
+        position: relative;
+        top: 1px;
+    }
+
+    .ui-datepicker-header {
+        margin-bottom: 7px;
+    }
+
+    thead th {
+        // mute the days-of-the-week headers
+        color: #999;
+        text-align: center;
+    }
+
+    td .ui-state-hover {
+        background-color: $dropdown-link-hover-bg;
+    }
+
+    td .ui-state-active {
+        color: $component-active-color;
+        background-color: $component-active-bg;
+        border-radius: 2px;
+    }
+
+    td a, td span {
+        padding: .3em;
+        text-align: center;
+        color: $text-color;
+        font-size: $font-size-base;
+    }
+
+    td span {
+        color: #ccc;
+    }
+
+    .ui-datepicker-unselectable {
+        // background-color: #f6f6f6;
+    }
+
+
+
+
+    /* icons */
+
+    .ui-datepicker-prev .ui-icon,
+    .ui-datepicker-next .ui-icon {
+        overflow: visible;
+        margin-left: 0;
+        margin-top: -12px;
+    }
+
+    .ui-datepicker-prev .ui-icon:after, .ui-datepicker-next .ui-icon:after {
+        @extend .icon:after;
+        margin-left: -4px;
+    }
+
+    .ui-datepicker-prev, .ui-datepicker-next {
+        cursor: pointer;
+    }
+
+    .ui-datepicker-prev-hover, .ui-datepicker-prev {
+        top: 7px;
+        left: 2px;
+    }
+    .ui-datepicker-next-hover, .ui-datepicker-next {
+        top: 7px;
+        right: 2px;
+    }
+
+    .ui-datepicker-next .ui-icon:after {
+        @extend .icon-angle-right:after;
+        text-indent: 0;
+        position: absolute;
+        left: 0;
+    }
+    .ui-datepicker-prev .ui-icon:after {
+        @extend .icon-angle-left:after;
+        text-indent: 0;
+        position: absolute;
+        left: 0;
+    }
+    button.ui-state-default {
+        @extend .btn;
+        @extend .btn-default;
+    }
+}

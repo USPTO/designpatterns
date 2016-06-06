@@ -10,13 +10,13 @@
     "jquery": "~1.11.0",
     "jquery.inputmask": "~3.1.26",
     "font-awesome": "~4.2.0",
-    "bootstrap": "~3.3.6",
+    "bootstrap-sass": "^3.3.6",
     "select2": "~3.5.1",
     "nouislider": "~7.0.10",
     "bootstrap-timepicker": "^0.5.2"
   },
   "main": [
-    "usptostrap/less/usptostrap.less"
+    "usptostrap/sass/usptostrap.scss"
   ],
   "ignore": [
     "**/.*",
@@ -35,6 +35,7 @@
     "_config*",
     "howto.md",
     "index.html",
-    "todo.md"
+    "todo.md",
+    "report.xml"
   ]
 }

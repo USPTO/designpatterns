@@ -52,7 +52,7 @@ bower install
 ```
 ---
 #### Running the documentation
-Build the front-end assets (LESS/CSS/JS) with:
+Build the front-end assets (SASS/CSS/JS) with:
 ```
 grunt build
 ```

@@ -1,0 +1,101 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+
+// FA icons only look good at 14px.
+.btn .fa {
+    font-size: 14px;
+}
+
+.input-group-lg .btn .fa {
+    font-size: 18px;
+}
+
+.btn-search {
+    width: 5em;
+}
+
+// Add a real subtle shadow to buttons
+.btn {
+    box-shadow: 0 1px 1px rgba(0,0,0,.025);
+}
+
+// Default cursor for disabled buttons
+.btn[disabled],
+.btn.disabled,
+fieldset[disabled] .btn {
+    cursor: default;
+}
+
+// A chromeless button until you hover over it, which then looks like btn-default.
+.btn.btn-hover {
+    border-color: transparent;
+    box-shadow: none;
+    background: none;
+    &:hover {
+        @extend .btn-default;
+    }
+    &:focus {
+        @extend .btn-default:focus;
+    }
+    &:active {
+        @extend .btn-default:active;
+    }
+    &.active {
+        @extend .btn-default.active;
+        @extend .btn.active;
+    }
+}
+
+// Make btn-links bold
+.btn-link {
+    font-weight: 600;
+    box-shadow: none;
+}
+
+// Position carets inside of buttons a little better.
+.btn .caret {
+    position: relative;
+    top: -1px;
+}
+
+// A button with only an icon.
+.btn-icon-only {
+    min-width: 33px; // odd pixel is necessary for smooth font rendering
+    text-align: center;
+    padding: $padding-base-horizontal/2;
+    &.btn-sm {
+        padding: $padding-small-horizontal/2;
+    }
+    &.btn-xs {
+        padding: $padding-xs-horizontal/2;
+    }
+}
+
+
+
+// A toolbar for hover buttons with separators created by btn-groups.
+.btn-toolbar.btn-toolbar-hover {
+    margin-left: 0;
+    .btn-group {
+        border-right: 1px solid #ddd;
+        padding-right: 5px;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    .btn {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .btn-group > .btn {
+        padding: 3px 8px;
+        min-width: 0;
+    }
+}
+
+// 100px Minimum width for submit buttons
+button[type=submit] {
+    min-width: 100px;
+    }

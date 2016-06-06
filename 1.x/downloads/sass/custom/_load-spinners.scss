@@ -1,0 +1,49 @@
+.loading-background,
+.loading-icon {
+    background-image: url(data:image/gif;base64,R0lGODlhFAAUAJEDAMzMzLOzs39/f////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgADACwAAAAAFAAUAAACPJyPqcuNItyCUJoQBo0ANIxpXOctYHaQpYkiHfM2cUrCNT0nqr4uudsz/IC5na/2Mh4Hu+HR6YBaplRDAQAh+QQFCgADACwEAAIADAAGAAACFpwdcYupC8BwSogR46xWZHl0l8ZYQwEAIfkEBQoAAwAsCAACAAoACgAAAhccMKl2uHxGCCvO+eTNmishcCCYjWEZFgAh+QQFCgADACwMAAQABgAMAAACFxwweaebhl4K4VE6r61DiOd5SfiN5VAAACH5BAUKAAMALAgACAAKAAoAAAIYnD8AeKqcHIwwhGntEWLkO3CcB4biNEIFACH5BAUKAAMALAQADAAMAAYAAAIWnDSpAHa4GHgohCHbGdbipnBdSHphAQAh+QQFCgADACwCAAgACgAKAAACF5w0qXa4fF6KUoVQ75UaA7Bs3yeNYAkWACH5BAUKAAMALAIABAAGAAwAAAIXnCU2iMfaRghqTmMp1moAoHyfIYIkWAAAOw==);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent !important;
+}
+
+.loading-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+
+    .btn > & {
+        margin: -3px 0 0 0;
+    }
+}
+
+.loading-overlay {
+    position: absolute;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    border-radius: 32px;
+    background: #fff;
+    padding: 5px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.5);
+    color: transparent;
+}
+
+.loading {
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    border-radius: 32px;
+    background: #fff;
+    opacity: .9;
+    padding: 5px;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,.2);
+    color: transparent;
+}
+
+

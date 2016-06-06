@@ -17,5 +17,6 @@
     "strict": true,
     "trailing": true,
     "smarttabs": true,
-    "jquery": true
+    "jquery": true,
+    "asi": true
 }

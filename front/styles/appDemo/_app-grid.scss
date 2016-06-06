@@ -1,0 +1,32 @@
+/* ========================================================================
+ * Grid styles
+ * ======================================================================== */
+.container-fluid,
+.container {
+  transition: width 0.5s;
+}
+@media (min-width: 768px) {
+  header .container.container--full {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+main.container--full {
+  padding-left: 0;
+  padding-right: 0;
+}
+header .container {
+  min-width: 240px;
+}
+header .container-fluid {
+  width: 100%;
+}
+.row-grid {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.col {
+  display: table-cell;
+  vertical-align: top;
+}

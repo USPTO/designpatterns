@@ -1,0 +1,4968 @@
+/*
+ * Sprite core
+ */
+/* Additional SVG Icon States */
+/* Masked icons added for future use */
+/*
+IP (Noun Project) Icons $ 48px
+*/
+/*
+ * FontAwesome Aliases
+ */
+/*
+ * Sizes and offsets
+ * Derived from FontAwesome Version 4.4
+ */
+/* Large IP Icons (Noun Project) */
+.icon {
+	&:after {
+		content: "";
+		display: inline-block;
+		position: relative;
+		top: 2px;
+		background-repeat: no-repeat;
+		background-image: url("../images/icons/black.svg");
+	}
+}
+.icon.icon-inverse {
+	&:after {
+		background-image: url("../images/icons/white.svg");
+	}
+}
+.icon.icon-color-success {
+	&:after {
+		background-image: url("../images/icons/success.svg");
+	}
+}
+.icon.icon-color-danger {
+	&:after {
+		background-image: url("../images/icons/danger.svg");
+	}
+}
+.icon.icon-color-warning {
+	&:after {
+		background-image: url("../images/icons/warning.svg");
+	}
+}
+.icon.icon-color-primary {
+	&:after {
+		background-image: url("../images/icons/primary.svg");
+	}
+}
+.icon.icon-color-info {
+	&:after {
+		background-image: url("../images/icons/info.svg");
+	}
+}
+.icon.icon-masked {
+	&:after {
+		background-image: url("../images/icons/mask.svg");
+	}
+}
+.icon-muted {
+	opacity: .5;
+}
+.icon-ip {
+	&:after {
+		content: "";
+		display: inline-block;
+		position: relative;
+		top: 2px;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-image: url("../images/icons/IPicons-large.svg");
+	}
+}
+.icon-px {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: 0 0;
+	}
+}
+.icon-adjust {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px 0;
+	}
+}
+.icon-adn {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px 0;
+	}
+}
+.icon-align-center {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px 0;
+	}
+}
+.icon-align-justify {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -120px 0;
+	}
+}
+.icon-align-left {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px 0;
+	}
+}
+.icon-align-right {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px 0;
+	}
+}
+.icon-amazon {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px 0;
+	}
+}
+.icon-ambulance {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -240px 0;
+	}
+}
+.icon-anchor {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px 0;
+	}
+}
+.icon-android {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -300px 0;
+	}
+}
+.icon-angellist {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -330px 0;
+	}
+}
+.icon-angle-double-down {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -360px 0;
+	}
+}
+.icon-angle-double-left {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px 0;
+	}
+}
+.icon-angle-double-right {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -420px 0;
+	}
+}
+.icon-angle-double-up {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -450px 0;
+	}
+}
+.icon-angle-down {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: 0 -30px;
+	}
+}
+.icon-angle-left {
+	&:after {
+		width: 5px;
+		height: 14px;
+		background-position: -30px -30px;
+	}
+}
+.icon-angle-right {
+	&:after {
+		width: 5px;
+		height: 14px;
+		background-position: -60px -30px;
+	}
+}
+.icon-angle-up {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -90px -30px;
+	}
+}
+.icon-apple {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -120px -30px;
+	}
+}
+.icon-archive {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -30px;
+	}
+}
+.icon-area-chart {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -180px -30px;
+	}
+}
+.icon-arrow-circle-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -30px;
+	}
+}
+.icon-arrow-circle-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -30px;
+	}
+}
+.icon-arrow-circle-o-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -30px;
+	}
+}
+.icon-arrow-circle-o-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -30px;
+	}
+}
+.icon-arrow-circle-o-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -30px;
+	}
+}
+.icon-arrow-circle-o-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -30px;
+	}
+}
+.icon-arrow-circle-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -30px;
+	}
+}
+.icon-arrow-circle-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -30px;
+	}
+}
+.icon-arrow-down {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -450px -30px;
+	}
+}
+.icon-arrow-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -60px;
+	}
+}
+.icon-arrow-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -60px;
+	}
+}
+.icon-arrow-up {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -60px -60px;
+	}
+}
+.icon-arrows {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -60px;
+	}
+}
+.icon-arrows-alt {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -60px;
+	}
+}
+.icon-arrows-h {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -60px;
+	}
+}
+.icon-arrows-v {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -180px -60px;
+	}
+}
+.icon-asterisk {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -60px;
+	}
+}
+.icon-at {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -60px;
+	}
+}
+.icon-automobile {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -270px -60px;
+	}
+}
+.icon-car {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -270px -60px;
+	}
+}
+.icon-backward {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -300px -60px;
+	}
+}
+.icon-balance-scale {
+	&:after {
+		width: 17px;
+		height: 14px;
+		background-position: -330px -60px;
+	}
+}
+.icon-ban {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -60px;
+	}
+}
+.icon-bank {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -390px -60px;
+	}
+}
+.icon-university {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -390px -60px;
+	}
+}
+.icon-institution {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -390px -60px;
+	}
+}
+.icon-bar-chart {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -420px -60px;
+	}
+}
+.icon-bar-chart-o {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -420px -60px;
+	}
+}
+.icon-barcode {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -60px;
+	}
+}
+.icon-bars {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -90px;
+	}
+}
+.icon-navicon {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -90px;
+	}
+}
+.icon-reorder {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -90px;
+	}
+}
+.icon-battery-0 {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -30px -90px;
+	}
+}
+.icon-battery-empty {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -30px -90px;
+	}
+}
+.icon-battery-1 {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -60px -90px;
+	}
+}
+.icon-battery-quarter {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -60px -90px;
+	}
+}
+.icon-battery-2 {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -90px -90px;
+	}
+}
+.icon-battery-half {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -90px -90px;
+	}
+}
+.icon-battery-3 {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -120px -90px;
+	}
+}
+.icon-battery-three-quarters {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -120px -90px;
+	}
+}
+.icon-battery-4 {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -150px -90px;
+	}
+}
+.icon-battery-full {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -150px -90px;
+	}
+}
+.icon-bed {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -180px -90px;
+	}
+}
+.icon-beer {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -90px;
+	}
+}
+.icon-behance {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -240px -90px;
+	}
+}
+.icon-behance-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -90px;
+	}
+}
+.icon-bell {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -90px;
+	}
+}
+.icon-bell-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -90px;
+	}
+}
+.icon-bell-slash {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -360px -90px;
+	}
+}
+.icon-bell-slash-o {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -390px -90px;
+	}
+}
+.icon-bicycle {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -420px -90px;
+	}
+}
+.icon-binoculars {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -90px;
+	}
+}
+.icon-birthday-cake {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -120px;
+	}
+}
+.icon-bitbucket {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -30px -120px;
+	}
+}
+.icon-bitbucket-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -120px;
+	}
+}
+.icon-bitcoin {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -90px -120px;
+	}
+}
+.icon-btc {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -90px -120px;
+	}
+}
+.icon-black-tie {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -120px;
+	}
+}
+.icon-bold {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -150px -120px;
+	}
+}
+.icon-bolt {
+	&:after {
+		width: 7px;
+		height: 14px;
+		background-position: -180px -120px;
+	}
+}
+.icon-flash {
+	&:after {
+		width: 7px;
+		height: 14px;
+		background-position: -180px -120px;
+	}
+}
+.icon-bomb {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -120px;
+	}
+}
+.icon-book {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -240px -120px;
+	}
+}
+.icon-bookmark {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -270px -120px;
+	}
+}
+.icon-bookmark-o {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -300px -120px;
+	}
+}
+.icon-briefcase {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -120px;
+	}
+}
+.icon-bug {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -360px -120px;
+	}
+}
+.icon-building {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -390px -120px;
+	}
+}
+.icon-building-o {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -420px -120px;
+	}
+}
+.icon-bullhorn {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -120px;
+	}
+}
+.icon-bullseye {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -150px;
+	}
+}
+.icon-bus {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -150px;
+	}
+}
+.icon-buysellads {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -150px;
+	}
+}
+.icon-cab {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -90px -150px;
+	}
+}
+.icon-taxi {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -90px -150px;
+	}
+}
+.icon-calculator {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -150px;
+	}
+}
+.icon-calendar {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -150px -150px;
+	}
+}
+.icon-calendar-check-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -150px;
+	}
+}
+.icon-calendar-minus-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -150px;
+	}
+}
+.icon-calendar-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -240px -150px;
+	}
+}
+.icon-calendar-plus-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -270px -150px;
+	}
+}
+.icon-calendar-times-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -300px -150px;
+	}
+}
+.icon-camera {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -330px -150px;
+	}
+}
+.icon-camera-retro {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -150px;
+	}
+}
+.icon-caret-down {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px -150px;
+	}
+}
+.icon-caret-left {
+	&:after {
+		width: 5px;
+		height: 14px;
+		background-position: -420px -150px;
+	}
+}
+.icon-caret-right {
+	&:after {
+		width: 5px;
+		height: 14px;
+		background-position: -450px -150px;
+	}
+}
+.icon-caret-square-o-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -180px;
+	}
+}
+.icon-toggle-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -180px;
+	}
+}
+.icon-caret-square-o-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -180px;
+	}
+}
+.icon-toggle-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -180px;
+	}
+}
+.icon-caret-square-o-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -180px;
+	}
+}
+.icon-toggle-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -180px;
+	}
+}
+.icon-caret-square-o-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -180px;
+	}
+}
+.icon-toggle-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -180px;
+	}
+}
+.icon-caret-up {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -120px -180px;
+	}
+}
+.icon-cart-arrow-down {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -150px -180px;
+	}
+}
+.icon-cart-plus {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -180px;
+	}
+}
+.icon-cc {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -210px -180px;
+	}
+}
+.icon-cc-amex {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -240px -180px;
+	}
+}
+.icon-cc-diners-club {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -270px -180px;
+	}
+}
+.icon-cc-discover {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -300px -180px;
+	}
+}
+.icon-cc-jcb {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -330px -180px;
+	}
+}
+.icon-cc-mastercard {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -360px -180px;
+	}
+}
+.icon-cc-paypal {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -390px -180px;
+	}
+}
+.icon-cc-stripe {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -420px -180px;
+	}
+}
+.icon-cc-visa {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -450px -180px;
+	}
+}
+.icon-certificate {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -210px;
+	}
+}
+.icon-chain {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -30px -210px;
+	}
+}
+.icon-link {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -30px -210px;
+	}
+}
+.icon-chain-broken {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -60px -210px;
+	}
+}
+.icon-unlink {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -60px -210px;
+	}
+}
+.icon-check {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -210px;
+	}
+}
+.icon-check-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -210px;
+	}
+}
+.icon-check-circle-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -210px;
+	}
+}
+.icon-check-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -210px;
+	}
+}
+.icon-check-square-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -210px;
+	}
+}
+.icon-chevron-circle-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -210px;
+	}
+}
+.icon-chevron-circle-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -210px;
+	}
+}
+.icon-chevron-circle-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -210px;
+	}
+}
+.icon-chevron-circle-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -210px;
+	}
+}
+.icon-chevron-down {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -210px;
+	}
+}
+.icon-chevron-left {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -390px -210px;
+	}
+}
+.icon-chevron-right {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -420px -210px;
+	}
+}
+.icon-chevron-up {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -210px;
+	}
+}
+.icon-child {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: 0 -240px;
+	}
+}
+.icon-chrome {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -240px;
+	}
+}
+.icon-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -240px;
+	}
+}
+.icon-circle-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -240px;
+	}
+}
+.icon-circle-o-notch {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -120px -240px;
+	}
+}
+.icon-circle-thin {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -240px;
+	}
+}
+.icon-clipboard {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -240px;
+	}
+}
+.icon-paste {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -240px;
+	}
+}
+.icon-clock-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -240px;
+	}
+}
+.icon-clone {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -240px;
+	}
+}
+.icon-close {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -270px -240px;
+	}
+}
+.icon-remove {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -270px -240px;
+	}
+}
+.icon-times {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -270px -240px;
+	}
+}
+.icon-cloud {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -300px -240px;
+	}
+}
+.icon-cloud-download {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -330px -240px;
+	}
+}
+.icon-cloud-upload {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -360px -240px;
+	}
+}
+.icon-cny {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px -240px;
+	}
+}
+.icon-rmb {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px -240px;
+	}
+}
+.icon-yen {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px -240px;
+	}
+}
+.icon-jpy {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px -240px;
+	}
+}
+.icon-code {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -420px -240px;
+	}
+}
+.icon-code-fork {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -450px -240px;
+	}
+}
+.icon-codepen {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -270px;
+	}
+}
+.icon-coffee {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -30px -270px;
+	}
+}
+.icon-cog {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -270px;
+	}
+}
+.icon-gear {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -270px;
+	}
+}
+.icon-cogs {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -90px -270px;
+	}
+}
+.icon-gears {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -90px -270px;
+	}
+}
+.icon-columns {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -270px;
+	}
+}
+.icon-comment {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -270px;
+	}
+}
+.icon-comment-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -270px;
+	}
+}
+.icon-commenting {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -270px;
+	}
+}
+.icon-commenting-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -270px;
+	}
+}
+.icon-comments {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -270px;
+	}
+}
+.icon-comments-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -270px;
+	}
+}
+.icon-compass {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -270px;
+	}
+}
+.icon-compress {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -270px;
+	}
+}
+.icon-connectdevelop {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -390px -270px;
+	}
+}
+.icon-contao {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -420px -270px;
+	}
+}
+.icon-copy {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -270px;
+	}
+}
+.icon-files-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -270px;
+	}
+}
+.icon-copyright {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -300px;
+	}
+}
+.icon-creative-commons {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -300px;
+	}
+}
+.icon-credit-card {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -60px -300px;
+	}
+}
+.icon-crop {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -90px -300px;
+	}
+}
+.icon-crosshairs {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -300px;
+	}
+}
+.icon-css3 {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -300px;
+	}
+}
+.icon-cube {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -300px;
+	}
+}
+.icon-cubes {
+	&:after {
+		width: 17px;
+		height: 14px;
+		background-position: -210px -300px;
+	}
+}
+.icon-cut {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -300px;
+	}
+}
+.icon-scissors {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -300px;
+	}
+}
+.icon-cutlery {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -270px -300px;
+	}
+}
+.icon-dashboard {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -300px;
+	}
+}
+.icon-tachometer {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -300px;
+	}
+}
+.icon-dashcube {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -330px -300px;
+	}
+}
+.icon-database {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -300px;
+	}
+}
+.icon-dedent {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -300px;
+	}
+}
+.icon-outdent {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -300px;
+	}
+}
+.icon-delicious {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -300px;
+	}
+}
+.icon-desktop {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -450px -300px;
+	}
+}
+.icon-deviantart {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: 0 -330px;
+	}
+}
+.icon-diamond {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -30px -330px;
+	}
+}
+.icon-digg {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -60px -330px;
+	}
+}
+.icon-dollar {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -90px -330px;
+	}
+}
+.icon-usd {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -90px -330px;
+	}
+}
+.icon-dot-circle-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -330px;
+	}
+}
+.icon-download {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -150px -330px;
+	}
+}
+.icon-dribbble {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -330px;
+	}
+}
+.icon-dropbox {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -330px;
+	}
+}
+.icon-drupal {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -330px;
+	}
+}
+.icon-edit {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -330px;
+	}
+}
+.icon-pencil-square-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -330px;
+	}
+}
+.icon-eject {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -330px;
+	}
+}
+.icon-ellipsis-h {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -330px -330px;
+	}
+}
+.icon-ellipsis-v {
+	&:after {
+		width: 3px;
+		height: 14px;
+		background-position: -360px -330px;
+	}
+}
+.icon-empire {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -330px;
+	}
+}
+.icon-ge {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -330px;
+	}
+}
+.icon-envelope {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -420px -330px;
+	}
+}
+.icon-envelope-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -330px;
+	}
+}
+.icon-envelope-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -360px;
+	}
+}
+.icon-eraser {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -30px -360px;
+	}
+}
+.icon-eur {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -60px -360px;
+	}
+}
+.icon-euro {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -60px -360px;
+	}
+}
+.icon-exchange {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -360px;
+	}
+}
+.icon-exclamation {
+	&:after {
+		width: 5px;
+		height: 14px;
+		background-position: -120px -360px;
+	}
+}
+.icon-exclamation-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -360px;
+	}
+}
+.icon-exclamation-triangle {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -360px;
+	}
+}
+.icon-warning {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -360px;
+	}
+}
+.icon-expand {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -360px;
+	}
+}
+.icon-expeditedssl {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -360px;
+	}
+}
+.icon-external-link {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -360px;
+	}
+}
+.icon-external-link-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -360px;
+	}
+}
+.icon-eye {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -360px;
+	}
+}
+.icon-eye-slash {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -360px;
+	}
+}
+.icon-eyedropper {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -360px;
+	}
+}
+.icon-facebook {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -420px -360px;
+	}
+}
+.icon-facebook-official {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -360px;
+	}
+}
+.icon-facebook-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -390px;
+	}
+}
+.icon-fast-backward {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -390px;
+	}
+}
+.icon-fast-forward {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -390px;
+	}
+}
+.icon-fax {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -390px;
+	}
+}
+.icon-feed {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -120px -390px;
+	}
+}
+.icon-female {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -150px -390px;
+	}
+}
+.icon-fighter-jet {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -180px -390px;
+	}
+}
+.icon-file {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -390px;
+	}
+}
+.icon-file-archive-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -390px;
+	}
+}
+.icon-file-zip-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -390px;
+	}
+}
+.icon-file-audio-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -390px;
+	}
+}
+.icon-file-sound-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -390px;
+	}
+}
+.icon-file-code-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -390px;
+	}
+}
+.icon-file-excel-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -390px;
+	}
+}
+.icon-file-image-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -390px;
+	}
+}
+.icon-file-photo-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -390px;
+	}
+}
+.icon-file-picture-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -390px;
+	}
+}
+.icon-file-movie-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -390px;
+	}
+}
+.icon-file-video-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -390px;
+	}
+}
+.icon-file-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -390px;
+	}
+}
+.icon-file-pdf-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -390px;
+	}
+}
+.icon-file-powerpoint-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -420px;
+	}
+}
+.icon-file-text {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -420px;
+	}
+}
+.icon-file-text-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -420px;
+	}
+}
+.icon-file-word-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -420px;
+	}
+}
+.icon-film {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -120px -420px;
+	}
+}
+.icon-filter {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -150px -420px;
+	}
+}
+.icon-fire {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -180px -420px;
+	}
+}
+.icon-fire-extinguisher {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -210px -420px;
+	}
+}
+.icon-firefox {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -420px;
+	}
+}
+.icon-flag {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -420px;
+	}
+}
+.icon-flag-checkered {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -420px;
+	}
+}
+.icon-flag-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -420px;
+	}
+}
+.icon-flask {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -360px -420px;
+	}
+}
+.icon-flickr {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -420px;
+	}
+}
+.icon-floppy-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -420px;
+	}
+}
+.icon-save {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -420px;
+	}
+}
+.icon-folder {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -450px -420px;
+	}
+}
+.icon-folder-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: 0 -450px;
+	}
+}
+.icon-folder-open {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -30px -450px;
+	}
+}
+.icon-folder-open-o {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -60px -450px;
+	}
+}
+.icon-font {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -90px -450px;
+	}
+}
+.icon-fonticons {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -450px;
+	}
+}
+.icon-forumbee {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -450px;
+	}
+}
+.icon-forward {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -450px;
+	}
+}
+.icon-foursquare {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -210px -450px;
+	}
+}
+.icon-frown-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -450px;
+	}
+}
+.icon-futbol-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -450px;
+	}
+}
+.icon-soccer-ball-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -450px;
+	}
+}
+.icon-gamepad {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -300px -450px;
+	}
+}
+.icon-gavel {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -450px;
+	}
+}
+.icon-legal {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -450px;
+	}
+}
+.icon-gbp {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -360px -450px;
+	}
+}
+.icon-genderless {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -390px -450px;
+	}
+}
+.icon-get-pocket {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -420px -450px;
+	}
+}
+.icon-gg {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -450px -450px;
+	}
+}
+.icon-gg-circle {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -480px;
+	}
+}
+.icon-gift {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -480px;
+	}
+}
+.icon-git {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -480px;
+	}
+}
+.icon-git-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -480px;
+	}
+}
+.icon-github {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -480px;
+	}
+}
+.icon-github-alt {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -150px -480px;
+	}
+}
+.icon-github-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -480px;
+	}
+}
+.icon-gittip {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -480px;
+	}
+}
+.icon-glass {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -480px;
+	}
+}
+.icon-globe {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -480px;
+	}
+}
+.icon-google {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -300px -480px;
+	}
+}
+.icon-google-plus {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -330px -480px;
+	}
+}
+.icon-google-plus-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -480px;
+	}
+}
+.icon-google-wallet {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -480px;
+	}
+}
+.icon-graduation-cap {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -420px -480px;
+	}
+}
+.icon-mortar-board {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -420px -480px;
+	}
+}
+.icon-group {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -450px -480px;
+	}
+}
+.icon-users {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -450px -480px;
+	}
+}
+.icon-h-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -510px;
+	}
+}
+.icon-hacker-news {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -510px;
+	}
+}
+.icon-hand-grab-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -510px;
+	}
+}
+.icon-hand-lizard-o {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -90px -510px;
+	}
+}
+.icon-hand-o-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -510px;
+	}
+}
+.icon-hand-o-left {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -510px;
+	}
+}
+.icon-hand-o-right {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -510px;
+	}
+}
+.icon-hand-o-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -510px;
+	}
+}
+.icon-hand-paper-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -240px -510px;
+	}
+}
+.icon-hand-peace-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -510px;
+	}
+}
+.icon-hand-pointer-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -300px -510px;
+	}
+}
+.icon-hand-scissors-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -510px;
+	}
+}
+.icon-hand-spock-o {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -360px -510px;
+	}
+}
+.icon-hdd-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -510px;
+	}
+}
+.icon-header {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -420px -510px;
+	}
+}
+.icon-headphones {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -450px -510px;
+	}
+}
+.icon-heart {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -540px;
+	}
+}
+.icon-heart-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -540px;
+	}
+}
+.icon-heartbeat {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -540px;
+	}
+}
+.icon-history {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -540px;
+	}
+}
+.icon-home {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -540px;
+	}
+}
+.icon-hospital-o {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -150px -540px;
+	}
+}
+.icon-hourglass {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -540px;
+	}
+}
+.icon-hourglass-1 {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -540px;
+	}
+}
+.icon-hourglass-2 {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -540px;
+	}
+}
+.icon-hourglass-3 {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -540px;
+	}
+}
+.icon-hourglass-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -540px;
+	}
+}
+.icon-houzz {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -330px -540px;
+	}
+}
+.icon-html5 {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -360px -540px;
+	}
+}
+.icon-i-cursor {
+	&:after {
+		width: 7px;
+		height: 14px;
+		background-position: -390px -540px;
+	}
+}
+.icon-ils {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -420px -540px;
+	}
+}
+.icon-shekel {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -420px -540px;
+	}
+}
+.icon-sheqel {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -420px -540px;
+	}
+}
+.icon-image {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -450px -540px;
+	}
+}
+.icon-photo {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -450px -540px;
+	}
+}
+.icon-picture-o {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -450px -540px;
+	}
+}
+.icon-inbox {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -570px;
+	}
+}
+.icon-indent {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -570px;
+	}
+}
+.icon-industry {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -570px;
+	}
+}
+.icon-info {
+	&:after {
+		width: 5px;
+		height: 14px;
+		background-position: -90px -570px;
+	}
+}
+.icon-info-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -570px;
+	}
+}
+.icon-inr {
+	&:after {
+		width: 7px;
+		height: 14px;
+		background-position: -150px -570px;
+	}
+}
+.icon-rupee {
+	&:after {
+		width: 7px;
+		height: 14px;
+		background-position: -150px -570px;
+	}
+}
+.icon-instagram {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -570px;
+	}
+}
+.icon-internet-explorer {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -570px;
+	}
+}
+.icon-intersex {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -240px -570px;
+	}
+}
+.icon-ioxhost {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -270px -570px;
+	}
+}
+.icon-italic {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -300px -570px;
+	}
+}
+.icon-joomla {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -570px;
+	}
+}
+.icon-jsfiddle {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -360px -570px;
+	}
+}
+.icon-key {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -570px;
+	}
+}
+.icon-keyboard-o {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -420px -570px;
+	}
+}
+.icon-krw {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -570px;
+	}
+}
+.icon-won {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -570px;
+	}
+}
+.icon-language {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -600px;
+	}
+}
+.icon-laptop {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -30px -600px;
+	}
+}
+.icon-lastfm {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -600px;
+	}
+}
+.icon-lastfm-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -600px;
+	}
+}
+.icon-leaf {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -120px -600px;
+	}
+}
+.icon-leanpub {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -150px -600px;
+	}
+}
+.icon-lemon-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -600px;
+	}
+}
+.icon-level-down {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -210px -600px;
+	}
+}
+.icon-level-up {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -240px -600px;
+	}
+}
+.icon-life-bouy {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -600px;
+	}
+}
+.icon-life-buoy {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -600px;
+	}
+}
+.icon-life-ring {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -600px;
+	}
+}
+.icon-life-saver {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -600px;
+	}
+}
+.icon-support {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -600px;
+	}
+}
+.icon-lightbulb-o {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -300px -600px;
+	}
+}
+.icon-line-chart {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -330px -600px;
+	}
+}
+.icon-linkedin {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -600px;
+	}
+}
+.icon-linkedin-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -600px;
+	}
+}
+.icon-linux {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -600px;
+	}
+}
+.icon-list {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -600px;
+	}
+}
+.icon-list-alt {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -630px;
+	}
+}
+.icon-list-ol {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -630px;
+	}
+}
+.icon-list-ul {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -630px;
+	}
+}
+.icon-location-arrow {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -90px -630px;
+	}
+}
+.icon-lock {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -120px -630px;
+	}
+}
+.icon-long-arrow-down {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -150px -630px;
+	}
+}
+.icon-long-arrow-left {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -630px;
+	}
+}
+.icon-long-arrow-right {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -630px;
+	}
+}
+.icon-long-arrow-up {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -240px -630px;
+	}
+}
+.icon-magic {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -270px -630px;
+	}
+}
+.icon-magnet {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -630px;
+	}
+}
+.icon-mail-forward {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -630px;
+	}
+}
+.icon-share {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -630px;
+	}
+}
+.icon-mail-reply {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -630px;
+	}
+}
+.icon-reply {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -630px;
+	}
+}
+.icon-mail-reply-all {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -630px;
+	}
+}
+.icon-reply-all {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -630px;
+	}
+}
+.icon-male {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -420px -630px;
+	}
+}
+.icon-map {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -630px;
+	}
+}
+.icon-map-marker {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: 0 -660px;
+	}
+}
+.icon-map-o {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -30px -660px;
+	}
+}
+.icon-map-pin {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -60px -660px;
+	}
+}
+.icon-map-signs {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -660px;
+	}
+}
+.icon-mars {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -660px;
+	}
+}
+.icon-mars-double {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -150px -660px;
+	}
+}
+.icon-mars-stroke {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -660px;
+	}
+}
+.icon-mars-stroke-h {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -210px -660px;
+	}
+}
+.icon-mars-stroke-v {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -240px -660px;
+	}
+}
+.icon-maxcdn {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -660px;
+	}
+}
+.icon-meanpath {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -660px;
+	}
+}
+.icon-medium {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -660px;
+	}
+}
+.icon-medkit {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -660px;
+	}
+}
+.icon-meh-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -660px;
+	}
+}
+.icon-mercury {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -420px -660px;
+	}
+}
+.icon-microphone {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -450px -660px;
+	}
+}
+.icon-microphone-slash {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: 0 -690px;
+	}
+}
+.icon-minus {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -30px -690px;
+	}
+}
+.icon-minus-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -690px;
+	}
+}
+.icon-minus-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -690px;
+	}
+}
+.icon-minus-square-o {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -120px -690px;
+	}
+}
+.icon-mobile {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -150px -690px;
+	}
+}
+.icon-mobile-phone {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -150px -690px;
+	}
+}
+.icon-money {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -180px -690px;
+	}
+}
+.icon-moon-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -690px;
+	}
+}
+.icon-motorcycle {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -240px -690px;
+	}
+}
+.icon-mouse-pointer {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -270px -690px;
+	}
+}
+.icon-music {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -690px;
+	}
+}
+.icon-neuter {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -330px -690px;
+	}
+}
+.icon-newspaper-o {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -360px -690px;
+	}
+}
+.icon-object-group {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -390px -690px;
+	}
+}
+.icon-object-ungroup {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -420px -690px;
+	}
+}
+.icon-odnoklassniki {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -450px -690px;
+	}
+}
+.icon-odnoklassniki-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -720px;
+	}
+}
+.icon-opencart {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -30px -720px;
+	}
+}
+.icon-openid {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -720px;
+	}
+}
+.icon-opera {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -720px;
+	}
+}
+.icon-optin-monster {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -120px -720px;
+	}
+}
+.icon-pagelines {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -150px -720px;
+	}
+}
+.icon-paint-brush {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -720px;
+	}
+}
+.icon-paper-plane {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -720px;
+	}
+}
+.icon-send {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -720px;
+	}
+}
+.icon-paper-plane-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -720px;
+	}
+}
+.icon-send-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -720px;
+	}
+}
+.icon-paperclip {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -270px -720px;
+	}
+}
+.icon-paragraph {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -300px -720px;
+	}
+}
+.icon-pause {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -720px;
+	}
+}
+.icon-paw {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -360px -720px;
+	}
+}
+.icon-paypal {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -720px;
+	}
+}
+.icon-pencil {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -720px;
+	}
+}
+.icon-pencil-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -720px;
+	}
+}
+.icon-phone {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: 0 -750px;
+	}
+}
+.icon-phone-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -750px;
+	}
+}
+.icon-pie-chart {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -750px;
+	}
+}
+.icon-pied-piper {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -750px;
+	}
+}
+.icon-pied-piper-alt {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -120px -750px;
+	}
+}
+.icon-pinterest {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -750px;
+	}
+}
+.icon-pinterest-p {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -180px -750px;
+	}
+}
+.icon-pinterest-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -750px;
+	}
+}
+.icon-plane {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -240px -750px;
+	}
+}
+.icon-play {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -270px -750px;
+	}
+}
+.icon-play-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -750px;
+	}
+}
+.icon-play-circle-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -750px;
+	}
+}
+.icon-plug {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -750px;
+	}
+}
+.icon-plus {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -390px -750px;
+	}
+}
+.icon-plus-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -750px;
+	}
+}
+.icon-plus-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -750px;
+	}
+}
+.icon-plus-square-o {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: 0 -780px;
+	}
+}
+.icon-power-off {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -780px;
+	}
+}
+.icon-print {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -60px -780px;
+	}
+}
+.icon-puzzle-piece {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -90px -780px;
+	}
+}
+.icon-qq {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -120px -780px;
+	}
+}
+.icon-qrcode {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -150px -780px;
+	}
+}
+.icon-question {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -180px -780px;
+	}
+}
+.icon-question-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -780px;
+	}
+}
+.icon-quote-left {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -240px -780px;
+	}
+}
+.icon-quote-right {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -270px -780px;
+	}
+}
+.icon-ra {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -780px;
+	}
+}
+.icon-rebel {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -780px;
+	}
+}
+.icon-random {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -780px;
+	}
+}
+.icon-recycle {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -780px;
+	}
+}
+.icon-reddit {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -780px;
+	}
+}
+.icon-reddit-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -780px;
+	}
+}
+.icon-refresh {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -780px;
+	}
+}
+.icon-registered {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -810px;
+	}
+}
+.icon-renren {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -810px;
+	}
+}
+.icon-repeat {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -810px;
+	}
+}
+.icon-rotate-right {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -810px;
+	}
+}
+.icon-retweet {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -90px -810px;
+	}
+}
+.icon-road {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -120px -810px;
+	}
+}
+.icon-rocket {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -150px -810px;
+	}
+}
+.icon-rotate-left {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -810px;
+	}
+}
+.icon-undo {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -810px;
+	}
+}
+.icon-rouble {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -210px -810px;
+	}
+}
+.icon-rub {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -210px -810px;
+	}
+}
+.icon-ruble {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -210px -810px;
+	}
+}
+.icon-rss {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -1080px;
+	}
+}
+.icon-rss-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -810px;
+	}
+}
+.icon-safari {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -810px;
+	}
+}
+.icon-search {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -300px -810px;
+	}
+}
+.icon-search-minus {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -330px -810px;
+	}
+}
+.icon-search-plus {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -360px -810px;
+	}
+}
+.icon-sellsy {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -390px -810px;
+	}
+}
+.icon-server {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -420px -810px;
+	}
+}
+.icon-share-alt {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -810px;
+	}
+}
+.icon-share-alt-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -840px;
+	}
+}
+.icon-share-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -840px;
+	}
+}
+.icon-share-square-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -60px -840px;
+	}
+}
+.icon-shield {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -90px -840px;
+	}
+}
+.icon-ship {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -120px -840px;
+	}
+}
+.icon-shirtsinbulk {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -840px;
+	}
+}
+.icon-shopping-cart {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -840px;
+	}
+}
+.icon-sign-in {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -840px;
+	}
+}
+.icon-sign-out {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -240px -840px;
+	}
+}
+.icon-signal {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -840px;
+	}
+}
+.icon-simplybuilt {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -300px -840px;
+	}
+}
+.icon-sitemap {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -840px;
+	}
+}
+.icon-skyatlas {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -360px -840px;
+	}
+}
+.icon-skype {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -840px;
+	}
+}
+.icon-slack {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -420px -840px;
+	}
+}
+.icon-sliders {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -840px;
+	}
+}
+.icon-slideshare {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -870px;
+	}
+}
+.icon-smile-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -870px;
+	}
+}
+.icon-sort {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -60px -870px;
+	}
+}
+.icon-unsorted {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -60px -870px;
+	}
+}
+.icon-sort-alpha-asc {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -90px -870px;
+	}
+}
+.icon-sort-alpha-desc {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -870px;
+	}
+}
+.icon-sort-amount-asc {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -870px;
+	}
+}
+.icon-sort-amount-desc {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -870px;
+	}
+}
+.icon-sort-asc {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -210px -870px;
+	}
+}
+.icon-sort-up {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -210px -870px;
+	}
+}
+.icon-sort-desc {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -240px -870px;
+	}
+}
+.icon-sort-down {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -240px -870px;
+	}
+}
+.icon-sort-numeric-asc {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -870px;
+	}
+}
+.icon-sort-numeric-desc {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -870px;
+	}
+}
+.icon-soundcloud {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -330px -870px;
+	}
+}
+.icon-space-shuttle {
+	&:after {
+		width: 17px;
+		height: 14px;
+		background-position: -360px -870px;
+	}
+}
+.icon-spinner {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -870px;
+	}
+}
+.icon-spoon {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -420px -870px;
+	}
+}
+.icon-spotify {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -870px;
+	}
+}
+.icon-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: 0 -900px;
+	}
+}
+.icon-square-o {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -30px -900px;
+	}
+}
+.icon-stack-exchange {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -60px -900px;
+	}
+}
+.icon-stack-overflow {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -90px -900px;
+	}
+}
+.icon-star {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -900px;
+	}
+}
+.icon-star-half {
+	&:after {
+		width: 7px;
+		height: 14px;
+		background-position: -150px -900px;
+	}
+}
+.icon-star-half-empty {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -900px;
+	}
+}
+.icon-star-half-full {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -900px;
+	}
+}
+.icon-star-half-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -900px;
+	}
+}
+.icon-star-o {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -900px;
+	}
+}
+.icon-steam {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -900px;
+	}
+}
+.icon-steam-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -900px;
+	}
+}
+.icon-step-backward {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -300px -900px;
+	}
+}
+.icon-step-forward {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -330px -900px;
+	}
+}
+.icon-stethoscope {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -360px -900px;
+	}
+}
+.icon-sticky-note {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -900px;
+	}
+}
+.icon-sticky-note-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -900px;
+	}
+}
+.icon-stop {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -900px;
+	}
+}
+.icon-street-view {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: 0 -930px;
+	}
+}
+.icon-strikethrough {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -930px;
+	}
+}
+.icon-stumbleupon {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -60px -930px;
+	}
+}
+.icon-stumbleupon-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -930px;
+	}
+}
+.icon-subscript {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -930px;
+	}
+}
+.icon-subway {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -150px -930px;
+	}
+}
+.icon-suitcase {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -930px;
+	}
+}
+.icon-sun-o {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -930px;
+	}
+}
+.icon-superscript {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -930px;
+	}
+}
+.icon-table {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -270px -930px;
+	}
+}
+.icon-tablet {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -300px -930px;
+	}
+}
+.icon-tag {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -330px -930px;
+	}
+}
+.icon-tags {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -360px -930px;
+	}
+}
+.icon-tasks {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -930px;
+	}
+}
+.icon-television {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -420px -930px;
+	}
+}
+.icon-tencent-weibo {
+	&:after {
+		width: 10px;
+		height: 14px;
+		background-position: -450px -930px;
+	}
+}
+.icon-terminal {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: 0 -960px;
+	}
+}
+.icon-text-height {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -960px;
+	}
+}
+.icon-text-width {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -960px;
+	}
+}
+.icon-th {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -960px;
+	}
+}
+.icon-th-large {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -960px;
+	}
+}
+.icon-th-list {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -960px;
+	}
+}
+.icon-thumb-tack {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -180px -960px;
+	}
+}
+.icon-thumbs-down {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -960px;
+	}
+}
+.icon-thumbs-o-down {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -960px;
+	}
+}
+.icon-thumbs-o-up {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -270px -960px;
+	}
+}
+.icon-thumbs-up {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -300px -960px;
+	}
+}
+.icon-ticket {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -960px;
+	}
+}
+.icon-times-circle {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -360px -960px;
+	}
+}
+.icon-times-circle-o {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -390px -960px;
+	}
+}
+.icon-tint {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -420px -960px;
+	}
+}
+.icon-toggle-off {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -450px -960px;
+	}
+}
+.icon-toggle-on {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: 0 -990px;
+	}
+}
+.icon-trademark {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -30px -990px;
+	}
+}
+.icon-train {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -990px;
+	}
+}
+.icon-transgender-alt {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -90px -990px;
+	}
+}
+.icon-trash {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -120px -990px;
+	}
+}
+.icon-trash-o {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -150px -990px;
+	}
+}
+.icon-tree {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -990px;
+	}
+}
+.icon-trello {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -210px -990px;
+	}
+}
+.icon-tripadvisor {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -240px -990px;
+	}
+}
+.icon-trophy {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -270px -990px;
+	}
+}
+.icon-truck {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -990px;
+	}
+}
+.icon-try {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -330px -990px;
+	}
+}
+.icon-turkish-lira {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -330px -990px;
+	}
+}
+.icon-tty {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -990px;
+	}
+}
+.icon-tumblr {
+	&:after {
+		width: 8px;
+		height: 14px;
+		background-position: -390px -990px;
+	}
+}
+.icon-tumblr-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -420px -990px;
+	}
+}
+.icon-twitch {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -990px;
+	}
+}
+.icon-twitter {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: 0 -1020px;
+	}
+}
+.icon-twitter-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -30px -1020px;
+	}
+}
+.icon-umbrella {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -60px -1020px;
+	}
+}
+.icon-underline {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -1020px;
+	}
+}
+.icon-unlock {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -120px -1020px;
+	}
+}
+.icon-unlock-alt {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -150px -1020px;
+	}
+}
+.icon-upload {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -180px -1020px;
+	}
+}
+.icon-user {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -210px -1020px;
+	}
+}
+.icon-user-md {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -240px -1020px;
+	}
+}
+.icon-user-plus {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -270px -1020px;
+	}
+}
+.icon-user-secret {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -300px -1020px;
+	}
+}
+.icon-user-times {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -330px -1020px;
+	}
+}
+.icon-venus {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -360px -1020px;
+	}
+}
+.icon-venus-double {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -1020px;
+	}
+}
+.icon-venus-mars {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -420px -1020px;
+	}
+}
+.icon-viacoin {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -450px -1020px;
+	}
+}
+.icon-video-camera {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -1050px;
+	}
+}
+.icon-vimeo {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -1050px;
+	}
+}
+.icon-vimeo-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -1050px;
+	}
+}
+.icon-vine {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -1050px;
+	}
+}
+.icon-vk {
+	&:after {
+		width: 15px;
+		height: 14px;
+		background-position: -120px -1050px;
+	}
+}
+.icon-volume-down {
+	&:after {
+		width: 9px;
+		height: 14px;
+		background-position: -150px -1050px;
+	}
+}
+.icon-volume-off {
+	&:after {
+		width: 6px;
+		height: 14px;
+		background-position: -180px -1050px;
+	}
+}
+.icon-volume-up {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -210px -1050px;
+	}
+}
+.icon-wechat {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -240px -1050px;
+	}
+}
+.icon-weixin {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -240px -1050px;
+	}
+}
+.icon-weibo {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -1050px;
+	}
+}
+.icon-whatsapp {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -300px -1050px;
+	}
+}
+.icon-wheelchair {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -330px -1050px;
+	}
+}
+.icon-wifi {
+	&:after {
+		width: 16px;
+		height: 14px;
+		background-position: -360px -1050px;
+	}
+}
+.icon-wikipedia-w {
+	&:after {
+		width: 18px;
+		height: 14px;
+		background-position: -390px -1050px;
+	}
+}
+.icon-windows {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: -420px -1050px;
+	}
+}
+.icon-wordpress {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -1050px;
+	}
+}
+.icon-wrench {
+	&:after {
+		width: 13px;
+		height: 14px;
+		background-position: 0 -1080px;
+	}
+}
+.icon-xing {
+	&:after {
+		width: 11px;
+		height: 14px;
+		background-position: -30px -1080px;
+	}
+}
+.icon-xing-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -60px -1080px;
+	}
+}
+.icon-y-combinator {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -90px -1080px;
+	}
+}
+.icon-yahoo {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -120px -1080px;
+	}
+}
+.icon-yelp {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -1080px;
+	}
+}
+.icon-youtube {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -180px -1080px;
+	}
+}
+.icon-youtube-play {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -1080px;
+	}
+}
+.icon-youtube-square {
+	&:after {
+		width: 12px;
+		height: 14px;
+		background-position: -240px -1080px;
+	}
+}
+.icon-utility-patent-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -1110px;
+	}
+}
+.icon-patent-pending-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -1110px;
+	}
+}
+.icon-plant-patent-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -1110px;
+	}
+}
+.icon-pro-se-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -90px -1110px;
+	}
+}
+.icon-invention-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -120px -1110px;
+	}
+}
+.icon-maker-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -150px -1110px;
+	}
+}
+.icon-intellectual-property-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -180px -1110px;
+	}
+}
+.icon-design-patent-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -210px -1110px;
+	}
+}
+.icon-prior-art-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -240px -1110px;
+	}
+}
+.icon-small-inventor-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -270px -1110px;
+	}
+}
+.icon-large-inventor-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -300px -1110px;
+	}
+}
+.icon-infringement-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -330px -1110px;
+	}
+}
+.icon-trade-secret-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -360px -1110px;
+	}
+}
+.icon-micro-entity-inventor-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -390px -1110px;
+	}
+}
+.icon-service-mark-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -420px -1110px;
+	}
+}
+.icon-counterfeit-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -450px -1110px;
+	}
+}
+.icon-ptotrademark-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: 0 -1140px;
+	}
+}
+.icon-stem-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -30px -1140px;
+	}
+}
+.icon-pro-bono-small {
+	&:after {
+		width: 14px;
+		height: 14px;
+		background-position: -60px -1140px;
+	}
+}
+.icon-utility-patent {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: 0 0;
+	}
+}
+.icon-patent-pending {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -64px 0;
+	}
+}
+.icon-plant-patent {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -128px 0;
+	}
+}
+.icon-pro-se {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -192px 0;
+	}
+}
+.icon-invention {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -256px 0;
+	}
+}
+.icon-maker {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -320px 0;
+	}
+}
+.icon-intellectual-property {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -384px 0;
+	}
+}
+.icon-design-patent {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -448px 0;
+	}
+}
+.icon-prior-art {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -512px 0;
+	}
+}
+.icon-small-inventor {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -576px 0;
+	}
+}
+.icon-large-inventor {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -640px 0;
+	}
+}
+.icon-infringement {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -704px 0;
+	}
+}
+.icon-trade-secret {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -768px 0;
+	}
+}
+.icon-micro-entity-inventor {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -832px 0;
+	}
+}
+.icon-service-mark {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -896px 0;
+	}
+}
+.icon-counterfeit {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -960px 0;
+	}
+}
+.icon-ptotrademark {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: 0px -64px;
+	}
+}
+.icon-stem {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -64px -64px;
+	}
+}
+.icon-pro-bono {
+	&:after {
+		width: 48px;
+		height: 48px;
+		background-position: -128px -64px;
+	}
+}

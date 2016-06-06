@@ -13,6 +13,8 @@ exclude:
   - LICENSE
   - salt
   - Vagrantfile
+  - .sass-cache
+  - report.xml
 
 # Whether or not to include docs that are marked as preview
 includePreviews: true

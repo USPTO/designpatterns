@@ -1,0 +1,220 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+
+// Sortable table
+//
+// Adds styling for sortable/disabled/active sort cells.
+
+.table-sortable {
+    > thead > tr > th,
+    > tbody > tr > th {
+        // font-weight: 400;
+    }
+    > thead > tr > .sortable {
+        &.active {
+            background: $table-header-sortable-active-bg; //overrides bootstrap's active color
+            border-color: darken($table-header-sortable-active-bg, 4%);
+            color: #222;
+            // border-bottom-color: #bbb;
+            font-weight: 700;
+        }
+
+        &:hover {
+            background: $table-header-sortable-hover-bg;
+            border-color: darken($table-header-sortable-active-bg, 4%);
+            cursor: pointer;
+        }
+    }
+}
+
+// Borderless version
+//
+// gets rid of all cell borders
+
+.table-borderless {
+    > tbody > tr > td, > thead > tr > th {
+        border: none;
+    }
+}
+
+// Zebra-striping
+//
+// Odd rows have accent color
+
+.table-striped {
+  > tbody > tr:nth-child(odd) {
+    background-color: transparent;
+  }
+  > tbody > tr:nth-child(even) {
+    background-color: $table-bg-accent;
+  }
+}
+
+.panel > .panel-collapse > .table {
+    border-top: 1px solid $panel-default-border;
+}
+
+// Row hover effect
+//
+// Duplicated from Bootstrap for precedence over striping
+
+.table-hover {
+  > tbody > tr:hover {
+    background-color: $table-bg-hover;
+  }
+}
+
+
+// Outlined version
+//
+// Adds a border to the outside of the table, but not the cells.
+
+.table-outline {
+    border: 1px solid #eee;
+}
+
+// Vertical align middle all cells
+.table-valign {
+    > tbody > tr > td {
+        vertical-align: middle;
+    }
+}
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding $table-cell-padding*1.4;
+      }
+    }
+  }
+}
+
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-condensed-cell-padding $table-condensed-cell-padding*2;
+      }
+    }
+  }
+}
+
+.table-comfortable {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding*1.6 $table-cell-padding*2;
+      }
+    }
+  }
+}
+
+// Adds a background color to the table header
+.table > thead > tr {
+    background: $table-bg-header;
+}
+.table > thead > tr > th {
+    border-bottom-color: $table-border-color;
+    border-bottom-width: 2px;
+    font-weight: 600;
+}
+
+.table-group {
+    background-color: $table-bg-header;
+}
+
+// Styles the .table-config-column
+.table > thead > tr > .table-config-column {
+    width: 28px;
+    text-align: center;
+    padding: 0;
+    vertical-align: middle;
+
+    > button {
+      background: none;
+      padding: 0;
+      margin: 0;
+      border: none;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+          background-color: $table-header-sortable-hover-bg;
+      }
+    }
+}
+
+
+// Expandable tables
+
+.table[data-pl-expandable-rows] {
+    > tbody > tr:not([data-pl-detail-row]) {
+        cursor: pointer;
+    }
+    > tbody > tr[data-pl-detail-row] > td:first-child {
+        box-shadow: inset 3px 0 0 #eee;
+        background: #f6f6f6;
+    }
+    > tbody > tr[aria-expanded="false"] > td > .icon-angle-right::after {
+        transition: transform .05s;
+        transform: rotate(0deg);
+    }
+    > tbody > tr[aria-expanded="true"] > td > .icon-angle-right::after {
+        transition: transform .05s;
+        transform: rotate(90deg);
+    }
+}
+
+
+// Contextual backgrounds
+
+@mixin table-variant($color) {
+    > thead > tr {
+        background: $color;
+        > th {
+          color: #fff;
+          border-bottom: none;
+        }
+    }
+
+    &.table-bordered {
+        border-top-color: darken($color, 5%);
+        > thead > tr > th {
+            border-color: darken($color, 5%);
+            border-bottom: 1px solid darken($color, 5%);
+        }
+    }
+}
+
+.table-primary {
+    @include table-variant($brand-primary);
+}
+.table-success {
+    @include table-variant($brand-success);
+}
+.table-warning {
+    @include table-variant($brand-warning);
+}
+.table-danger {
+    @include table-variant($brand-danger);
+}
+.table-info {
+    @include table-variant($brand-info);
+}
+.table-inverse {
+    @include table-variant(#282930);
+}
+.table-clear {
+  > thead > tr {
+    background: transparent;
+  }
+}

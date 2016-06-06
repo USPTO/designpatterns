@@ -1,0 +1,191 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
+
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 300;
+    src: local("Segoe UI Semilight");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    src: local("Segoe UI");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: local("Segoe UI Semibold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Segoe UI Italic");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Segoe UI Bold Italic");
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+.black {
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.toolbar-text {
+    padding: 8px 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+dt {
+    font-weight: 600;
+    // color: $gray-light;
+}
+
+dd {
+    margin-bottom: 6px;
+}
+
+@media (min-width: $screen-sm) {
+    .dl-horizontal dd {
+        margin-bottom: 0px;
+    }
+}
+
+.dl-inverse {
+    dt {
+        font-weight:normal;
+    }
+    dd {
+        font-weight: 600;
+    }
+}
+
+.dl-inline {
+    @include clearfix();
+    dd, dt {
+        font-weight: 400;
+        float: left;
+        display: inline-block;
+        color: $gray-light;
+    }
+    dd, dt {
+        margin-right: 4px;
+        margin-bottom: 0;
+    }
+    dt:after {
+        content: ":";
+        display: inline-block;
+    }
+    dd:after {
+        margin-left: 8px;
+        margin-right: 4px;
+        display: inline-block;
+        content: "•";
+    }
+    dd:last-child:after {
+        display: none;
+    }
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6,
+.subhead, .title, .headline, .display1, .display2, .display3 {
+    color: $headings-color;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3,
+.display2, .display1, .headline {
+    margin-top: 32px;
+    margin-bottom: 9px;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6,
+.title, .subhead {
+    margin-top: 18px;
+    margin-bottom: 9px;
+}
+
+
+.caption {
+    font-size: $font-size-base - 1;
+    color: $gray-light;
+}
+h6, .h6 {
+    font-weight: 600;
+    font-size: $font-size-base;
+}
+.subhead, h5, .h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.title, h4, .h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.headline, h3, .h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.display1, h2, .h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+.display2, h1, .h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+.display3 {
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.prose {
+    font-size: $font-size-base + 1;
+    line-height: 1.8;
+}
+
+
+// Paragraph Links
+p {
+     a {
+         text-decoration: $paragraph-link;
+        }
+        a:visited {
+            color: $visited-color;
+        }
+        a.link-top {
+            text-decoration: none;
+        }
+}

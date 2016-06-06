@@ -1,0 +1,83 @@
+// style overrides for https://github.com/leongersen/noUiSlider v7.0.10
+
+.noUi-target[data-pips] {
+    margin-bottom: 48px; // space for pips
+}
+
+.noUi-target {
+    margin-top: 13px; // align in form group
+    margin-bottom: 13px; // align in form group
+    box-shadow: inset 0 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    border: none;
+}
+
+.noUi-target.noUi-connect, .noUi-connect {
+    box-shadow: none;
+    background: $brand-primary;
+}
+
+.noUi-target[disabled].noUi-connect,
+.noUi-target[disabled] .noUi-connect {
+    background: #ccc;
+}
+.noUi-horizontal[disabled] .noUi-handle,
+.noUi-vertical[disabled] .noUi-handle {
+    border-color: #ccc;
+
+    &:hover, &.noUi-active {
+        box-shadow: none;
+    }
+}
+
+.noUi-background {
+    background: #f5f5f5;
+    box-shadow: inset 0 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+.noUi-horizontal .noUi-handle,
+.noUi-vertical .noUi-handle {
+    border: 2px solid $brand-primary;
+    background: #f5f5f5;
+    box-shadow: none;
+    border-radius: 100px;
+    height: 18px;
+    width: 18px;
+    left: -9px;
+    top: -6px;
+
+    &:hover, &.noUi-active {
+        box-shadow: 0 0 0 4px rgba(0,0,0,.1);
+    }
+}
+
+.noUi-horizontal {
+    height: 6px;
+
+}
+
+.noUi-pips-horizontal {
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+.noUi-value-horizontal.noUi-value-sub {
+    color: $text-muted;
+}
+.noUi-pips {
+    color: $gray;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none;
+    content: none;
+}
+
+.noUi-value-horizontal {
+    padding-top: 14px;
+}
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 10px;
+}

@@ -1,0 +1,100 @@
+.panel-group[role="tablist"] > .panel > .panel-heading {
+    cursor: pointer;
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    &[aria-expanded="false"] .icon::after {
+        transition: transform .2s;
+        transform: rotate(0deg);
+    }
+    &[aria-expanded="true"] .icon::after {
+        transition: transform .2s;
+        transform: rotate(90deg);
+    }
+}
+
+.panel-group > .panel + .panel {
+    margin-top: -1px;
+}
+
+.panel-group .panel:not(.panel-default) > .panel-heading + .panel-collapse > .panel-body {
+    border-top: none;
+}
+
+.panel-group .panel:not(.panel-default) {
+    box-shadow: none;
+}
+
+.panel-group .panel:not(.panel-default) + .panel{
+    border-top: 1px solid #eee;
+}
+
+
+// .accordion-group {
+//     > .accordion-panel {
+//         > .accordion-header {
+//             > a {
+//                 padding: 5px 10px;
+//                 color: $text-color;
+//                 text-decoration: none;
+//                 font-weight: 600;
+//                 display: block;
+
+//                 > .icon {
+//                     margin-right: 5px;
+//                 }
+//             }
+//         }
+
+//         .accordion-collapse > .accordion-body {
+//             padding: 5px 23px;
+//         }
+
+//         .accordion-panel {
+//             > .accordion-header > a {
+//                 background: #f4f4f4;
+//             }
+//             .accordion-panel {
+//                 > .accordion-header > a {
+//                     background: #efefef;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// // variant with icon on the right instead of left
+// .accordion-group.accordion-group-icon-right {
+//     > .accordion-panel > .accordion-header > a > .icon {
+//         float: right;
+//         margin-left: 5px;
+//         margin-right: 0;
+//     }
+// }
+
+// // Bordered variant of accordion group
+// .accordion-group.accordion-group-bordered {
+//     > .accordion-panel {
+//         border: 1px solid #ddd;
+//         margin-top: -1px;
+
+//         &:first-child {
+//             margin-top: 0;
+//         }
+
+//         > .accordion-collapse {
+//             border-top: 1px solid #ddd;
+//         }
+//     }
+// }
+
+// Expand & Collapse All Toggle Construct
+.panel-toggler {
+    margin-bottom: 12px;
+
+    a {
+        cursor: pointer;
+    }
+}

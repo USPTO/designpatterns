@@ -1,0 +1,45 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+
+.label {
+    display: inline-block;
+}
+
+.label-warning {
+    color: $text-color;
+}
+
+.label-default.subtle {
+    color: $text-color;
+    background-color: mix($text-color, #fff, 7.5%);
+    border: 1px solid mix($text-color, #fff, 35%);
+}
+
+.label-success.subtle {
+    color: $state-success-text;
+    background-color: $state-success-bg;
+    border: 1px solid $state-success-border;
+}
+
+.label-info.subtle {
+    color: $state-info-text;
+    background-color: $state-info-bg;
+    border: 1px solid $state-info-border;
+}
+
+.label-warning.subtle {
+    color: $text-color;
+    background-color: $state-warning-bg;
+    border: 1px solid $state-warning-border;
+}
+
+.label-danger.subtle {
+    color: $state-danger-text;
+    background-color: $state-danger-bg;
+    border: 1px solid $state-danger-border;
+}
+
+.label-primary.subtle {
+    color: $brand-primary;
+    background-color: mix($brand-primary, #fff, 7.5%);
+    border: 1px solid mix($brand-primary, #fff, 35%);
+}

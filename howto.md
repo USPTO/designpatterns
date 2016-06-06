@@ -13,7 +13,7 @@ Download the latest version of UI Design Library [here](http://uspto.github.io/d
 
 
 ##### Resources:
-- Download CSS/LESS: Download the precompiled and minified versions of UI Design Library CSS, SVG image, and less. No documentation or original source code files are included. 
+- Download CSS/SASS: Download the precompiled and minified versions of UI Design Library CSS, SVG image, and sass. No documentation or original source code files are included. 
 - View on Github: Get the latest UI Design Library and JavaScript source code directly from GitHub. 
 
 ---
@@ -31,7 +31,7 @@ If you have downloaded the UI Design Library source code then the file structure
 
 **Images:** Fundamental SVG images for icons. 
 
-**Less:** The usptostrap.less file uses @import to merge all the LESS files at compilation time.
+**SASS:** The usptostrap.scss file uses @import to merge all the SCSS files at compilation time.
 
 ---
 

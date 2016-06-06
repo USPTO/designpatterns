@@ -1,0 +1,16 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+
+.dropdown-menu {
+    &.has-icon > li > a,
+    &.has-icon > .dropdown-header {
+        padding-left: 28px;
+
+        .dropdown-menu-icon {
+            position: absolute;
+            line-height: 18px;
+            margin-left: -20px;
+        }
+    }
+
+    li > a {white-space: normal;}
+}

@@ -15,12 +15,12 @@ There are two primary ways to help:
     - [Releasing](#releasing)
 - [Code architecture OVERVIEW](#code-architecture-overview)
     - [Guides](#guide-architecture)
-    - [LESS/CSS/JS/Images](#lesscssjsimage-architecture)
+    - [SASS/CSS/JS/Images](#sasscssjsimage-architecture)
     - [Versioning](#versioning-overview)
 - [Adding and modifying patterns and guides](#adding-and-modifying-patterns-and-guides)
     - [Modifying a guide](#modifying-a-guide)
     - [Adding a new guide](#adding-a-new-guide)
-- [Adding and modifying the LESS files](#adding-and-modifying-the-less-files)
+- [Adding and modifying the SASS files](#adding-and-modifying-the-sass-files)
 - [Adding and modifying the icons](#adding-and-modifying-the-icons)
 - [Performing a versioned release](#performing-a-versioned-release)
 
@@ -68,9 +68,9 @@ There are two primary ways to help:
   - `title: Buttons` : The title of the guide
   - `hidden: true` : Whether the guide should be hidden from the navigation (if it’s a work in progress or if it should just be excluded for some reason)
 
-##### LESS/CSS/JS/Image architecture
-- LESS files for the 'usptostrap' Bootstrap theme are in `/usptostrap/less`
-- LESS files, JS, and vendor libraries specific for the design library are in `/front`
+##### SASS/CSS/JS/Image architecture
+- SASS files for the 'usptostrap' Bootstrap theme are in `/usptostrap/sass`
+- SASS files, JS, and vendor libraries specific for the design library are in `/front`
 - When possible, vendor dependencies are managed via [Bower](http://bower.io/)
 - Assets are compiled using [Node](https://nodejs.org/) and [Grunt](http://gruntjs.com/), and are placed in the `/generated` folder
 - Compiled assets are also placed and zipped for distribution via Grunt into the `/downloads` folder
@@ -129,17 +129,17 @@ There are two primary ways to help:
 - Heading 3s (`###` or `h3` elements) show up as subsections in the left navigation
 - Commit your changes. [Learn how](https://help.github.com/articles/making-changes/)
 
-## Adding and modifying the LESS files
-- Organize less files into modular components
-- `/uspotstrap/less/usptostrap.less` imports all the individual components
-- Custom components that are not in Bootstrap are placed in `/usptostrap/less/custom/`
+## Adding and modifying the SASS files
+- Organize sass files into modular components
+- `/uspotstrap/sass/usptostrap.scss` imports all the individual components
+- Custom components that are not in Bootstrap are placed in `/usptostrap/sass/custom/`
 - Ensure that all changes are consistent with the style and practices used elsewhere in the code
-- Run `grunt build` to build the LESS files
+- Run `grunt build` to build the SASS files
 - Commit your changes, including the `/generated` folder (which is where compiled assets go). [Learn how](https://help.github.com/articles/making-changes/).
 
 ## Adding and modifying the icons
 - Since the method for serving icons is often dependent on the target audience, the design library provides a set of individual `.svg` files in `/usptostrap/images/icons/` that users can consume and modify to meet their needs.
-- If an icon is added or modified, use [icomoon.io](https://icomoon.io/) to compile the individual icons into black and white sprite sheets. You will need to update `/usptostrap/less/_icons.less` with the generated css. 
+- If an icon is added or modified, use [icomoon.io](https://icomoon.io/) to compile the individual icons into black and white sprite sheets. You will need to update `/usptostrap/sass/_icons.scss` with the generated css. 
 
 ## Performing a versioned release
 - Update changelog.md with your latest changes
@@ -148,7 +148,7 @@ There are two primary ways to help:
 - Update the `baseurl` property in `/_config.yml` to `/designpatterns/1.x` (for a major bump, it would be `/designpatterns/2.x`)
 - Update the `versions` property in `/_config.yml` to include your new version
 - Update the `includePreviews` property in `/_config.yml` to be `false`
-- Run `grunt build` to build all the LESS/JS files
+- Run `grunt build` to build all the SASS/JS files
 - Run `jekyll build` from the cmd line to build the documentation
 - Delete the nested version folders under `/_site`
 - Rename the newly created `/_site` folder to your new version (e.g., `/1.x` or `/2.x`)

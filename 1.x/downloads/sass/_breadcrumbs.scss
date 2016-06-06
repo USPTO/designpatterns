@@ -1,0 +1,20 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+
+.breadcrumb {
+    padding: 8px 16px;
+}
+
+.breadcrumb > li+li:before {
+    content: "";
+    @extend .icon:after;
+    @extend .icon-angle-right:after;
+    opacity: .8;
+    left: 2px;
+    margin-right: 4px;
+    margin-left: 2px;
+    top: 2px;
+}
+
+.breadcrumb > li > a {
+    // color: $breadcrumb-color;
+}

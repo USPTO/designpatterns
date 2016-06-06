@@ -1,0 +1,16 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+
+.navbar {
+    border: none;
+    font-weight: 600;
+
+    .navbar-toggle {
+        color: #fff;
+        border: none;
+        @include navbar-vertical-align(36px);
+    }
+}
+
+.navbar-inverse.navbar-clear {
+    background: transparent;
+}

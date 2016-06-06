@@ -1,0 +1,124 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+
+// improve alert padding
+
+
+
+.alert {
+    display: inline-block;
+    width: 100%;
+    padding: $alert-padding $alert-padding*2;
+
+    .close {
+        margin-top: -3px;
+        margin-left: 8px;
+        margin-right: -3px;
+        text-shadow: none;
+    }
+
+    .alert-icon {
+        margin-right: 3px;
+        width: 18px;
+        margin-left: -4px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .btn {
+        margin: -4px;
+        margin-left: 10px;
+        text-decoration: underline;
+        // margin-right: -10px;
+        // text-transform: uppercase;
+    }
+}
+
+.alert-dismissible {
+        padding-right:32px;
+
+        .close {
+            margin-top:0px;
+        }
+    }
+
+.alert-icon-info:after,
+.alert-icon-success:after,
+.alert-icon-danger:after,
+.alert-icon-warning:after {
+    @extend .icon:after;
+}
+
+.alert-icon-info:after {
+    @extend .icon-info-circle:after;
+}
+
+.alert-icon-success:after {
+    @extend .icon-check:after;
+}
+
+.alert-icon-danger:after {
+    @extend .icon-times-circle:after;
+}
+
+.alert-icon-warning:after {
+    @extend .icon-warning:after;
+}
+
+.toast-list {
+    .toast {
+        position: relative;
+        border: 1px solid #ddd;
+        border-left-width: 4px;
+        border-radius: 2px;
+        margin-bottom: 9px;
+        position: relative;
+        background: #fff;
+        box-shadow: 0px 1px 3px rgba(0,0,0,.1);
+        padding: $alert-padding*2;
+
+        &.toast-info {
+            border-left-color: $brand-info;
+        }
+        &.toast-primary {
+            border-left-color: $brand-primary;
+        }
+        &.toast-success {
+            border-left-color: $brand-success;
+        }
+        &.toast-danger {
+            border-left-color: $brand-danger;
+        }
+        &.toast-warning {
+            border-left-color: $brand-warning;
+        }
+
+        .toast-content {
+        }
+
+
+        .toast-actions {
+            margin-top: $alert-padding;
+            padding-top: 0;
+            display: inline-block;
+            width: 100%;
+
+            > .btn-link {
+                padding: 0px;
+                margin-right: 8px;
+            }
+        }
+        .toast-footer {
+            background: $gray-lighter;
+            margin:10px -12px -12px -12px;
+            padding:8px 5px 8px 10px;
+
+        }
+
+        .close {
+            margin-top: -3px;
+            margin-left: 8px;
+        }
+    }
+
+
+}

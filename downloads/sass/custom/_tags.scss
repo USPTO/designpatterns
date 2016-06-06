@@ -1,0 +1,20 @@
+.tag {
+    padding: 2px 8px;
+    border-radius: $border-radius-base;
+    background-color: $gray-lighter;
+    border: none;
+    margin: 0 5px 5px 0;
+    display: inline-block;
+
+    &:hover, &:focus {
+        background: darken($gray-lighter, 5%);
+        cursor: pointer;
+        i {
+            opacity: 1;
+        }
+    }
+
+    i {
+        margin-left: 5px;
+    }
+}

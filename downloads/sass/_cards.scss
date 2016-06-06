@@ -1,0 +1,267 @@
+// Bootstrap 4.0 card backport
+// Modified, with original source by Martin Bean
+//The MIT License (MIT)
+//
+//Copyright (c) 2015 Martin Bean
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all
+//copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//SOFTWARE.
+
+.card {
+  position: relative;
+  margin-bottom: $line-height-computed;
+  border: 1px solid $panel-default-border;
+  border-radius: $border-radius-base;
+}
+
+.card-block {
+  padding: $panel-body-padding;
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+.card-subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  text-decoration: none;
+
+  + .card-link {
+    margin-left: ($grid-gutter-width / 2);
+  }
+}
+
+.card {
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      border-radius: 0 0 $border-radius-base $border-radius-base;
+    }
+  }
+}
+
+
+//
+// Optional textual caps
+//
+
+.card-header {
+  padding: $panel-heading-padding;
+  background-color: $panel-default-heading-bg;
+  border-bottom: 1px solid $panel-default-border;
+
+  &:first-child {
+    border-radius: ($border-radius-base - 1) ($border-radius-base - 1) 0 0;
+  }
+}
+
+.card-footer {
+  padding: $panel-footer-padding;
+  background-color: $panel-footer-bg;
+  border-top: 1px solid $panel-default-border;
+
+  &:last-child {
+    border-radius: 0 0 ($panel-border-radius - 1) ($panel-border-radius - 1);
+  }
+}
+
+
+//
+// Background variations
+//
+
+.card-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+.card-success {
+  background-color: $brand-success;
+  border-color: $brand-success;
+}
+.card-info {
+  background-color: $brand-info;
+  border-color: $brand-info;
+}
+.card-warning {
+  background-color: $brand-warning;
+  border-color: $brand-warning;
+}
+.card-danger {
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+}
+
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+.card-inverse {
+  .card-header,
+  .card-footer {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+  .card-header,
+  .card-footer,
+  .card-title,
+  .card-blockquote {
+    color: #fff;
+  }
+  .card-link,
+  .card-text,
+  .card-blockquote > footer {
+    color: rgba(255,255,255,.65);
+  }
+  .card-link {
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+
+//
+// Blockquote
+//
+
+.card-blockquote {
+  padding: 0;
+  margin-bottom: 0;
+  border-left: 0;
+}
+
+// Card image
+.card-img {
+  border-radius: $panel-border-radius;
+}
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $panel-body-padding;
+}
+
+
+
+// Card image caps
+.card-img-top {
+  border-radius: $panel-border-radius $panel-border-radius 0 0;
+}
+.card-img-bottom {
+  border-radius: 0 0 $panel-border-radius $panel-border-radius;
+}
+
+
+//
+// Card set
+//
+
+.card-deck {
+  display: table;
+  table-layout: fixed;
+  border-spacing: ($grid-gutter-width / 2) 0;
+
+  .card {
+    display: table-cell;
+    width: 1%;
+    vertical-align: top;
+  }
+}
+.card-deck-wrapper {
+  margin-right: -($grid-gutter-width / 2);
+  margin-left: -($grid-gutter-width / 2);
+}
+
+//
+// Card groups
+//
+
+.card-group {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+
+  .card {
+    display: table-cell;
+    vertical-align: top;
+
+    + .card {
+      margin-left: 0;
+      border-left: 0;
+    }
+
+    // Handle rounded corners
+    &:first-child {
+      .card-img-top {
+        border-top-right-radius: 0;
+      }
+      .card-img-bottom {
+        border-bottom-right-radius: 0;
+      }
+    }
+    &:last-child {
+      .card-img-top {
+        border-top-left-radius: 0;
+      }
+      .card-img-bottom {
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+
+      .card-img-top,
+      .card-img-bottom {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+
+//
+// Card
+//
+
+.card-columns {
+  column-count: 3;
+  column-gap: ($grid-gutter-width / 2);
+
+  .card {
+    display: inline-block;
+    width: 100%; // Don't let them exceed the column width
+  }
+}

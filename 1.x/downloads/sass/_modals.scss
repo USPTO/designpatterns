@@ -1,0 +1,38 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+
+.modal-footer {
+    background-color: #fafafb;
+    border-top: 1px solid #ddd;
+
+    &:last-child {
+        border-radius: 0 0 2px 2px;
+    }
+}
+.modal-header {
+    background: #fafafb;
+    // text-align: center;
+    border-bottom: 1px solid #ddd;
+
+    .close {
+        margin-top: 1px;
+    }
+}
+
+.modal-center {
+    .modal-header, .modal-body {
+        text-align: center;
+    }
+}
+
+.modal-content {
+    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    border: none;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (min-width: $screen-sm-min) {
+    .modal-content {
+        box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    }
+}
