@@ -12,7 +12,7 @@ Users need to see structured data in a manner that makes the data readable, scan
 Tables provide customizable views of tabular data with features including sorting and managing columns. Tables are useful when a collection of data requires vertical alignment through columns for quick scanning and discovery of information, as well as for data that with many attributes that requires sorting, grouping, and a user customizable display.
 
 #### Basic functionality
-Tables list a collection of items in rows that have similar attributes, usually with headers to label each attribute. 
+Tables list a collection of items in rows that have similar attributes, usually with headers to label each attribute.
 
 The following functionality can be provided by tables:
 
@@ -24,6 +24,7 @@ The following functionality can be provided by tables:
 - Performing actions on a row
 - Grouping by attributes
 - Expanding rows
+- Nested tables
 
 A table's complexity and needs can vary greatly. This pattern provides many different features a table _may_ have. Features can be mixed and matched based on your needs. Don't include features unless they're actually needed.
 
@@ -299,7 +300,7 @@ Use the condensed style, which reduces cell padding, for very large amounts of d
 {% endhighlight %}
 
 #### Comfortable
-Use the comfortable style, which increases cell padding, for making simple data breathe more. 
+Use the comfortable style, which increases cell padding, for making simple data breathe more.
 
 {::nomarkdown}
 <div class="pl-preview">
@@ -345,7 +346,7 @@ Use the comfortable style, which increases cell padding, for making simple data 
 #### Colored headers
 For text heavy pages (e.g., FAQ, APIs, Documentation, Pricing), or pages where there is one primary grid, a colored header may be appropriate. For tables immediately surrounded by other distinguishing elements, a clear header may be appropriate.
 
-Similar to other components, the available styles are `.table-{primary, success, info, warning, danger}`, as well as `table-inverse` (black header) and `table-clear` (clear header). 
+Similar to other components, the available styles are `.table-{primary, success, info, warning, danger}`, as well as `table-inverse` (black header) and `table-clear` (clear header).
 
 
 {::nomarkdown}
@@ -436,7 +437,7 @@ A normal header scrolls with the data.
 </div>
 {:/nomarkdown}
 {% highlight html %}
-<table class="table"> 
+<table class="table">
     <thead>
         <tr>
             <th>Project name</th>
@@ -563,7 +564,7 @@ A fixed header remains visible as the table body is scrolled. This is useful for
 {:/nomarkdown}
 
 #### Headerless
-If the content of the table is self-explanatory for your users, it may not need a header. Provide an alternative for sorting, if necessary (e.g., a toolbar with a dropdown). 
+If the content of the table is self-explanatory for your users, it may not need a header. Provide an alternative for sorting, if necessary (e.g., a toolbar with a dropdown).
 
 
 {::nomarkdown}
@@ -593,7 +594,7 @@ If the content of the table is self-explanatory for your users, it may not need 
 </div>
 {:/nomarkdown}
 {% highlight html %}
-<table class="table"> 
+<table class="table">
     <tbody> ... </tbody>
 </table>
 {% endhighlight %}
@@ -605,7 +606,7 @@ If the content of the table is self-explanatory for your users, it may not need 
 ### Sorting
 
 #### Single sorting
-Clicking a header cell sets that column as the currently sorted column. The first click should sort `descending`, the second click should sort `ascending`. 
+Clicking a header cell sets that column as the currently sorted column. The first click should sort `descending`, the second click should sort `ascending`.
 
 
 {::nomarkdown}
@@ -994,7 +995,7 @@ This dialog provides the ability to show/hide columns as desired.
 <div class="pl-pattern">
 ### Grouping
 
-Row grouping allows users to show and hide sets of rows that share a similar attribute. 
+Row grouping allows users to show and hide sets of rows that share a similar attribute.
 
 {::nomarkdown}
 <div class="pl-preview">
@@ -1097,6 +1098,87 @@ Expandable rows provide additional information about a row on demand.
                         <dt>Law firm</dt>
                         <dd>Clayton & Clayton Associates</dd>
                     </dl>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+{:/nomarkdown}
+</div>
+
+
+
+<div class="pl-pattern">
+### Expandable rows with nested table
+
+Expandable rows provide additional information about a row on demand.
+
+{::nomarkdown}
+<div class="pl-preview">
+<div style="padding: 40px; background: #fff;">
+    <table data-pl-expandable-rows role="grid" style="table-layout: fixed;" class="table table-bordered ">
+        <thead>
+            <tr role="row">
+                <th scope="col" role="columnheader" style="width: 36px;"><input indeterminate type="checkbox" disabled></th>
+                <th scope="col" role="columnheader" aria-sort="none">Project name</th>
+                <th scope="col" role="columnheader" aria-sort="none">Description</th>
+                <th scope="col" role="columnheader" aria-sort="none">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" disabled></td>
+                <td><i class="icon icon-angle-right"></i> &nbsp;Invoice</td>
+                <td><span >Add invoice confirmation</span></td>
+                <td><span >$4,500</span></td>
+            </tr>
+            <tr data-pl-detail-row style="display: none;">
+                <td colspan="4" >
+                    <table class="table table-bordered table-info">
+                      <thead>
+                          <tr>
+                              <th scope="col" role="columnheader">Income</th>
+                              <th scope="col" role="columnheader" aria-sort="none">Expense</th>
+                              <th scope="col" role="columnheader" aria-sort="none">Profit</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>$4,500
+                              </td><td>$2,500
+                              </td><td>$2,000
+                              </td>
+                              </tr>
+                          </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr aria-expanded="true">
+                <td><input type="checkbox" disabled></td>
+                <td><i class="icon icon-angle-right"></i> &nbsp;Payments</td>
+                <td><span >Process payments using third party api</span></td>
+                <td><span >$5,400</span></td>
+            </tr>
+            <tr data-pl-detail-row style="display: table-row;">
+                <td colspan="4" >
+                <table class="table table-bordered table-info">
+                  <thead>
+                      <tr>
+                          <th scope="col" role="columnheader">Income</th>
+                          <th scope="col" role="columnheader" aria-sort="none">Expense</th>
+                          <th scope="col" role="columnheader" aria-sort="none">Profit</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>$6,500
+                          </td><td>$2,500
+                          </td><td>$4,000
+                          </td>
+                          </tr>
+                      </tbody>
+                </table>
                 </td>
             </tr>
         </tbody>
