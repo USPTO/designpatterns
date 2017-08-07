@@ -1,0 +1,6012 @@
+/*
+ * Sprite core
+ */
+
+.icon {
+    &-muted {
+        opacity: .5;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        @include rem(top, 2px);
+        background: url("../images/icons/black.svg") no-repeat scroll;
+    }
+
+    &.icon-inverse {
+        &:after {
+            background-image: url("../images/icons/white.svg");
+        }
+    }
+    /* Additional SVG Icon States */
+    &.icon-color-success {
+        &:after {
+            background-image: url("../images/icons/success.svg");
+        }
+    }
+    &.icon-color-danger {
+        &:after {
+            background-image: url("../images/icons/danger.svg");
+        }
+    }
+    &.icon-color-warning {
+        &:after {
+            background-image: url("../images/icons/warning.svg");
+        }
+    }
+    &.icon-color-primary {
+        &:after {
+            background-image: url("../images/icons/primary.svg");
+        }
+    }
+    &.icon-color-info {
+        &:after {
+            background-image: url("../images/icons/info.svg");
+        }
+    }
+    /* Masked icons added for future use */
+    &.icon-masked {
+        &:after {
+            background-image: url("../images/icons/mask.svg");
+        }
+    }
+
+    /*
+     * FontAwesome Aliases
+     */
+    &-bar-chart-o {
+        &:after {
+            @extend .icon-bar-chart;
+        }
+    }
+
+    &-battery-empty {
+        &:after {
+            @extend .icon-battery-0;
+        }
+    }
+
+    &-battery-full {
+        &:after {
+            @extend .icon-battery-4;
+        }
+    }
+
+    &-battery-half {
+        &:after {
+            @extend .icon-battery-2;
+        }
+    }
+
+    &-battery-quarter {
+        &:after {
+            @extend .icon-battery-1;
+        }
+    }
+
+    &-battery-three-quarters {
+        &:after {
+            @extend .icon-battery-3;
+        }
+    }
+
+    &-car {
+        &:after {
+            @extend .icon-automobile;
+        }
+    }
+
+    &-eye {
+        &:after {
+            //.icon-eye2 doesn't exist
+            // @extend .icon-eye2;
+        }
+    }
+
+    &-file-photo-o,
+    &-file-picture-o {
+        &:after {
+            @extend .icon-file-image-o;
+        }
+    }
+
+    &-file-zip-o {
+        &:after {
+            @extend .icon-file-archive-o;
+        }
+    }
+
+    &-file-sound-o {
+        &:after {
+            @extend .icon-file-audio-o;
+        }
+    }
+
+    &-file-video-o {
+        &:after {
+            @extend .icon-file-movie-o;
+        }
+    }
+
+    &-fire {
+        &:after {
+            //icon-fire2 doesn't exist
+            //@extend .icon-fire2;
+        }
+    }
+
+    &-flash {
+        &:after {
+            @extend .icon-bolt;
+        }
+    }
+
+    &-gear {
+        &:after {
+            @extend .icon-cog;
+        }
+    }
+
+    &-gears {
+        &:after {
+            @extend .icon-cogs;
+        }
+    }
+
+    &-gift {
+        &:after {
+            //.icon-gift2 doesn't exist
+            //@extend .icon-gift2;
+        }
+    }
+
+    &-globe {
+        &:after {
+            //.icon-globe2 doesn't exist
+            //@extend .icon-globe2;
+        }
+    }
+
+    &-heart-o {
+        &:after {
+            //.icon-heart-o2 doesn't exist
+            //@extend .icon-heart-o2;
+        }
+    }
+
+    &-university,
+    &-institution {
+        &:after {
+            @extend .icon-bank;
+        }
+    }
+
+    &-legal {
+        &:after {
+            @extend .icon-gavel;
+        }
+    }
+
+    &-life-buoy,
+    &-life-ring,
+    &-life-saver,
+    &-support {
+        &:after {
+            @extend .icon-life-bouy;
+        }
+    }
+
+    &-mobile-phone {
+        &:after {
+            @extend .icon-mobile;
+        }
+    }
+
+    &-mortar-board {
+        &:after {
+            @extend .icon-graduation-cap;
+        }
+    }
+
+    &-navicon,
+    &-reorder {
+        &:after {
+            @extend .icon-bars;
+        }
+    }
+
+    &-pencil-square-o {
+        &:after {
+            @extend .icon-edit;
+        }
+    }
+
+    &-photo,
+    &-picture-o {
+        &:after {
+            @extend .icon-image;
+        }
+    }
+
+    &-remove {
+        &:after {
+            @extend .icon-close;
+        }
+    }
+
+    &-reply {
+        &:after {
+            @extend .icon-mail-reply;
+        }
+    }
+
+    &-reply-all {
+        &:after {
+            @extend .icon-mail-reply-all;
+        }
+    }
+
+    &-send {
+        &:after {
+            @extend .icon-paper-plane;
+        }
+    }
+
+    &-send-o {
+        &:after {
+            @extend .icon-paper-plane-o;
+        }
+    }
+
+    &-share {
+        &:after {
+            @extend .icon-mail-forward;
+        }
+    }
+
+    &-sign-out {
+        &:after {
+            //.icon-sign-out2 doesn't exist
+            //@extend .icon-sign-out2;
+        }
+    }
+
+    &-soccer-ball-o {
+        &:after {
+            @extend .icon-futbol-o;
+        }
+    }
+
+    &-sort-down {
+        &:after {
+            @extend .icon-sort-desc;
+        }
+    }
+
+    &-sort-up {
+        &:after {
+            @extend .icon-sort-asc;
+        }
+    }
+
+    &-star-half-full,
+    &-star-half-o {
+        &:after {
+            @extend .icon-star-half-empty;
+        }
+    }
+
+    &-tachometer {
+        &:after {
+            @extend .icon-dashboard;
+        }
+    }
+
+    &-taxi {
+        &:after {
+            @extend .icon-cab;
+        }
+    }
+
+    &-television {
+        &:after {
+            //.icon-tv doesn't exist
+            //@extend .icon-tv;
+        }
+    }
+
+    &-thumb-tack {
+        &:after {
+            //.icon-thumb-tack2 doesn't exist
+            //@extend .icon-thumb-tack2;
+        }
+    }
+
+    &-times {
+        &:after {
+            @extend .icon-remove;
+        }
+    }
+
+    &-toggle-down {
+        &:after {
+            @extend .icon-caret-square-o-down;
+        }
+    }
+
+    &-toggle-left {
+        &:after {
+            @extend .icon-caret-square-o-left;
+        }
+    }
+
+    &-toggle-right {
+        &:after {
+            @extend .icon-caret-square-o-right;
+        }
+    }
+
+    &-toggle-up {
+        &:after {
+            @extend .icon-caret-square-o-up;
+        }
+    }
+
+    &-unsorted {
+        &:after {
+            @extend .icon-sort;
+        }
+    }
+
+    &-users {
+        &:after {
+            @extend .icon-group;
+        }
+    }
+
+    &-warning {
+        &:after {
+            @extend .icon-exclamation-triangle;
+        }
+    }
+
+    &-btc {
+        &:after {
+            @extend .icon-bitcoin;
+        }
+    }
+
+    &-rmb,
+    &-yen, &-jpy {
+        &:after {
+            @extend .icon-cny;
+        }
+    }
+
+    &-euro {
+        &:after {
+            @extend .icon-eur;
+        }
+    }
+
+    &-rub,
+    &-ruble {
+        &:after {
+            @extend .icon-rouble;
+        }
+    }
+
+    &-rupee {
+        &:after {
+            @extend .icon-inr;
+        }
+    }
+
+    &-shekel,
+    &-sheqel {
+        &:after {
+            @extend .icon-ils;
+        }
+    }
+
+    &-turkish-lira {
+        &:after {
+            @extend .icon-try;
+        }
+    }
+
+    &-usd {
+        &:after {
+            @extend .icon-dollar;
+        }
+    }
+
+    &-won {
+        &:after {
+            @extend .icon-krw;
+        }
+    }
+
+    &-files-o {
+        &:after {
+            @extend .icon-copy;
+        }
+    }
+
+    &-link {
+        &:after {
+            @extend .icon-chain;
+        }
+    }
+
+    &-outdent {
+        &:after {
+            @extend .icon-dedent;
+        }
+    }
+
+    &-rotate-right {
+        &:after {
+            @extend .icon-repeat;
+        }
+    }
+
+    &-paste {
+        &:after {
+            @extend .icon-clipboard;
+        }
+    }
+
+    &-save {
+        &:after {
+            @extend .icon-floppy-o;
+        }
+    }
+
+    &-scissors {
+        &:after {
+            @extend .icon-cut;
+        }
+    }
+
+    &-undo {
+        &:after {
+            @extend .icon-rotate-left;
+        }
+    }
+
+    &-unlink {
+        &:after {
+            @extend .icon-chain-broken;
+        }
+    }
+
+    &-arrow-circle-down {
+        &:after {
+            //.icon-arrow-circle-down2 doesn't exist
+            //@extend .icon-arrow-circle-down2;
+        }
+    }
+
+    &-arrow-circle-right {
+        &:after {
+            //.icon-arrow-circle-right2 doesn't exist
+            //@extend .icon-arrow-circle-right2;
+        }
+    }
+
+    &-arrow-circle-up {
+        &:after {
+            //.icon-arrow-circle-up2 doesn't exist
+            //@extend .icon-arrow-circle-up2;
+        }
+    }
+
+    &-ge {
+        &:after {
+            @extend .icon-empire;
+        }
+    }
+
+    &-linkedin-square {
+        &:after {
+            //.icon-linkedin-square2 doesn't exist
+            //@extend .icon-linkedin-square2;
+        }
+    }
+
+    &-rebel {
+        &:after {
+            @extend .icon-ra;
+        }
+    }
+
+    &-weixin {
+        &:after {
+            @extend .icon-wechat;
+        }
+    }
+
+    /*
+     * Sizes and offsets
+     * Derived from FontAwesome Version 4.4
+     */
+    &-px {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: 0 0;
+        }
+    }
+
+    &-adjust {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px 0;
+        }
+    }
+
+    &-adn {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px 0;
+        }
+    }
+
+    &-align-center {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px 0;
+        }
+    }
+
+    &-align-justify {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -120px 0;
+        }
+    }
+
+    &-align-left {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px 0;
+        }
+    }
+
+    &-align-right {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px 0;
+        }
+    }
+
+    &-amazon {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px 0;
+        }
+    }
+
+    &-ambulance {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -240px 0;
+        }
+    }
+
+    &-anchor {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px 0;
+        }
+    }
+
+    &-android {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -300px 0;
+        }
+    }
+
+    &-angellist {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -330px 0;
+        }
+    }
+
+    &-angle-double-down {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -360px 0;
+        }
+    }
+
+    &-angle-double-left {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -390px 0;
+        }
+    }
+
+    &-angle-double-right {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -420px 0;
+        }
+    }
+
+    &-angle-double-up {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -450px 0;
+        }
+    }
+
+    &-angle-down {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: 0 -30px;
+        }
+    }
+
+    &-angle-left {
+        &:after {
+            width: 5px;
+            height: 14px;
+            background-position: -30px -30px;
+        }
+    }
+
+    &-angle-right {
+        &:after {
+            width: 5px;
+            height: 14px;
+            background-position: -60px -30px;
+        }
+    }
+
+    &-angle-up {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -90px -30px;
+        }
+    }
+
+    &-apple {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -120px -30px;
+        }
+    }
+
+    &-archive {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -30px;
+        }
+    }
+
+    &-area-chart {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -180px -30px;
+        }
+    }
+
+    &-arrow-circle-down {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -30px;
+        }
+    }
+
+    &-arrow-circle-left {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -30px;
+        }
+    }
+
+    &-arrow-circle-o-down {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -30px;
+        }
+    }
+
+    &-arrow-circle-o-left {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -30px;
+        }
+    }
+
+    &-arrow-circle-o-right {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -30px;
+        }
+    }
+
+    &-arrow-circle-o-up {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -30px;
+        }
+    }
+
+    &-arrow-circle-right {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -30px;
+        }
+    }
+
+    &-arrow-circle-up {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -30px;
+        }
+    }
+
+    &-arrow-down {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -450px -30px;
+        }
+    }
+
+    &-arrow-left {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -60px;
+        }
+    }
+
+    &-arrow-right {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -60px;
+        }
+    }
+
+    &-arrow-up {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -60px -60px;
+        }
+    }
+
+    &-arrows {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -60px;
+        }
+    }
+
+    &-arrows-alt {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -60px;
+        }
+    }
+
+    &-arrows-h {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -60px;
+        }
+    }
+
+    &-arrows-v {
+        &:after {
+            width: 6px;
+            height: 14px;
+            background-position: -180px -60px;
+        }
+    }
+
+    &-asterisk {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -60px;
+        }
+    }
+
+    &-at {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -60px;
+        }
+    }
+
+    &-automobile {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -270px -60px;
+        }
+    }
+
+    &-backward {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -300px -60px;
+        }
+    }
+
+    &-balance-scale {
+        &:after {
+            width: 17px;
+            height: 14px;
+            background-position: -330px -60px;
+        }
+    }
+
+    &-ban {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -60px;
+        }
+    }
+
+    &-bank {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -390px -60px;
+        }
+    }
+
+    &-bar-chart {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -420px -60px;
+        }
+    }
+
+    &-barcode {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -60px;
+        }
+    }
+
+    &-bars {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -90px;
+        }
+    }
+
+    &-battery-0 {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -30px -90px;
+        }
+    }
+
+    &-battery-1 {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -60px -90px;
+        }
+    }
+
+    &-battery-2 {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -90px -90px;
+        }
+    }
+
+    &-battery-3 {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -120px -90px;
+        }
+    }
+
+    &-battery-4 {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -150px -90px;
+        }
+    }
+
+    &-bed {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -180px -90px;
+        }
+    }
+
+    &-beer {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -90px;
+        }
+    }
+
+    &-behance {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -240px -90px;
+        }
+    }
+
+    &-behance-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -90px;
+        }
+    }
+
+    &-bell {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -90px;
+        }
+    }
+
+    &-bell-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -90px;
+        }
+    }
+
+    &-bell-slash {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -360px -90px;
+        }
+    }
+
+    &-bell-slash-o {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -390px -90px;
+        }
+    }
+
+    &-bicycle {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -420px -90px;
+        }
+    }
+
+    &-binoculars {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -90px;
+        }
+    }
+
+    &-birthday-cake {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -120px;
+        }
+    }
+
+    &-bitbucket {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -30px -120px;
+        }
+    }
+
+    &-bitbucket-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -120px;
+        }
+    }
+
+    &-bitcoin {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -90px -120px;
+        }
+    }
+
+    &-black-tie {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -120px;
+        }
+    }
+
+    &-bold {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -150px -120px;
+        }
+    }
+
+    &-bolt {
+        &:after {
+            width: 7px;
+            height: 14px;
+            background-position: -180px -120px;
+        }
+    }
+
+    &-bomb {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -120px;
+        }
+    }
+
+    &-book {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -240px -120px;
+        }
+    }
+
+    &-bookmark {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -270px -120px;
+        }
+    }
+
+    &-bookmark-o {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -300px -120px;
+        }
+    }
+
+    &-briefcase {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -120px;
+        }
+    }
+
+    &-bug {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -360px -120px;
+        }
+    }
+
+    &-building {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -390px -120px;
+        }
+    }
+
+    &-building-o {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -420px -120px;
+        }
+    }
+
+    &-bullhorn {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -120px;
+        }
+    }
+
+    &-bullseye {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -150px;
+        }
+    }
+
+    &-bus {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -150px;
+        }
+    }
+
+    &-buysellads {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -150px;
+        }
+    }
+
+    &-cab {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -90px -150px;
+        }
+    }
+
+    &-calculator {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -150px;
+        }
+    }
+
+    &-calendar {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -150px -150px;
+        }
+    }
+
+    &-calendar-check-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -150px;
+        }
+    }
+
+    &-calendar-minus-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -150px;
+        }
+    }
+
+    &-calendar-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -240px -150px;
+        }
+    }
+
+    &-calendar-plus-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -270px -150px;
+        }
+    }
+
+    &-calendar-times-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -300px -150px;
+        }
+    }
+
+    &-camera {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -330px -150px;
+        }
+    }
+
+    &-camera-retro {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -150px;
+        }
+    }
+
+    &-caret-down {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -390px -150px;
+        }
+    }
+
+    &-caret-left {
+        &:after {
+            width: 5px;
+            height: 14px;
+            background-position: -420px -150px;
+        }
+    }
+
+    &-caret-right {
+        &:after {
+            width: 5px;
+            height: 14px;
+            background-position: -450px -150px;
+        }
+    }
+
+    &-caret-square-o-down {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -180px;
+        }
+    }
+
+    &-caret-square-o-left {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -180px;
+        }
+    }
+
+    &-caret-square-o-right {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -180px;
+        }
+    }
+
+    &-caret-square-o-up {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -180px;
+        }
+    }
+
+    &-caret-up {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -120px -180px;
+        }
+    }
+
+    &-cart-arrow-down {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -150px -180px;
+        }
+    }
+
+    &-cart-plus {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -180px;
+        }
+    }
+
+    &-cc {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -210px -180px;
+        }
+    }
+
+    &-cc-amex {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -240px -180px;
+        }
+    }
+
+    &-cc-diners-club {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -270px -180px;
+        }
+    }
+
+    &-cc-discover {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -300px -180px;
+        }
+    }
+
+    &-cc-jcb {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -330px -180px;
+        }
+    }
+
+    &-cc-mastercard {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -360px -180px;
+        }
+    }
+
+    &-cc-paypal {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -390px -180px;
+        }
+    }
+
+    &-cc-stripe {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -420px -180px;
+        }
+    }
+
+    &-cc-visa {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -450px -180px;
+        }
+    }
+
+    &-certificate {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -210px;
+        }
+    }
+
+    &-chain {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -30px -210px;
+        }
+    }
+
+    &-chain-broken {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -60px -210px;
+        }
+    }
+
+    &-check {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -210px;
+        }
+    }
+
+    &-check-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -210px;
+        }
+    }
+
+    &-check-circle-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -210px;
+        }
+    }
+
+    &-check-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -210px;
+        }
+    }
+
+    &-check-square-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -210px;
+        }
+    }
+
+    &-chevron-circle-down {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -210px;
+        }
+    }
+
+    &-chevron-circle-left {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -210px;
+        }
+    }
+
+    &-chevron-circle-right {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -210px;
+        }
+    }
+
+    &-chevron-circle-up {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -210px;
+        }
+    }
+
+    &-chevron-down {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -210px;
+        }
+    }
+
+    &-chevron-left {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -390px -210px;
+        }
+    }
+
+    &-chevron-right {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -420px -210px;
+        }
+    }
+
+    &-chevron-up {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -210px;
+        }
+    }
+
+    &-child {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: 0 -240px;
+        }
+    }
+
+    &-chrome {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -240px;
+        }
+    }
+
+    &-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -240px;
+        }
+    }
+
+    &-circle-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -240px;
+        }
+    }
+
+    &-circle-o-notch {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -120px -240px;
+        }
+    }
+
+    &-circle-thin {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -240px;
+        }
+    }
+
+    &-clipboard {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -240px;
+        }
+    }
+
+    &-clock-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -240px;
+        }
+    }
+
+    &-clone {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -240px;
+        }
+    }
+
+    &-close {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -270px -240px;
+        }
+    }
+
+    &-cloud {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -300px -240px;
+        }
+    }
+
+    &-cloud-download {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -330px -240px;
+        }
+    }
+
+    &-cloud-upload {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -360px -240px;
+        }
+    }
+
+    &-cny {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -390px -240px;
+        }
+    }
+
+    &-code {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -420px -240px;
+        }
+    }
+
+    &-code-fork {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -450px -240px;
+        }
+    }
+
+    &-codepen {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -270px;
+        }
+    }
+
+    &-coffee {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -30px -270px;
+        }
+    }
+
+    &-cog {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -270px;
+        }
+    }
+
+    &-cogs {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -90px -270px;
+        }
+    }
+
+    &-columns {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -270px;
+        }
+    }
+
+    &-comment {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -270px;
+        }
+    }
+
+    &-comment-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -270px;
+        }
+    }
+
+    &-commenting {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -270px;
+        }
+    }
+
+    &-commenting-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -270px;
+        }
+    }
+
+    &-comments {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -270px;
+        }
+    }
+
+    &-comments-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -270px;
+        }
+    }
+
+    &-compass {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -270px;
+        }
+    }
+
+    &-compress {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -270px;
+        }
+    }
+
+    &-connectdevelop {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -390px -270px;
+        }
+    }
+
+    &-contao {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -420px -270px;
+        }
+    }
+
+    &-copy {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -270px;
+        }
+    }
+
+    &-copyright {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -300px;
+        }
+    }
+
+    &-creative-commons {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -300px;
+        }
+    }
+
+    &-credit-card {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -60px -300px;
+        }
+    }
+
+    &-crop {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -90px -300px;
+        }
+    }
+
+    &-crosshairs {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -300px;
+        }
+    }
+
+    &-css3 {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -300px;
+        }
+    }
+
+    &-cube {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -300px;
+        }
+    }
+
+    &-cubes {
+        &:after {
+            width: 17px;
+            height: 14px;
+            background-position: -210px -300px;
+        }
+    }
+
+    &-cut {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -300px;
+        }
+    }
+
+    &-cutlery {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -270px -300px;
+        }
+    }
+
+    &-dashboard {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -300px;
+        }
+    }
+
+    &-dashcube {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -330px -300px;
+        }
+    }
+
+    &-database {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -300px;
+        }
+    }
+
+    &-dedent {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -300px;
+        }
+    }
+
+    &-delicious {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -300px;
+        }
+    }
+
+    &-desktop {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -450px -300px;
+        }
+    }
+
+    &-deviantart {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: 0 -330px;
+        }
+    }
+
+    &-diamond {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -30px -330px;
+        }
+    }
+
+    &-digg {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -60px -330px;
+        }
+    }
+
+    &-dollar {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -90px -330px;
+        }
+    }
+
+    &-dot-circle-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -330px;
+        }
+    }
+
+    &-download {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -150px -330px;
+        }
+    }
+
+    &-dribbble {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -330px;
+        }
+    }
+
+    &-dropbox {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -330px;
+        }
+    }
+
+    &-drupal {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -330px;
+        }
+    }
+
+    &-edit {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -330px;
+        }
+    }
+
+    &-eject {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -330px;
+        }
+    }
+
+    &-ellipsis-h {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -330px -330px;
+        }
+    }
+
+    &-ellipsis-v {
+        &:after {
+            width: 3px;
+            height: 14px;
+            background-position: -360px -330px;
+        }
+    }
+
+    &-empire {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -330px;
+        }
+    }
+
+    &-envelope {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -420px -330px;
+        }
+    }
+
+    &-envelope-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -330px;
+        }
+    }
+
+    &-envelope-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -360px;
+        }
+    }
+
+    &-eraser {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -30px -360px;
+        }
+    }
+
+    &-eur {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -60px -360px;
+        }
+    }
+
+    &-exchange {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -360px;
+        }
+    }
+
+    &-exclamation {
+        &:after {
+            width: 5px;
+            height: 14px;
+            background-position: -120px -360px;
+        }
+    }
+
+    &-exclamation-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -360px;
+        }
+    }
+
+    &-exclamation-triangle {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -360px;
+        }
+    }
+
+    &-expand {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -360px;
+        }
+    }
+
+    &-expeditedssl {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -360px;
+        }
+    }
+
+    &-external-link {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -360px;
+        }
+    }
+
+    &-external-link-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -360px;
+        }
+    }
+
+    &-eye {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -360px;
+        }
+    }
+
+    &-eye-slash {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -360px;
+        }
+    }
+
+    &-eyedropper {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -360px;
+        }
+    }
+
+    &-facebook {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -420px -360px;
+        }
+    }
+
+    &-facebook-official {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -360px;
+        }
+    }
+
+    &-facebook-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -390px;
+        }
+    }
+
+    &-fast-backward {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -390px;
+        }
+    }
+
+    &-fast-forward {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -390px;
+        }
+    }
+
+    &-fax {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -390px;
+        }
+    }
+
+    &-feed {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -120px -390px;
+        }
+    }
+
+    &-female {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -150px -390px;
+        }
+    }
+
+    &-fighter-jet {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -180px -390px;
+        }
+    }
+
+    &-file {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -390px;
+        }
+    }
+
+    &-file-archive-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -390px;
+        }
+    }
+
+    &-file-audio-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -390px;
+        }
+    }
+
+    &-file-code-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -390px;
+        }
+    }
+
+    &-file-excel-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -390px;
+        }
+    }
+
+    &-file-image-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -390px;
+        }
+    }
+
+    &-file-movie-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -390px;
+        }
+    }
+
+    &-file-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -390px;
+        }
+    }
+
+    &-file-pdf-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -390px;
+        }
+    }
+
+    &-file-powerpoint-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -420px;
+        }
+    }
+
+    &-file-text {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -420px;
+        }
+    }
+
+    &-file-text-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -420px;
+        }
+    }
+
+    &-file-word-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -420px;
+        }
+    }
+
+    &-film {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -120px -420px;
+        }
+    }
+
+    &-filter {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -150px -420px;
+        }
+    }
+
+    &-fire {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -180px -420px;
+        }
+    }
+
+    &-fire-extinguisher {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -210px -420px;
+        }
+    }
+
+    &-firefox {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -420px;
+        }
+    }
+
+    &-flag {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -420px;
+        }
+    }
+
+    &-flag-checkered {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -420px;
+        }
+    }
+
+    &-flag-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -420px;
+        }
+    }
+
+    &-flask {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -360px -420px;
+        }
+    }
+
+    &-flickr {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -420px;
+        }
+    }
+
+    &-floppy-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -420px;
+        }
+    }
+
+    &-folder {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -450px -420px;
+        }
+    }
+
+    &-folder-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: 0 -450px;
+        }
+    }
+
+    &-folder-open {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -30px -450px;
+        }
+    }
+
+    &-folder-open-o {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -60px -450px;
+        }
+    }
+
+    &-font {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -90px -450px;
+        }
+    }
+
+    &-fonticons {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -450px;
+        }
+    }
+
+    &-forumbee {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -450px;
+        }
+    }
+
+    &-forward {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -450px;
+        }
+    }
+
+    &-foursquare {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -210px -450px;
+        }
+    }
+
+    &-frown-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -450px;
+        }
+    }
+
+    &-futbol-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -450px;
+        }
+    }
+
+    &-gamepad {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -300px -450px;
+        }
+    }
+
+    &-gavel {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -450px;
+        }
+    }
+
+    &-gbp {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -360px -450px;
+        }
+    }
+
+    &-genderless {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -390px -450px;
+        }
+    }
+
+    &-get-pocket {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -420px -450px;
+        }
+    }
+
+    &-gg {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -450px -450px;
+        }
+    }
+
+    &-gg-circle {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -480px;
+        }
+    }
+
+    &-gift {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -480px;
+        }
+    }
+
+    &-git {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -480px;
+        }
+    }
+
+    &-git-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -480px;
+        }
+    }
+
+    &-github {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -480px;
+        }
+    }
+
+    &-github-alt {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -150px -480px;
+        }
+    }
+
+    &-github-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -480px;
+        }
+    }
+
+    &-gittip {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -480px;
+        }
+    }
+
+    &-glass {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -480px;
+        }
+    }
+
+    &-globe {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -480px;
+        }
+    }
+
+    &-google {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -300px -480px;
+        }
+    }
+
+    &-google-plus {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -330px -480px;
+        }
+    }
+
+    &-google-plus-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -480px;
+        }
+    }
+
+    &-google-wallet {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -480px;
+        }
+    }
+
+    &-graduation-cap {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -420px -480px;
+        }
+    }
+
+    &-group {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -450px -480px;
+        }
+    }
+
+    &-h-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -510px;
+        }
+    }
+
+    &-hacker-news {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -510px;
+        }
+    }
+
+    &-hand-grab-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -510px;
+        }
+    }
+
+    &-hand-lizard-o {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -90px -510px;
+        }
+    }
+
+    &-hand-o-down {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -510px;
+        }
+    }
+
+    &-hand-o-left {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -510px;
+        }
+    }
+
+    &-hand-o-right {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -510px;
+        }
+    }
+
+    &-hand-o-up {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -510px;
+        }
+    }
+
+    &-hand-paper-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -240px -510px;
+        }
+    }
+
+    &-hand-peace-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -510px;
+        }
+    }
+
+    &-hand-pointer-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -300px -510px;
+        }
+    }
+
+    &-hand-scissors-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -510px;
+        }
+    }
+
+    &-hand-spock-o {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -360px -510px;
+        }
+    }
+
+    &-hdd-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -510px;
+        }
+    }
+
+    &-header {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -420px -510px;
+        }
+    }
+
+    &-headphones {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -450px -510px;
+        }
+    }
+
+    &-heart {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -540px;
+        }
+    }
+
+    &-heart-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -540px;
+        }
+    }
+
+    &-heartbeat {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -540px;
+        }
+    }
+
+    &-history {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -540px;
+        }
+    }
+
+    &-home {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -540px;
+        }
+    }
+
+    &-hospital-o {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -150px -540px;
+        }
+    }
+
+    &-hourglass {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -540px;
+        }
+    }
+
+    &-hourglass-1 {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -540px;
+        }
+    }
+
+    &-hourglass-2 {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -540px;
+        }
+    }
+
+    &-hourglass-3 {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -540px;
+        }
+    }
+
+    &-hourglass-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -540px;
+        }
+    }
+
+    &-houzz {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -330px -540px;
+        }
+    }
+
+    &-html5 {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -360px -540px;
+        }
+    }
+
+    &-i-cursor {
+        &:after {
+            width: 7px;
+            height: 14px;
+            background-position: -390px -540px;
+        }
+    }
+
+    &-ils {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -420px -540px;
+        }
+    }
+
+    &-image {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -450px -540px;
+        }
+    }
+
+    &-inbox {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -570px;
+        }
+    }
+
+    &-indent {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -570px;
+        }
+    }
+
+    &-industry {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -570px;
+        }
+    }
+
+    &-info {
+        &:after {
+            width: 5px;
+            height: 14px;
+            background-position: -90px -570px;
+        }
+    }
+
+    &-info-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -570px;
+        }
+    }
+
+    &-inr {
+        &:after {
+            width: 7px;
+            height: 14px;
+            background-position: -150px -570px;
+        }
+    }
+
+    &-instagram {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -570px;
+        }
+    }
+
+    &-internet-explorer {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -570px;
+        }
+    }
+
+    &-intersex {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -240px -570px;
+        }
+    }
+
+    &-ioxhost {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -270px -570px;
+        }
+    }
+
+    &-italic {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -300px -570px;
+        }
+    }
+
+    &-joomla {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -570px;
+        }
+    }
+
+    &-jsfiddle {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -360px -570px;
+        }
+    }
+
+    &-key {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -570px;
+        }
+    }
+
+    &-keyboard-o {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -420px -570px;
+        }
+    }
+
+    &-krw {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -570px;
+        }
+    }
+
+    &-language {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -600px;
+        }
+    }
+
+    &-laptop {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -30px -600px;
+        }
+    }
+
+    &-lastfm {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -600px;
+        }
+    }
+
+    &-lastfm-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -600px;
+        }
+    }
+
+    &-leaf {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -120px -600px;
+        }
+    }
+
+    &-leanpub {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -150px -600px;
+        }
+    }
+
+    &-lemon-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -600px;
+        }
+    }
+
+    &-level-down {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -210px -600px;
+        }
+    }
+
+    &-level-up {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -240px -600px;
+        }
+    }
+
+    &-life-bouy {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -600px;
+        }
+    }
+
+    &-lightbulb-o {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -300px -600px;
+        }
+    }
+
+    &-line-chart {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -330px -600px;
+        }
+    }
+
+    &-linkedin {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -600px;
+        }
+    }
+
+    &-linkedin-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -600px;
+        }
+    }
+
+    &-linux {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -600px;
+        }
+    }
+
+    &-list {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -600px;
+        }
+    }
+
+    &-list-alt {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -630px;
+        }
+    }
+
+    &-list-ol {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -630px;
+        }
+    }
+
+    &-list-ul {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -630px;
+        }
+    }
+
+    &-location-arrow {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -90px -630px;
+        }
+    }
+
+    &-lock {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -120px -630px;
+        }
+    }
+
+    &-long-arrow-down {
+        &:after {
+            width: 6px;
+            height: 14px;
+            background-position: -150px -630px;
+        }
+    }
+
+    &-long-arrow-left {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -630px;
+        }
+    }
+
+    &-long-arrow-right {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -630px;
+        }
+    }
+
+    &-long-arrow-up {
+        &:after {
+            width: 6px;
+            height: 14px;
+            background-position: -240px -630px;
+        }
+    }
+
+    &-magic {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -270px -630px;
+        }
+    }
+
+    &-magnet {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -630px;
+        }
+    }
+
+    &-mail-forward {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -630px;
+        }
+    }
+
+    &-mail-reply {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -630px;
+        }
+    }
+
+    &-mail-reply-all {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -630px;
+        }
+    }
+
+    &-male {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -420px -630px;
+        }
+    }
+
+    &-map {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -630px;
+        }
+    }
+
+    &-map-marker {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: 0 -660px;
+        }
+    }
+
+    &-map-o {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -30px -660px;
+        }
+    }
+
+    &-map-pin {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -60px -660px;
+        }
+    }
+
+    &-map-signs {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -660px;
+        }
+    }
+
+    &-mars {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -660px;
+        }
+    }
+
+    &-mars-double {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -150px -660px;
+        }
+    }
+
+    &-mars-stroke {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -660px;
+        }
+    }
+
+    &-mars-stroke-h {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -210px -660px;
+        }
+    }
+
+    &-mars-stroke-v {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -240px -660px;
+        }
+    }
+
+    &-maxcdn {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -660px;
+        }
+    }
+
+    &-meanpath {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -660px;
+        }
+    }
+
+    &-medium {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -660px;
+        }
+    }
+
+    &-medkit {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -660px;
+        }
+    }
+
+    &-meh-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -660px;
+        }
+    }
+
+    &-mercury {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -420px -660px;
+        }
+    }
+
+    &-microphone {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -450px -660px;
+        }
+    }
+
+    &-microphone-slash {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: 0 -690px;
+        }
+    }
+
+    &-minus {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -30px -690px;
+        }
+    }
+
+    &-minus-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -690px;
+        }
+    }
+
+    &-minus-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -690px;
+        }
+    }
+
+    &-minus-square-o {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -120px -690px;
+        }
+    }
+
+    &-mobile {
+        &:after {
+            width: 6px;
+            height: 14px;
+            background-position: -150px -690px;
+        }
+    }
+
+    &-money {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -180px -690px;
+        }
+    }
+
+    &-moon-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -690px;
+        }
+    }
+
+    &-motorcycle {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -240px -690px;
+        }
+    }
+
+    &-mouse-pointer {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -270px -690px;
+        }
+    }
+
+    &-music {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -690px;
+        }
+    }
+
+    &-neuter {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -330px -690px;
+        }
+    }
+
+    &-newspaper-o {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -360px -690px;
+        }
+    }
+
+    &-object-group {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -390px -690px;
+        }
+    }
+
+    &-object-ungroup {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -420px -690px;
+        }
+    }
+
+    &-odnoklassniki {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -450px -690px;
+        }
+    }
+
+    &-odnoklassniki-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -720px;
+        }
+    }
+
+    &-opencart {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -30px -720px;
+        }
+    }
+
+    &-openid {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -720px;
+        }
+    }
+
+    &-opera {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -720px;
+        }
+    }
+
+    &-optin-monster {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -120px -720px;
+        }
+    }
+
+    &-pagelines {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -150px -720px;
+        }
+    }
+
+    &-paint-brush {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -720px;
+        }
+    }
+
+    &-paper-plane {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -720px;
+        }
+    }
+
+    &-paper-plane-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -720px;
+        }
+    }
+
+    &-paperclip {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -270px -720px;
+        }
+    }
+
+    &-paragraph {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -300px -720px;
+        }
+    }
+
+    &-pause {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -720px;
+        }
+    }
+
+    &-paw {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -360px -720px;
+        }
+    }
+
+    &-paypal {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -720px;
+        }
+    }
+
+    &-pencil {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -720px;
+        }
+    }
+
+    &-pencil-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -720px;
+        }
+    }
+
+    &-phone {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: 0 -750px;
+        }
+    }
+
+    &-phone-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -750px;
+        }
+    }
+
+    &-pie-chart {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -750px;
+        }
+    }
+
+    &-pied-piper {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -750px;
+        }
+    }
+
+    &-pied-piper-alt {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -120px -750px;
+        }
+    }
+
+    &-pinterest {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -750px;
+        }
+    }
+
+    &-pinterest-p {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -180px -750px;
+        }
+    }
+
+    &-pinterest-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -750px;
+        }
+    }
+
+    &-plane {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -240px -750px;
+        }
+    }
+
+    &-play {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -270px -750px;
+        }
+    }
+
+    &-play-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -750px;
+        }
+    }
+
+    &-play-circle-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -750px;
+        }
+    }
+
+    &-plug {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -750px;
+        }
+    }
+
+    &-plus {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -390px -750px;
+        }
+    }
+
+    &-plus-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -750px;
+        }
+    }
+
+    &-plus-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -750px;
+        }
+    }
+
+    &-plus-square-o {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: 0 -780px;
+        }
+    }
+
+    &-power-off {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -780px;
+        }
+    }
+
+    &-print {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -60px -780px;
+        }
+    }
+
+    &-puzzle-piece {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -90px -780px;
+        }
+    }
+
+    &-qq {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -120px -780px;
+        }
+    }
+
+    &-qrcode {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -150px -780px;
+        }
+    }
+
+    &-question {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -180px -780px;
+        }
+    }
+
+    &-question-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -780px;
+        }
+    }
+
+    &-quote-left {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -240px -780px;
+        }
+    }
+
+    &-quote-right {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -270px -780px;
+        }
+    }
+
+    &-ra {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -780px;
+        }
+    }
+
+    &-random {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -780px;
+        }
+    }
+
+    &-recycle {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -780px;
+        }
+    }
+
+    &-reddit {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -780px;
+        }
+    }
+
+    &-reddit-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -780px;
+        }
+    }
+
+    &-refresh {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -780px;
+        }
+    }
+
+    &-registered {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -810px;
+        }
+    }
+
+    &-renren {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -810px;
+        }
+    }
+
+    &-repeat {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -810px;
+        }
+    }
+
+    &-retweet {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -90px -810px;
+        }
+    }
+
+    &-road {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -120px -810px;
+        }
+    }
+
+    &-rocket {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -150px -810px;
+        }
+    }
+
+    &-rotate-left {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -810px;
+        }
+    }
+
+    &-rouble {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -210px -810px;
+        }
+    }
+
+    &-rss {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -1080px;
+        }
+    }
+
+    &-rss-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -810px;
+        }
+    }
+
+    &-safari {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -810px;
+        }
+    }
+
+    &-search {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -300px -810px;
+        }
+    }
+
+    &-search-minus {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -330px -810px;
+        }
+    }
+
+    &-search-plus {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -360px -810px;
+        }
+    }
+
+    &-sellsy {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -390px -810px;
+        }
+    }
+
+    &-server {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -420px -810px;
+        }
+    }
+
+    &-share-alt {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -810px;
+        }
+    }
+
+    &-share-alt-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -840px;
+        }
+    }
+
+    &-share-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -840px;
+        }
+    }
+
+    &-share-square-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -60px -840px;
+        }
+    }
+
+    &-shield {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -90px -840px;
+        }
+    }
+
+    &-ship {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -120px -840px;
+        }
+    }
+
+    &-shirtsinbulk {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -840px;
+        }
+    }
+
+    &-shopping-cart {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -840px;
+        }
+    }
+
+    &-sign-in {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -840px;
+        }
+    }
+
+    &-sign-out {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -240px -840px;
+        }
+    }
+
+    &-signal {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -840px;
+        }
+    }
+
+    &-simplybuilt {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -300px -840px;
+        }
+    }
+
+    &-sitemap {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -840px;
+        }
+    }
+
+    &-skyatlas {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -360px -840px;
+        }
+    }
+
+    &-skype {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -840px;
+        }
+    }
+
+    &-slack {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -420px -840px;
+        }
+    }
+
+    &-sliders {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -840px;
+        }
+    }
+
+    &-slideshare {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -870px;
+        }
+    }
+
+    &-smile-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -870px;
+        }
+    }
+
+    &-sort {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -60px -870px;
+        }
+    }
+
+    &-sort-alpha-asc {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -90px -870px;
+        }
+    }
+
+    &-sort-alpha-desc {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -870px;
+        }
+    }
+
+    &-sort-amount-asc {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -870px;
+        }
+    }
+
+    &-sort-amount-desc {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -870px;
+        }
+    }
+
+    &-sort-asc {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -210px -870px;
+        }
+    }
+
+    &-sort-desc {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -240px -870px;
+        }
+    }
+
+    &-sort-numeric-asc {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -870px;
+        }
+    }
+
+    &-sort-numeric-desc {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -870px;
+        }
+    }
+
+    &-soundcloud {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -330px -870px;
+        }
+    }
+
+    &-space-shuttle {
+        &:after {
+            width: 17px;
+            height: 14px;
+            background-position: -360px -870px;
+        }
+    }
+
+    &-spinner {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -870px;
+        }
+    }
+
+    &-spoon {
+        &:after {
+            width: 6px;
+            height: 14px;
+            background-position: -420px -870px;
+        }
+    }
+
+    &-spotify {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -870px;
+        }
+    }
+
+    &-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: 0 -900px;
+        }
+    }
+
+    &-square-o {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -30px -900px;
+        }
+    }
+
+    &-stack-exchange {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -60px -900px;
+        }
+    }
+
+    &-stack-overflow {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -90px -900px;
+        }
+    }
+
+    &-star {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -900px;
+        }
+    }
+
+    &-star-half {
+        &:after {
+            width: 7px;
+            height: 14px;
+            background-position: -150px -900px;
+        }
+    }
+
+    &-star-half-empty {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -900px;
+        }
+    }
+
+    &-star-o {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -900px;
+        }
+    }
+
+    &-steam {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -900px;
+        }
+    }
+
+    &-steam-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -900px;
+        }
+    }
+
+    &-step-backward {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -300px -900px;
+        }
+    }
+
+    &-step-forward {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -330px -900px;
+        }
+    }
+
+    &-stethoscope {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -360px -900px;
+        }
+    }
+
+    &-sticky-note {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -900px;
+        }
+    }
+
+    &-sticky-note-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -900px;
+        }
+    }
+
+    &-stop {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -900px;
+        }
+    }
+
+    &-street-view {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: 0 -930px;
+        }
+    }
+
+    &-strikethrough {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -930px;
+        }
+    }
+
+    &-stumbleupon {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -60px -930px;
+        }
+    }
+
+    &-stumbleupon-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -930px;
+        }
+    }
+
+    &-subscript {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -930px;
+        }
+    }
+
+    &-subway {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -150px -930px;
+        }
+    }
+
+    &-suitcase {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -930px;
+        }
+    }
+
+    &-sun-o {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -930px;
+        }
+    }
+
+    &-superscript {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -930px;
+        }
+    }
+
+    &-table {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -270px -930px;
+        }
+    }
+
+    &-tablet {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -300px -930px;
+        }
+    }
+
+    &-tag {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -330px -930px;
+        }
+    }
+
+    &-tags {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -360px -930px;
+        }
+    }
+
+    &-tasks {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -930px;
+        }
+    }
+
+    &-television {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -420px -930px;
+        }
+    }
+
+    &-tencent-weibo {
+        &:after {
+            width: 10px;
+            height: 14px;
+            background-position: -450px -930px;
+        }
+    }
+
+    &-terminal {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: 0 -960px;
+        }
+    }
+
+    &-text-height {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -960px;
+        }
+    }
+
+    &-text-width {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -960px;
+        }
+    }
+
+    &-th {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -960px;
+        }
+    }
+
+    &-th-large {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -960px;
+        }
+    }
+
+    &-th-list {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -960px;
+        }
+    }
+
+    &-thumb-tack {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -180px -960px;
+        }
+    }
+
+    &-thumbs-down {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -960px;
+        }
+    }
+
+    &-thumbs-o-down {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -960px;
+        }
+    }
+
+    &-thumbs-o-up {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -270px -960px;
+        }
+    }
+
+    &-thumbs-up {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -300px -960px;
+        }
+    }
+
+    &-ticket {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -960px;
+        }
+    }
+
+    &-times-circle {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -360px -960px;
+        }
+    }
+
+    &-times-circle-o {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -390px -960px;
+        }
+    }
+
+    &-tint {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -420px -960px;
+        }
+    }
+
+    &-toggle-off {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -450px -960px;
+        }
+    }
+
+    &-toggle-on {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: 0 -990px;
+        }
+    }
+
+    &-trademark {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -30px -990px;
+        }
+    }
+
+    &-train {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -990px;
+        }
+    }
+
+    &-transgender-alt {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -90px -990px;
+        }
+    }
+
+    &-trash {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -120px -990px;
+        }
+    }
+
+    &-trash-o {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -150px -990px;
+        }
+    }
+
+    &-tree {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -990px;
+        }
+    }
+
+    &-trello {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -210px -990px;
+        }
+    }
+
+    &-tripadvisor {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -240px -990px;
+        }
+    }
+
+    &-trophy {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -270px -990px;
+        }
+    }
+
+    &-truck {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -990px;
+        }
+    }
+
+    &-try {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -330px -990px;
+        }
+    }
+
+    &-tty {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -990px;
+        }
+    }
+
+    &-tumblr {
+        &:after {
+            width: 8px;
+            height: 14px;
+            background-position: -390px -990px;
+        }
+    }
+
+    &-tumblr-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -420px -990px;
+        }
+    }
+
+    &-twitch {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -990px;
+        }
+    }
+
+    &-twitter {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: 0 -1020px;
+        }
+    }
+
+    &-twitter-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -30px -1020px;
+        }
+    }
+
+    &-umbrella {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -60px -1020px;
+        }
+    }
+
+    &-underline {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -1020px;
+        }
+    }
+
+    &-unlock {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -120px -1020px;
+        }
+    }
+
+    &-unlock-alt {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -150px -1020px;
+        }
+    }
+
+    &-upload {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -180px -1020px;
+        }
+    }
+
+    &-user {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -210px -1020px;
+        }
+    }
+
+    &-user-md {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -240px -1020px;
+        }
+    }
+
+    &-user-plus {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -270px -1020px;
+        }
+    }
+
+    &-user-secret {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -300px -1020px;
+        }
+    }
+
+    &-user-times {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -330px -1020px;
+        }
+    }
+
+    &-venus {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -360px -1020px;
+        }
+    }
+
+    &-venus-double {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -1020px;
+        }
+    }
+
+    &-venus-mars {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -420px -1020px;
+        }
+    }
+
+    &-viacoin {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -450px -1020px;
+        }
+    }
+
+    &-video-camera {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -1050px;
+        }
+    }
+
+    &-vimeo {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -1050px;
+        }
+    }
+
+    &-vimeo-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -1050px;
+        }
+    }
+
+    &-vine {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -1050px;
+        }
+    }
+
+    &-vk {
+        &:after {
+            width: 15px;
+            height: 14px;
+            background-position: -120px -1050px;
+        }
+    }
+
+    &-volume-down {
+        &:after {
+            width: 9px;
+            height: 14px;
+            background-position: -150px -1050px;
+        }
+    }
+
+    &-volume-off {
+        &:after {
+            width: 6px;
+            height: 14px;
+            background-position: -180px -1050px;
+        }
+    }
+
+    &-volume-up {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -210px -1050px;
+        }
+    }
+
+    &-wechat {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -240px -1050px;
+        }
+    }
+
+    &-weibo {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -1050px;
+        }
+    }
+
+    &-whatsapp {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -300px -1050px;
+        }
+    }
+
+    &-wheelchair {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -330px -1050px;
+        }
+    }
+
+    &-wifi {
+        &:after {
+            width: 16px;
+            height: 14px;
+            background-position: -360px -1050px;
+        }
+    }
+
+    &-wikipedia-w {
+        &:after {
+            width: 18px;
+            height: 14px;
+            background-position: -390px -1050px;
+        }
+    }
+
+    &-windows {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: -420px -1050px;
+        }
+    }
+
+    &-wordpress {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -1050px;
+        }
+    }
+
+    &-wrench {
+        &:after {
+            width: 13px;
+            height: 14px;
+            background-position: 0 -1080px;
+        }
+    }
+
+    &-xing {
+        &:after {
+            width: 11px;
+            height: 14px;
+            background-position: -30px -1080px;
+        }
+    }
+
+    &-xing-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -60px -1080px;
+        }
+    }
+
+    &-y-combinator {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -90px -1080px;
+        }
+    }
+
+    &-yahoo {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -120px -1080px;
+        }
+    }
+
+    &-yelp {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -1080px;
+        }
+    }
+
+    &-youtube {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -180px -1080px;
+        }
+    }
+
+    &-youtube-play {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -1080px;
+        }
+    }
+
+    &-youtube-square {
+        &:after {
+            width: 12px;
+            height: 14px;
+            background-position: -240px -1080px;
+        }
+    }
+
+    &-utility-patent-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -1110px;
+        }
+    }
+
+    &-patent-pending-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -1110px;
+        }
+    }
+
+    &-plant-patent-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -1110px;
+        }
+    }
+
+    &-pro-se-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -90px -1110px;
+        }
+    }
+
+    &-invention-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -120px -1110px;
+        }
+    }
+
+    &-maker-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -150px -1110px;
+        }
+    }
+
+    &-intellectual-property-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -180px -1110px;
+        }
+    }
+
+    &-design-patent-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -210px -1110px;
+        }
+    }
+
+    &-prior-art-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -240px -1110px;
+        }
+    }
+
+    &-small-inventor-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -270px -1110px;
+        }
+    }
+
+    &-large-inventor-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -300px -1110px;
+        }
+    }
+
+    &-infringement-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -330px -1110px;
+        }
+    }
+
+    &-trade-secret-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -360px -1110px;
+        }
+    }
+
+    &-micro-entity-inventor-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -390px -1110px;
+        }
+    }
+
+    &-service-mark-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -420px -1110px;
+        }
+    }
+
+    &-counterfeit-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -450px -1110px;
+        }
+    }
+
+    &-ptotrademark-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: 0 -1140px;
+        }
+    }
+
+    &-stem-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -30px -1140px;
+        }
+    }
+
+    &-pro-bono-small {
+        &:after {
+            width: 14px;
+            height: 14px;
+            background-position: -60px -1140px;
+        }
+    }
+
+    /* Icon Scaling - (Experimental) */
+    &-2x, &-3x, &-4x, &-5x, &-6x, &-10x {
+        display: inline-block;
+    }
+    &-2x {
+        transform: scale(2.0);
+        display: inline-block;
+        @include rem(margin, 10px);
+    }
+
+    &-3x {
+        transform: scale(3.0);
+        @include rem(margin, 15px);
+    }
+
+    &-4x {
+        transform: scale(4.0);
+        @include rem(margin, 25px);
+    }
+
+    &-5x {
+        transform: scale(5.0);
+        @include rem(margin, 30px);
+
+    }
+
+    &-6x {
+        transform: scale(6.0);
+        @include rem(margin, 35px);
+
+    }
+
+    &-10x {
+        transform: scale(10.0);
+        @include rem(margin, 70px);
+    }
+
+    /*
+    IP (Noun Project) Icons @ 48px
+    */
+    &-ip {
+        &:after {
+            content: "";
+            display: inline-block;
+            position: relative;
+            @include rem(top, 2px);
+            vertical-align: middle;
+            background: url("../images/icons/IPicons-large.svg") no-repeat scroll;
+        }
+        &.icon {
+            /* Large IP Icons (Noun Project) */
+            &-utility-patent {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: 0 0;
+                }
+            }
+
+            &-patent-pending {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -64px 0;
+                }
+            }
+
+            &-plant-patent {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -128px 0;
+                }
+            }
+
+            &-pro-se {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -192px 0;
+                }
+            }
+
+            &-invention {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -256px 0;
+                }
+            }
+
+            &-maker {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -320px 0;
+                }
+            }
+
+            &-intellectual-property {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -384px 0;
+                }
+            }
+
+            &-design-patent {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -448px 0;
+                }
+            }
+
+            &-prior-art {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -512px 0;
+                }
+            }
+
+            &-small-inventor {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -576px 0;
+                }
+            }
+
+            &-large-inventor {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -640px 0;
+                }
+            }
+
+            &-infringement {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -704px 0;
+                }
+            }
+
+            &-trade-secret {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -768px 0;
+                }
+            }
+
+            &-micro-entity-inventor {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -832px 0;
+                }
+            }
+
+            &-service-mark {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -896px 0;
+                }
+            }
+
+            &-counterfeit {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -960px 0;
+                }
+            }
+
+            &-ptotrademark {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: 0 -64px;
+                }
+            }
+
+            &-stem {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -64px -64px;
+                }
+            }
+
+            &-pro-bono {
+                &:after {
+                    width: 48px;
+                    height: 48px;
+                    background-position: -128px -64px;
+                }
+            }
+        }
+    }
+    /*
+OC Icons @ 16px
+*/
+    &-oc {
+        &:after {
+            content: "";
+            display: inline-block;
+            position: relative;
+            @include rem(top, 2px);
+            vertical-align: middle;
+            background: url("../images/icons/OCicons.svg") no-repeat scroll;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* OC Icons  */
+        &.oc {
+
+            &-access-dav {
+                &:after {
+                    background-position: 0 0;
+                }
+            }
+
+            &-add-page-icon {
+                &:after {
+                    background-position: -32px 0;
+                }
+            }
+
+            &-add-preferred-reviewer-icon {
+                &:after {
+                    background-position: -64px 0;
+                }
+            }
+
+            &-approve-icon {
+                &:after {
+                    background-position: -96px 0;
+                }
+            }
+
+            &-bold-type-icon {
+                &:after {
+                    background-position: -128px 0;
+                }
+            }
+
+            &-clear-form-fields-icon {
+                &:after {
+                    background-position: -160px 0;
+                }
+            }
+
+            &-close-set {
+                &:after {
+                    background-position: -192px 0;
+                }
+            }
+
+            &-close-tab-hover-icon {
+                &:after {
+                    background-position: -224px 0;
+                }
+            }
+
+            &-close-tab-icon {
+                &:after {
+                    background-position: -256px 0;
+                }
+            }
+
+            &-collapse-set {
+                &:after {
+                    background-position: -288px 0;
+                }
+            }
+
+            &-collapse-toggle-icon {
+                &:after {
+                    background-position: -320px 0;
+                }
+            }
+
+            &-console-icon {
+                &:after {
+                    background-position: -352px 0;
+                }
+            }
+
+            &-create-new-icon {
+                &:after {
+                    background-position: -384px 0;
+                }
+            }
+
+            &-create-scenario-icon {
+                &:after {
+                    background-position: -416px 0;
+                }
+            }
+
+            &-delete-page-icon {
+                &:after {
+                    background-position: -448px 0;
+                }
+            }
+
+            &-document-add-icon {
+                &:after {
+                    background-position: -480px 0;
+                }
+            }
+
+            &-document-delete-icon {
+                &:after {
+                    background-position: 0 -32px;
+                }
+            }
+
+            &-document-icon {
+                &:after {
+                    background-position: -32px -32px;
+                }
+            }
+
+            &-document-rename-icon {
+                &:after {
+                    background-position: -64px -32px;
+                }
+            }
+
+            &-dropdown-icon {
+                &:after {
+                    background-position: -96px -32px;
+                }
+            }
+
+            &-expand-set {
+                &:after {
+                    background-position: -128px -32px;
+                }
+            }
+
+            &-expand-toggle-icon {
+                &:after {
+                    background-position: -160px -32px;
+                }
+            }
+
+            &-folder-view-icon {
+                &:after {
+                    background-position: -192px -32px;
+                }
+            }
+
+            &-gadget-actions-icon {
+                &:after {
+                    background-position: -224px -32px;
+                }
+            }
+
+            &-gadgets-briefcase-icon {
+                &:after {
+                    background-position: -256px -32px;
+                }
+            }
+
+            &-gadgets-briefcase2-icon {
+                &:after {
+                    background-position: -288px -32px;
+                }
+            }
+
+            &-help-icon {
+                &:after {
+                    background-position: -320px -32px;
+                }
+            }
+
+            &-html-edit-icon {
+                &:after {
+                    background-position: -352px -32px;
+                }
+            }
+
+            &-html-icon {
+                &:after {
+                    background-position: -384px -32px;
+                }
+            }
+
+            &-ifw-reference-icon {
+                &:after {
+                    background-position: -416px -32px;
+                }
+            }
+
+            &-import-manager-icon {
+                &:after {
+                    background-position: -448px -32px;
+                }
+            }
+
+            &-italic-type-icon {
+                &:after {
+                    background-position: -480px -32px;
+                }
+            }
+
+            &-list-view-icon {
+                &:after {
+                    background-position: 0 -64px;
+                }
+            }
+
+            &-mail-set-icon {
+                &:after {
+                    background-position: -32px -64px;
+                }
+            }
+
+            &-mail-set2-icon {
+                &:after {
+                    background-position: -64px -64px;
+                }
+            }
+
+            &-make-special-icon {
+                &:after {
+                    background-position: -96px -64px;
+                }
+            }
+
+            &-member-list-icon {
+                &:after {
+                    background-position: -128px -64px;
+                }
+            }
+
+            &-notification-icon {
+                &:after {
+                    background-position: -160px -64px;
+                }
+            }
+
+            &-oacs-archive-active-icon {
+                &:after {
+                    background-position: -192px -64px;
+                }
+            }
+
+            &-oacs-archive-icon {
+                &:after {
+                    background-position: -224px -64px;
+                }
+            }
+
+            &-opener-icon {
+                &:after {
+                    background-position: -256px -64px;
+                }
+            }
+
+            &-options-gear-icon {
+                &:after {
+                    background-position: -288px -64px;
+                }
+            }
+
+            &-pdf-annotate-einitials {
+                &:after {
+                    background-position: -320px -64px;
+                }
+            }
+
+            &-pdf-annotate-esignature {
+                &:after {
+                    background-position: -352px -64px;
+                }
+            }
+
+            &-pdf-edit-icon {
+                &:after {
+                    background-position: -384px -64px;
+                }
+            }
+
+            &-pdf-icon {
+                &:after {
+                    background-position: -416px -64px;
+                }
+            }
+
+            &-postforconsult-icon {
+                &:after {
+                    background-position: -448px -64px;
+                }
+            }
+
+            &-postforcredit-icon {
+                &:after {
+                    background-position: -480px -64px;
+                }
+            }
+
+            &-preview-icon {
+                &:after {
+                    background-position: 0 -96px;
+                }
+            }
+
+            &-print-set-icon {
+                &:after {
+                    background-position: -32px -96px;
+                }
+            }
+
+            &-refresh-icon {
+                &:after {
+                    background-position: -64px -96px;
+                }
+            }
+
+            &-remove-preferred-reviewer-icon {
+                &:after {
+                    background-position: -96px -96px;
+                }
+            }
+
+            &-remove-reviewer-icon {
+                &:after {
+                    background-position: -128px -96px;
+                }
+            }
+
+            &-reports-icon {
+                &:after {
+                    background-position: -160px -96px;
+                }
+            }
+
+            &-resettodefault-icon {
+                &:after {
+                    background-position: -192px -96px;
+                }
+            }
+
+            &-return-icon {
+                &:after {
+                    background-position: -224px -96px;
+                }
+            }
+
+            &-save-close-icon {
+                &:after {
+                    background-position: -256px -96px;
+                }
+            }
+
+            &-search-icon {
+                &:after {
+                    background-position: -288px -96px;
+                }
+            }
+
+            &-set-delete-icon {
+                &:after {
+                    background-position: -320px -96px;
+                }
+            }
+
+            &-set-rename-icon {
+                &:after {
+                    background-position: -352px -96px;
+                }
+            }
+
+            &-setasdefault-icon {
+                &:after {
+                    background-position: -384px -96px;
+                }
+            }
+
+            &-spe-mgmt-db-icon {
+                &:after {
+                    background-position: -416px -96px;
+                }
+            }
+
+            &-status-icon {
+                &:after {
+                    background-position: -480px -96px;
+                }
+            }
+
+            &-submit-icon {
+                &:after {
+                    background-position: 0 -128px;
+                }
+            }
+
+            &-tab-slope-left-icon {
+                &:after {
+                    background-position: -32px -128px;
+                }
+            }
+
+            &-tab-slope-right-icon {
+                &:after {
+                    background-position: -64px -128px;
+                }
+            }
+
+            &-word-icon {
+                &:after {
+                    background-position: -96px -128px;
+                }
+            }
+
+            &-wordedit-icon {
+                &:after {
+                    background-position: -128px -128px;
+                }
+            }
+
+            &-zoom-handle-icon {
+                &:after {
+                    background-position: -160px -128px;
+                }
+            }
+        }
+    }
+}

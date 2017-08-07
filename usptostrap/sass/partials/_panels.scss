@@ -1,0 +1,118 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+
+// Base class
+.panel {
+    @include rem(margin-bottom, $line-height-computed);
+    @include rem(border-radius, $panel-border-radius);
+    > .list-group,
+    > .panel-collapse > .list-group {
+
+        .list-group-item {
+            @include rem(border-width, 1px 0);
+        }
+        // Add border top radius for first one
+        &:first-child {
+            .list-group-item:first-child {
+                @include rem(border-top-left-radius, ($panel-border-radius - 1));
+                @include rem(border-top-right-radius, ($panel-border-radius - 1));
+            }
+        }
+
+        // Add border bottom radius for last one
+        &:last-child {
+            .list-group-item:last-child {
+                @include rem(border-bottom-left-radius, ($panel-border-radius - 1));
+                @include rem(border-bottom-right-radius, ($panel-border-radius - 1));
+            }
+        }
+    }
+    > .table,
+    > .table-responsive > .table,
+    > .panel-collapse > .table {
+        caption {
+            @include rem(padding-left, $panel-body-padding);
+            @include rem(padding-right, $panel-body-padding);
+        }
+    }
+    // Add border top radius for first one
+    > .table:first-child,
+    > .table-responsive:first-child > .table:first-child {
+        @include rem(border-top-left-radius, ($panel-border-radius - 1));
+        @include rem(border-top-right-radius, ($panel-border-radius - 1));
+        > thead:first-child,
+        > tbody:first-child {
+            > tr:first-child {
+                @include rem(border-top-right-radius, ($panel-border-radius - 1));
+
+                td:first-child,
+                th:first-child {
+                    @include rem(border-top-left-radius, ($panel-border-radius - 1));
+                }
+                td:last-child,
+                th:last-child {
+                    @include rem(border-top-right-radius, ($panel-border-radius - 1));
+                }
+            }
+        }
+    }
+    // Add border bottom radius for last one
+    > .table:last-child,
+    > .table-responsive:last-child > .table:last-child {
+        @include rem(border-bottom-left-radius, ($panel-border-radius - 1));
+        @include rem(border-bottom-right-radius, ($panel-border-radius - 1));
+        > tbody:last-child,
+        > tfoot:last-child {
+            > tr:last-child {
+                @include rem(border-bottom-left-radius, ($panel-border-radius - 1));
+                @include rem(border-bottom-right-radius, ($panel-border-radius - 1));
+
+                td:first-child,
+                th:first-child {
+                    @include rem(border-bottom-left-radius, ($panel-border-radius - 1));
+                }
+                td:last-child,
+                th:last-child {
+                    @include rem(border-bottom-right-radius, ($panel-border-radius - 1));
+                }
+            }
+        }
+    }
+
+    // Panel contents
+    &-body {
+        @include rem(padding, $panel-body-padding);
+    }
+
+    // Optional heading
+    &-heading {
+        @include rem(border-top-left-radius, ($panel-border-radius - 1));
+        @include rem(border-top-right-radius, ($panel-border-radius - 1));
+        @include rem(padding, $panel-heading-padding);
+    }
+
+    // Within heading, strip any `h*` tag of its default margins for spacing.
+    &-title {
+        @include rem(font-size, ceil(($font-size-base * 1.125)));
+    }
+
+    // Optional footer (stays gray in every modifier class)
+    &-footer {
+        @include rem(border-bottom-left-radius, ($panel-border-radius - 1));
+        @include rem(border-bottom-right-radius, ($panel-border-radius - 1));
+        @include rem(padding, $panel-footer-padding);
+    }
+
+    &-group {
+        @include rem(margin-bottom, $line-height-computed);
+
+        // Tighten up margin so it's only between panels
+        .panel {
+            @include rem(border-radius, $panel-border-radius);
+
+            + .panel {
+                @include rem(margin-top, 5px);
+            }
+        }
+
+    }
+}

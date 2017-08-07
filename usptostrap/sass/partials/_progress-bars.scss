@@ -1,0 +1,15 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+
+.progress {
+    box-shadow: inset 0 0px 0px 1px rgba(0, 0, 0, 0.1);
+    @include rem(height, 12px);
+
+    &-bar {
+        @include transition(width 0.5s);
+        box-shadow: none;
+    }
+
+    &-label {
+        @include rem(margin-bottom, 6px);
+    }
+}

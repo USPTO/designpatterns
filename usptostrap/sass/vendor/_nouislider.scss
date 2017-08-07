@@ -1,0 +1,82 @@
+// style overrides for https://github.com/leongersen/noUiSlider v7.0.10
+
+.noUi-target[data-pips] {
+    @include rem(margin-bottom, 48px); // space for pips
+}
+
+.noUi-target {
+    @include rem(margin-top, 13px); // align in form group
+    @include rem(margin-bottom, 13px); // align in form group
+    box-shadow: inset 0 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    @include rem(border-radius, 3px);
+    border: none;
+}
+
+.noUi-target.noUi-connect, .noUi-connect {
+    box-shadow: none;
+    background: $brand-primary;
+}
+
+.noUi-target[disabled].noUi-connect,
+.noUi-target[disabled] .noUi-connect {
+    background: #ccc;
+}
+.noUi-horizontal[disabled] .noUi-handle,
+.noUi-vertical[disabled] .noUi-handle {
+    border-color: #ccc;
+
+    &:hover, &.noUi-active {
+        box-shadow: none;
+    }
+}
+
+.noUi-background {
+    background: #f5f5f5;
+    box-shadow: inset 0 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+.noUi-horizontal .noUi-handle,
+.noUi-vertical .noUi-handle {
+    border: 2px solid $brand-primary;
+    background: #f5f5f5;
+    box-shadow: none;
+    @include rem(border-radius, 100px);
+    @include rem(height, 18px);
+    @include rem(width, 18px);
+    @include rem(left, -9px);
+    @include rem(top, -6px);
+
+    &:hover, &.noUi-active {
+        box-shadow: 0 0 0 4px rgba(0,0,0,.1);
+    }
+}
+
+.noUi-horizontal {
+    @include rem(height, 6px);
+}
+
+.noUi-pips-horizontal {
+    padding-top: 0;
+    @include rem(margin-top, 10px);
+}
+
+.noUi-value-horizontal.noUi-value-sub {
+    color: $text-muted;
+}
+.noUi-pips {
+    color: $gray;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none;
+    content: none;
+}
+
+.noUi-value-horizontal {
+    @include rem(padding-top, 14px);
+}
+.noUi-marker-horizontal.noUi-marker-large {
+    @include rem(height, 10px);
+}

@@ -1,0 +1,25 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+
+.list-group {
+    @include rem(margin-bottom, 20px);
+    &-item {
+        @include rem(padding, 10px 15px);
+        @include rem(margin-bottom, -1px);
+        // Round the first and last items
+        &:first-child {
+            //altered to match less version
+            @include rem(border-bottom-left-radius, ($list-group-border-radius - 1));
+            @include rem(border-bottom-right-radius, ($list-group-border-radius - 1));
+        }
+        &:last-child {
+            //altered to match less version
+            @include rem(border-bottom-left-radius, $list-group-border-radius);
+            @include rem(border-bottom-right-radius, $list-group-border-radius);
+        }
+        &-heading {
+
+            @include rem(margin-bottom, 5px);
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+@import"./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+
+.label {
+    display: inline-block;
+    &-default {
+        &.subtle {
+            color: $text-color;
+            background-color: mix($text-color, $white, 7.5%);
+            border: 1px solid mix($text-color, $white, 35%);
+        }
+    }
+
+    &-success {
+        &.subtle {
+            color: $state-success-text;
+            background-color: $state-success-bg;
+            border: 1px solid $state-success-border;
+        }
+    }
+
+    &-info {
+        &.subtle {
+            color: $state-info-text;
+            background-color: $state-info-bg;
+            border: 1px solid $state-info-border;
+        }
+    }
+
+    &-warning {
+        color: $text-color;
+        &.subtle {
+            color: $text-color;
+            background-color: $state-warning-bg;
+            border: 1px solid $state-warning-border;
+        }
+    }
+
+    &-danger {
+        &.subtle {
+            color: $state-danger-text;
+            background-color: $state-danger-bg;
+            border: 1px solid $state-danger-border;
+        }
+    }
+
+    &-primary {
+        &.subtle {
+            color: $brand-primary;
+            background-color: mix($brand-primary, $white, 7.5%);
+            border: 1px solid mix($brand-primary, $white, 35%);
+        }
+    }
+}
+

@@ -1,0 +1,30 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_normalize";
+
+h1 {
+    @include rem(font-size, 36px);
+    @include rem(margin, 24.12px 0);
+}
+
+sup {
+    @include rem(top, -5.25px)
+}
+
+sub {
+    @include rem(bottom, -2.625px);
+}
+
+figure {
+    @include rem(margin, 14px 40px);
+}
+
+code,
+kbd,
+pre,
+samp {
+    @include rem(font-size, 14px);
+}
+
+fieldset {
+    @include rem(margin, 0 2px);
+    @include rem(padding, 10.5px 8.75px 4.9px);
+}

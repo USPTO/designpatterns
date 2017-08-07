@@ -1,0 +1,407 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+
+.nav-pills {
+    > li {
+        &.active {
+            > a {
+                &:hover,
+                &:focus {
+                    background-color: $gray-46;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+// Simple stacked nav menu
+.nav {
+    &.nav-stacked {
+        > .category {
+            text-transform: uppercase;
+            font-weight: $font-weight-bold;
+            border-left: 3px solid transparent;
+            @include rem(padding, 3px 15px);
+            @include rem(margin-top, 18px);
+            color: $gray-light;
+            @include rem(font-size, $font-size-base - 1);
+            &:first-child {
+                @include rem(margin-top, 12px);
+            }
+        }
+        > li {
+            > a {
+                @include rem(padding, 3px 15px);
+                border-left: 3px solid transparent;
+                border-radius: 0;
+                &:hover {
+                    background-color: $gray-46;
+                }
+            }
+            &.active > a {
+                background-color: $gray-46;
+                color: $text-color;
+                border-left-color: $brand-primary;
+                &:hover, &:focus {
+                    background-color: $gray-46;
+                    color: $text-color;
+                    cursor: default;
+                }
+            }
+        }
+
+    }
+}
+
+.nav-stacked {
+    &.nav-tree {
+        > .category {
+            @include rem(padding-left, 20px);
+        }
+
+        // standard level
+        > li {
+            > a {
+                @include rem(padding-left, 20px);
+            }
+        }
+
+        // nested 1 level
+        > li {
+            > .nav-stacked {
+                > li {
+                    > a {
+                        @include rem(padding-left, 40px);
+                    }
+                    // nested 2 levels
+                    > .nav-stacked {
+                        > li {
+                            > a {
+                                @include rem(padding-left, 60px);
+                            }
+                            > .expander {
+                                @include rem(padding-left, 48px);
+                            }
+                        }
+                    }
+                    > .expander {
+                        @include rem(padding-left, 28px);
+                    }
+                }
+            }
+
+            > .expander {
+                @include rem(padding-left, 8px);
+            }
+            .expander {
+                z-index: 1;
+                position: absolute;
+                font-style: normal;
+                text-align: right;
+                @include rem(padding-top, 3px);
+                @include rem(padding-bottom, 3px);
+                @include rem(padding-right, 8px);
+                color: $gray-light;
+                @include rem(font-size, 14px);
+                border: none;
+                background: transparent;
+                outline: none;
+
+                &:hover, &:focus {
+                    background: transparent;
+                    border: none;
+                    color: $black;
+                    cursor: pointer;
+                }
+                &.expanded {
+                    &:after {
+                        @extend .icon;
+                        @extend .icon-angle-down;
+                    }
+                }
+                &.collapsed {
+                    &:after {
+                        @extend .icon;
+                        @extend .icon-angle-right;
+                        @include rem(margin-left, 2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Nested stacked menus
+//
+// Increases padding and lightens text weight.
+
+.nav-stacked {
+    > li {
+        > .nav-stacked {
+            > li {
+                > a {
+                    @include rem(padding-left, 35px);
+                    font-weight: $font-weight-normal;
+                }
+                > .nav-stacked {
+                    > li {
+                        > a {
+                            @include rem(padding-left, 55px);
+                            display: block;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-tabs {
+    > li {
+        > a {
+            @include rem(margin-right, -1px);
+            // background-color: transparent;
+            // border-color: $nav-tabs-border-color;
+        }
+        &.disabled > a {
+            color: $gray-65;
+        }
+        &.active > a {
+            background-color: $nav-tabs-active-link-hover-bg;
+        }
+
+        &.open > a,
+        &.open > a:focus {
+            border-color: $nav-tabs-border-color;
+        }
+    }
+    &.nav-justified {
+        > .active {
+            > a {
+                border-bottom-color: $white;
+                @media (max-width: $screen-xs-max) {
+                    background: $white;
+                    border-color: $nav-tabs-border-color;
+                }
+                &:focus, &:hover {
+                    border-bottom-color: $white;
+                }
+            }
+        }
+        > li > a {
+            @media (max-width: $screen-xs-max) {
+                background: $white;
+                border-color: $nav-tabs-border-color;
+            }
+        }
+    }
+}
+
+.nav-centered {
+    text-align: center;
+    > li {
+        float: initial;
+        display: inline-block;
+    }
+}
+
+.nav-tabs.nav-tabs-light {
+    border-bottom: 1px solid $nav-tabs-border-color;
+    > li {
+        @include rem(margin-bottom, -1px);
+        > a {
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid transparent;
+            &:hover {
+                border: none;
+                background: transparent;
+                border-bottom: 2px solid $nav-tabs-border-color;
+            }
+        }
+        &.disabled > a {
+            &:hover {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &.active > a {
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid $gray-light;
+            &:hover,
+            &:focus,
+            &:active {
+                border: none;
+                background: transparent;
+                border-bottom: 2px solid $gray-light;
+            }
+        }
+        &.open > a {
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid $gray-light;
+        }
+    }
+}
+
+.nav-steps {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    word-wrap: break-word;
+    margin-left: 0;
+    padding: 0;
+    > li {
+        display: table-cell;
+        @include rem(max-width, 150px);
+        @include rem(min-width, 75px);
+        text-align: center;
+        @include rem(padding, 0 10px);
+
+        > a, > span {
+            display: block;
+            font-weight: $font-weight-semi-bold;
+            outline: none;
+            @include rem(padding-top, 25px);
+            position: relative;
+            &:before {
+                background: $brand-primary;
+                border-radius: 100%;
+                content: "";
+                box-shadow: 0 0 0 3px $faint-white;
+                @include rem(height, 10px);
+                left: 50%;
+                @include rem(margin-left, -5px);
+                position: absolute;
+                @include rem(top, 3px);
+                @include rem(width, 10px);
+            }
+        }
+    }
+
+    li + li > {
+        span, a {
+            &:after {
+                background: $brand-primary;
+                border: solid $faint-white;
+                border-width: 2px 0;
+                box-shadow: -5px 0 0 -2px $brand-primary, 5px 0 0 -2px $brand-primary;
+                content: "";
+                @include rem(height, 8px);
+                left: -50%;
+                @include rem(margin-left, -14px);
+                @include rem(margin-right, 6px);
+                position: absolute;
+                right: 50%;
+                @include rem(top, 4px);
+            }
+        }
+    }
+    .active {
+        ~ li {
+            color: $gray-light;
+            > span, > a {
+                &:before {
+                    background-color: $gray-45;
+                }
+                &:after {
+                    background-color: $faint-white;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.nav-steps.nav-stacked {
+    display: block;
+    counter-reset: test;
+
+    > li {
+        text-align: left;
+        display: block;
+        max-width: none;
+        min-width: 0;
+        @include rem(padding, 11px 0 10px 50px);
+
+        > a, > span {
+            padding-top: 0;
+            &:before {
+                @include rem(left, -35px);
+                top: 0;
+                margin: 0;
+                @include rem(height, 20px);
+                @include rem(width, 20px);
+                content: counter(test);
+                counter-increment: test;
+                text-align: center;
+                color: $white;
+                box-shadow: 0 0 0 3px $brand-primary;
+            }
+        }
+        &.active {
+            > a, > span {
+                &:before {
+                    color: $brand-primary;
+                    background: $white;
+                    box-shadow: 0 0 0 3px $brand-primary;
+                }
+            }
+        }
+        &.active ~ li {
+            > a, > span {
+                &:before {
+                    color: $text-color;
+                    background: $white;
+                    box-shadow: 0 0 0 3px $faint-white;
+                }
+            }
+        }
+    }
+    li {
+        + li {
+            > a, > span {
+                &:after {
+                    top: -100%;
+                    height: 100%;
+                    bottom: 0;
+                    @include rem(left, -27px);
+                    border-width: 0 0;
+                    right: 0;
+                    @include rem(width, 3px);
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.nav-dots {
+    display: block;
+    padding-left: 0;
+
+    > li {
+        display: inline-block;
+        > a {
+            @include rem(margin-right, 4px);
+            display: inline-block;
+            border-radius: 50%;
+            @include rem(height, 10px);
+            @include rem(width, 10px);
+            overflow: hidden;
+            text-indent: 100%;
+            background-color: $gray-47;
+        }
+        &:last-child > a {
+            margin-right: 0;
+        }
+        &.active > a {
+            background-color: $gray-60;
+        }
+    }
+}
+

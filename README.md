@@ -52,10 +52,19 @@ bower install
 ```
 ---
 #### Running the documentation
-Build the front-end assets (LESS/CSS/JS) with:
+This project can be built with SASS or LESS. The advantages of use the SASS is the added availability of the rem values.
+
+To build the front-end assets (LESS/CSS/JS) with:
 ```
 grunt build
 ```
+
+To build the front-end assets (SASS/CSS/JS) with:
+```
+grunt buildSass
+```
+ __Note:__ The SASS files require your project to install [Bootstrap Sass](https://github.com/twbs/bootstrap-sass) with NPM. The SASS files are looking for a 'node_modules' folder.
+
 Run the project with Jekyll:
 ```
 jekyll serve

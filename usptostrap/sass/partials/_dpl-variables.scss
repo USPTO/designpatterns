@@ -1,0 +1,201 @@
+// Paths for compilation.
+
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+
+// Bootstrap variable overrides
+//
+// To reduce the number of actual rule overrides, bootstrap variables are utilized as much as possible.
+
+// actual brand colors
+$brand-primary: #004C97;
+$brand-success: #008139;
+$brand-danger: #AC2B37;
+$brand-warning: #f3d54e;
+$brand-info: #1596D1;
+
+// Tertiary brand palette colors
+$dark-red: #643335;
+$medium-red: #A6192E;
+$bright-red: #E4002B;
+$light-pink: #FABBCB;
+$dark-blue: #003865;
+$medium-blue: #004c97;
+$bright-blue: #009CDE;
+$pale-blue:#9BB8D3;
+$dark-green: #004c23;
+$medium-green: #007a33;
+$light-green: #7a9a01;
+$pale-green: #d4eb8e;
+$dark-purple: #3c1053;
+$medium-purple: #671e75;
+$light-purple: #BB16a3;
+$pale-purple: #c9b1d0;
+$dark-yellow: #a07400;
+$medium-yellow: #f2a900;
+$light-yellow: #f2d54e;
+$pale-yellow: #efdbb2;
+$black: #000;
+$gray-75: #63666a;
+$gray-65: #999;
+$gray-60: #aaa;
+$gray-50: #a7a8aa;
+$gray-47: #ddd;
+$gray-46: #eee;
+$gray-45: #cccccc;
+$gray-25: #d9d9d6;
+$gray-5: #fafafb;
+$white: #fff;
+$faint-white: #f5f5f5;
+
+
+$text-color:                        #444;
+$headings-color:                    #222;
+
+$body-bg:                           $white;
+
+$gray-light:                        #707070;
+$gray-lightplus:                    #A7A8AA;
+
+// Defaults
+$default-visited:                  #800080;
+
+
+$font-family-sans-serif:            "Segoe UI", Helvetica Neue, Tahoma, Arial, sans-serif;
+$font-family-segoe:                 "Segoe UI";
+$headings-font-family:              $font-family-sans-serif;
+
+$font-weight-lighter:               200;
+$font-weight-light:                 300;
+$font-weight-normal:                400;
+$font-weight-semi-bold:             600;
+$font-weight-bold:                  700;
+
+$btn-font-weight:                   $font-weight-semi-bold;
+$font-size-base:                    13px;
+$line-height-base:                  1.4;
+
+$btn-default-bg:                    #f9f9f9;
+$btn-default-color:                 $text-color;
+
+$btn-warning-color:                 $text-color;
+
+$border-radius-base:                2px;
+$border-radius-small:               2px;
+$border-radius-large:               2px;
+
+$input-border-focus:                $brand-info;
+
+$navbar-height:                     42px;
+$navbar-inverse-bg:                 $brand-primary;
+$navbar-inverse-color:              $white;
+$navbar-inverse-link-color:         $white;
+$navbar-border-radius:              0;
+$navbar-margin-bottom:              0;
+//$navbar-inverse-link-hover-bg:      lighten(spin($navbar-inverse-bg, -3), 2%);
+$navbar-inverse-toggle-hover-bg:    $navbar-inverse-link-hover-bg;
+$navbar-inverse-brand-hover-bg:     $navbar-inverse-link-hover-bg;
+
+$nav-tabs-active-link-hover-bg:     $white;
+$nav-tabs-link-hover-border-color:  $gray-47;
+$nav-link-padding:                  6px 14px;
+
+$nav-pills-border-radius:           100px;
+
+$grid-gutter-width:                 16px;
+
+$alert-padding:                     6px;
+$alert-warning-text:                #ce8f22;
+
+$tooltip-bg:                        #313233;
+$tooltip-opacity:                   .99;
+$tooltip-light-text:                #313233;
+$tooltip-light-bg:                  $gray-lighter;
+$tooltip-light-arrow-color:         $gray-lighter;
+$tooltip-padding:                   6px 12px;
+
+$popover-border-color:              rgba(0,0,0,.05);
+
+$table-border-color:                #e9eaeb;
+$table-bg-header:                   $panel-default-heading-bg;
+$table-bg-accent:                   #f8f9fa;
+$table-bg-active:                   #FDFBE4;
+$table-bg-hover:                    $state-info-bg;
+$table-condensed-cell-padding:      4px;
+
+$dropdown-border:                   rgba(0,0,0,.05);
+$dropdown-fallback-border:          $gray-47;
+$dropdown-link-hover-bg:            $gray-46;
+
+$breadcrumb-bg:                     transparent;
+$breadcrumb-active-color:           #888;
+$breadcrumb-color:                  $text-color;
+$breadcrumb-separator:              "\f105";
+
+$state-success-text:                $brand-success;
+$state-success-bg:                  mix(#88A620, $white, 15%);
+$state-success-border:              mix($state-success-bg, $black, 90%);
+
+$state-info-text:                   $brand-info;
+$state-info-bg:                     mix($brand-info, $white, 10%);
+$state-info-border:                 mix($state-info-bg, $black, 90%);
+
+$state-warning-text:                #F2A900;
+$state-warning-bg:                  mix($brand-warning, $white, 20%);
+$state-warning-border:              mix($state-warning-bg, $black, 90%);
+
+$state-danger-text:                 $brand-danger;
+$state-danger-bg:                   mix($brand-danger, $white, 15%);
+$state-danger-border:               mix($state-danger-bg, $black, 90%);
+
+$alert-success-text:                $text-color;
+$alert-success-bg:                  $state-success-bg;
+$alert-success-border:              $state-success-border;
+
+$alert-info-text:                   $text-color;
+$alert-info-bg:                     $state-info-bg;
+$alert-info-border:                 $state-info-border;
+
+$alert-warning-text:                $text-color;
+$alert-warning-bg:                  $state-warning-bg;
+$alert-warning-border:              $state-warning-border;
+
+$alert-danger-text:                 $text-color;
+$alert-danger-bg:                   $state-danger-bg;
+$alert-danger-border:               $state-danger-border;
+
+$padding-small-vertical:            3px;
+$padding-small-horizontal:          8px;
+
+$padding-xs-vertical:               1px;
+$padding-xs-horizontal:             6px;
+
+$modal-content-border-color:        rgba(0,0,0,.05);
+//** Modal content border color **for IE8**
+$modal-content-fallback-border-color: $gray-47;
+
+$badge-active-color: $white;
+$badge-active-bg: $brand-primary;
+
+//Link preferences
+$paragraph-link:                     underline;
+$visited-color:                      $default-visited;
+
+// Custom variables
+//
+// These variables don't exist in Bootstrap.
+
+$table-bg-header:                   $panel-default-heading-bg;
+$table-header-sortable-active-bg:    darken($table-bg-header, 3%);
+$table-header-sortable-hover-bg:    darken($table-bg-header, 6%);
+
+
+$keyline-color:                     $gray-47;
+
+// Custom mixins
+
+//Bootstrap Sass overwrites to align SASS version with LESS
+$input-height-base:              (floor(($font-size-base * $line-height-base)) + $padding-base-vertical * 2) + 2;
+$border-radius-base:             2px;
+$panel-border-radius:            $border-radius-base;
+$line-height-computed:           floor(($font-size-base * $line-height-base));
+$list-group-border-radius:      $border-radius-base;

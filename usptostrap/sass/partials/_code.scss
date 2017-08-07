@@ -1,0 +1,25 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+
+code {
+    @include rem(border-radius, $border-radius-base);
+    @include rem(padding, 2px 4px);
+}
+
+// User input typically entered via keyboard
+kbd {
+    @include rem(border-radius, $border-radius-small);
+    @include rem(padding, 2px 4px);
+}
+
+// Blocks of code
+pre {
+    @include rem(border-radius, $border-radius-base);
+    @include rem(font-size, ($font-size-base - 1)); // 14px to 13px
+    @include rem(margin, 0 0 ($line-height-computed / 2));
+    @include rem(padding, (($line-height-computed - 1) / 2));
+}
+
+// Enable scrollable blocks of code
+.pre-scrollable {
+    @include rem(max-height, $pre-scrollable-max-height);
+}

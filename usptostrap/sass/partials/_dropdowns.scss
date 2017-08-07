@@ -1,0 +1,19 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns";
+
+.dropdown-menu {
+    li {
+        > a {
+            white-space: normal;
+        }
+    }
+    &.has-icon {
+        > li > a, > .dropdown-header {
+            @include rem(padding-left, 28px);
+            .dropdown-menu-icon {
+                position: absolute;
+                @include rem(line-height, 18px);
+                @include rem(margin-left, -20px);
+            }
+        }
+    }
+}

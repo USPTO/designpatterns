@@ -1,0 +1,6 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+.close {
+    @include rem(font-size, $font-size-base * 1.5);
+}
+

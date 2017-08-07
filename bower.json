@@ -36,5 +36,8 @@
     "howto.md",
     "index.html",
     "todo.md"
-  ]
+  ],
+  "resolutions": {
+    "jquery": "~1.11.0"
+  }
 }

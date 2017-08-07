@@ -1,0 +1,72 @@
+//$bootstrap-path: "./node_modules/bootstrap-sass/assets/stylesheets";
+//$images-path: "../images/";
+// Core variables and mixins
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins";
+@import "partials/mixins/_dpl-mixins";
+// include DPL mixins and DPL variables;
+// Reset and dependencies
+@import "partials/_normalize";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_print";
+@import "partials/_icons";
+
+// Core CSS
+@import "partials/_scaffolding";
+@import "partials/_type";
+@import "partials/_code";
+@import "partials/_grid";
+@import "partials/_tables";
+@import "partials/_forms";
+@import "partials/_buttons";
+
+// Components
+@import "partials/_component-animations";
+@import "partials/_dropdowns";
+@import "partials/_button-groups";
+@import "partials/_input-groups";
+@import "partials/_navs";
+@import "partials/_navbar";
+@import "partials/_breadcrumbs";
+@import "partials/_pagination";
+@import "partials/_pager";
+@import "partials/_labels";
+@import "partials/_badges";
+@import "partials/_jumbotron";
+@import "partials/_thumbnails";
+@import "partials/_alerts";
+@import "partials/_progress-bars";
+@import "partials/_media";
+@import "partials/_list-group";
+@import "partials/_panels";
+@import "partials/_responsive-embed";
+@import "partials/_wells";
+@import "partials/_close";
+
+// Bootstrap 4 backports
+@import "partials/_cards";
+
+// Components w/ JavaScript
+@import "partials/_modals";
+@import "partials/_tooltip";
+@import "partials/_popovers";
+@import "partials/_carousel";
+
+// Custom 3rd party lib styles
+@import "vendor/_datepicker";
+@import "vendor/_nouislider";
+@import "vendor/_nouislider";
+@import "vendor/_timepicker";
+
+// Custom components
+@import "custom/_filters";
+@import "custom/_sliders";
+@import "custom/_load-spinners";
+@import "custom/_accordions";
+@import "custom/_tags";
+
+// Utility classes
+@import "partials/_utilities";
+@import "partials/_responsive-utilities";
+
+// Custom flair
+@import "partials/_flair"; // @import flair styling file
+

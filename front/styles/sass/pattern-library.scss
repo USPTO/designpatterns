@@ -1,0 +1,510 @@
+@import "../../../usptostrap/sass/usptostrap.scss";
+@import "pattern-library-hjs-github";
+
+$pl-background-color: #f6f6f6;
+// $navbar-height: 42px;
+$pl-header-bg: $navbar-inverse-bg;
+$pl-sidebar-width: 200px;
+$pl-sidebar-bg: #282930;
+$pl-sidebar-link-fg: $white;
+$pl-sidebar-sublink-fg: #ccc;
+$pl-sidebar-category-fg: mix($pl-sidebar-bg, $white, 75%);
+$pl-sidebar-link-active-bg: mix($pl-sidebar-bg, #000, 85%);
+$pl-sub-header-height: 0;
+$pl-sub-header-bg: $faint-white;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    overflow-y: auto;
+    background-color: $pl-background-color;
+}
+
+.pl-palette-color {
+    display: inline-block;
+    @include rem(padding, 4px);
+    @include rem(margin-bottom, 8px);
+    @include rem(margin-right, 8px);
+    border: 1px solid $gray-46;
+    text-align: center;
+
+    .pl-palette-preview {
+        @include rem(border-radius, 2px);
+        @include rem(width, 125px);
+        @include rem(height, 50px);
+    }
+
+    .pl-palette-variable {
+        font-weight: $font-weight-semi-bold;
+        color: $gray-light;
+    }
+}
+
+.pl-header {
+    padding: 0;
+
+    .navbar-brand {
+        @include rem(width, 158px);
+        @include rem(padding-left, 16px);
+        background: darken($pl-header-bg, 5%);
+    }
+
+    .pl-uspto-logo {
+        @include rem(margin-top, -2px);
+    }
+
+    .nav-collapse {
+        background: darken($pl-header-bg, 5%);
+        @include rem(padding, 12px 14px);
+        border: none;
+        float: left;
+        height: $navbar-height;
+    }
+}
+
+.pl-collapsed-nav {
+    .pl-sidebar {
+        display: none;
+    }
+    .pl-content {
+        margin-left: 0;
+    }
+    .pl-sub-header {
+        left: 0;
+    }
+    .pl-header .navbar-brand {
+        @extend .hidden;
+    }
+    .pl-header .container-fluid {
+        padding-left: 0;
+    }
+    .pl-header .container-fluid > .navbar-header {
+        margin-left: 0;
+    }
+}
+
+.pl-no-sidebar {
+    @include rem(padding-top, 10px);
+    @include rem(padding-bottom, 10px);
+
+    .pl-sidebar {
+        display: none;
+    }
+    .pl-content {
+        margin: auto;
+        @include rem(padding-left, 8px);
+        @include rem(padding-right, 8px);
+    }
+    .navbar-brand {
+        background: none;
+    }
+}
+
+.pl-sub-header {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    position: fixed;
+    @include rem(padding, 15px);
+    z-index: 2;
+    right: 0;
+    left: $pl-sidebar-width;
+    top: $navbar-height;
+    min-height: $pl-sub-header-height - 1;
+    background: $white;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    h3 {
+        @include rem(margin-left, 8px);
+        @include rem(margin-top, 12px);
+        @include rem(margin-bottom, 4px);
+        font-weight: $font-weight-semi-bold;
+    }
+    h5 {
+        @include rem(margin-left, 8px);
+        color: $gray-light;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .pull-right {
+        padding: 0;
+    }
+}
+
+.pl-container {
+    position: relative;
+    height: 100%;
+}
+
+.pl-panel {
+    display: block;
+    @include rem(margin, 40px);
+    @include rem(padding, 40px);
+    line-height: 1.8;
+    background: $white;
+    border: 1px solid $gray-47;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .025);
+}
+
+.pl-content {
+    @include rem(margin-left, $pl-sidebar-width);
+    position: relative;
+    @include rem(padding-top, $navbar-height + $pl-sub-header-height);
+
+    @media(max-width: $screen-xs-max) {
+        margin-left: 0;
+        @include rem(padding-top, $navbar-height + $pl-sub-header-height);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .pl-footer {
+        @include rem(padding, 0 30px 30px 30px);
+    }
+
+    .pl-pattern {
+        @extend .pl-panel;
+        @include rem(padding, 40px 40px 0 40px);
+
+        @media(max-width: $screen-xs-max) {
+            @include rem(margin, 6px);
+        }
+
+        > h3 {
+            @include rem(font-size, 28px);
+            margin-top: 0;
+            font-weight: $font-weight-normal;
+            .pl-heading-link {
+                text-decoration: none;
+                .pl-heading-link-hash {
+                    color: #ccc;
+                    position: absolute;
+                    display: none;
+                }
+                &:hover .pl-heading-link-hash {
+                    @include rem(margin-left, -20px);
+                    display: inline-block;
+                }
+            }
+        }
+
+        > h4 {
+            @include rem(margin-top, 40px);
+        }
+
+        .pl-toggle-code {
+            position: absolute;
+            top: 0;
+            display: block;
+            right: 0;
+            @include rem(padding, 0 10px 0 8px);
+            font-weight: $font-weight-semi-bold;
+            border-left: 1px solid $gray-46;
+            border-bottom: 1px solid $gray-46;
+            @include rem(border-bottom-left-radius, 2px);
+            background: #fafafa;
+            cursor: pointer;
+
+            .icon {
+                @include rem(margin-right, 3px);
+            }
+
+            &:hover, &.active {
+                background: #f0f0f0;
+            }
+
+        }
+
+        .pl-preview {
+            background: #fefefe;
+            position: relative;
+            @include rem(margin, 20px -40px 0 -40px);
+            @include rem(padding, 30px 40px);
+            border: 1px solid $gray-46;
+            border-left: 0;
+            border-right: 0;
+            line-height: $line-height-base;
+
+            @media(max-width: $screen-xs-max) {
+                @include rem(margin, 0 -15px);
+                @include rem(adding, 30px 15px);
+            }
+
+            &::before {
+                content: "Example";
+                position: absolute;
+                top: 0;
+                @include rem(right, 111px);
+                @include rem(padding, 0 8px);
+                color: $gray-65;
+                font-weight: $font-weight-semi-bold;
+                border-left: 1px solid $gray-46;
+                border-bottom: 1px solid $gray-46;
+                @include rem(border-bottom-left-radius, 2px);
+                background: #fafafa;
+            }
+            + .highlight {
+                display: none;
+                @include rem(padding, 30px 40px);
+                @include rem(margin, 0 -40px);
+                position: relative;
+                z-index: 2;
+                background: #fefefe;
+                border-bottom: 1px solid $gray-46;
+            }
+        }
+        pre {
+            border-radius: 0;
+            border: 0;
+            padding: 0;
+            word-wrap: normal;
+            background: transparent;
+
+            code {
+                white-space: pre;
+            }
+        }
+
+        .highlight {
+            padding: 0;
+        }
+
+    }
+}
+
+.pl-icon-list {
+    line-height: 2;
+    @include rem(font-size, 13px);
+    color: #888;
+    i {
+        display: inline-block;
+        @include rem(width, 20px);
+        @include rem(margin-right, 6px);
+        text-align: left;
+        color: #333;
+    }
+}
+
+.pl-icon-list-large {
+    line-height: 2;
+    @include rem(font-size, 13px);
+    color: #888;
+    i {
+        display: inline-block;
+        @include rem(width, 20px);
+        @include rem(margin-right, 36px);
+        text-align: left;
+        color: #333;
+    }
+}
+
+.pl-grid-example .row > div > div {
+    background: #f0f0f0;
+    color: $gray-65;
+    border: 1px solid $gray-46;
+    @include rem(padding, 6px);
+    text-align: center;
+    @include rem(margin-bottom, 16px);
+}
+
+.pl-preview-header {
+    text-align: center;
+    @include rem(line-height, 40px);
+    @include rem(margin-bottom, -40px);
+    font-weight: $font-weight-normal;
+
+    @media(max-width: $screen-xs-max) {
+            @include rem(margin-bottom, -6px);
+    }
+}
+
+.pl-sidebar {
+    float: left;
+    overflow: auto;
+    top: $navbar-height + $pl-sub-header-height;
+    background: $pl-sidebar-bg;
+    bottom: 0;
+    margin: 0;
+    position: fixed;
+    width: $pl-sidebar-width;
+    z-index: $zindex-navbar-fixed - 1;
+    @include rem(padding, 0 0 6px 0);
+}
+
+.pl-sidebar .nav.nav-stacked {
+
+    list-style: none;
+    font-weight: $font-weight-semi-bold;
+    line-height: 16px;
+
+    > li > a {
+        color: $pl-sidebar-link-fg;
+        &:hover,
+        &:focus {
+            background: $pl-sidebar-link-active-bg;
+            color: $pl-sidebar-link-fg;
+        }
+    }
+
+    > li.active > a {
+        background: $pl-sidebar-link-active-bg;
+        color: $pl-sidebar-link-fg;
+    }
+
+    > li > ul > li > a {
+        background: $pl-sidebar-link-active-bg;
+        color: $pl-sidebar-sublink-fg;
+        border-left-color: transparent;
+        @include rem(font-size, $font-size-base - 1);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    > li > ul > li:last-child > a {
+        @include rem(padding-bottom, 8px);
+    }
+
+    > li > ul > li.active > a {
+        background: $pl-sidebar-link-active-bg;
+        color: $pl-sidebar-link-fg;
+    }
+
+    li + li {
+        margin-top: 0;
+
+        &.category {
+            @include rem(margin-top, 18px);
+        }
+    }
+
+    > .category {
+        color: $pl-sidebar-category-fg;
+    }
+
+    > li > a > .fa {
+        color: $white;
+        opacity: .15;
+        position: relative;
+        @include rem(top, 1px);
+        left: .6em;
+    }
+
+}
+
+.pl-hero {
+    background-color: $brand-primary;
+    @include rem(padding-bottom, 75px);
+    background-image: url(../images/hero-mockup.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    .btn {
+        @include rem(margin, 0 10px);
+        @include rem(min-width, 120px);
+        border: 2px solid $white;
+        box-shadow: none;
+        background: $brand-primary;
+
+        @media(max-width: $screen-xs-max) {
+            display: block;
+            @include rem(margin, 10px auto);
+            @include rem(max-width, 300px);
+        }
+
+    }
+
+    .btn-default {
+        color: $brand-primary;
+        background: $white;
+    }
+
+    .container {
+        @include rem(padding, 20px 8px);
+    }
+
+    h1 {
+        color: $white;
+        @include rem(font-size, 50px);
+        font-weight: 200;
+    }
+    h3 {
+        color: mix($brand-primary, $white, 50%);
+        @include rem(font-size, 20px);
+        font-weight: $font-weight-normal;
+    }
+}
+
+.pl-help {
+    background-color: $pl-sidebar-bg;
+    color: $white;
+    display: inline-block;
+    width: 100%;
+    @include rem(font-size, 14px);
+    text-align: center;
+    h4 {
+        color: $white;
+    }
+    @include rem(padding, 100px);
+    color: mix($pl-sidebar-bg, $white, 50%);
+    a {
+        color: mix($pl-sidebar-bg, $white, 50%);
+        text-decoration: underline;
+    }
+}
+
+.pl-heading-fancy {
+    color: $brand-success;
+    &:after {
+        display: block;
+        content: "";
+        @include rem(height, 1px);
+        background: mix($brand-success, $white, 75%);
+        @include rem(width, 60px);
+        @include rem(margin-top, 8px);
+        margin-left: 0;
+        @include rem(margin-bottom, 20px);
+    }
+}
+
+.pl-about {
+    background: $white;
+    @include rem(padding-top, 50px);
+    @include rem(padding-bottom, 50px);
+    @include rem(font-size, 16px);
+    line-height: 1.6;
+
+    h4 {
+        @include rem(margin-top, 21px)
+    }
+
+    .pl-padded-col {
+        @include rem(padding, 20px 40px);
+        p {
+            text-align: left;
+        }
+    }
+}
+
+.pl-uspto-logo {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTY5LjUgNTkuMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTY5LjUgNTkuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE0Mi42LDE4LjdjLTEuOSwwLTMuNSwwLjYtNC43LDEuOWMtMiwyLTIuMiw1LjQtMi4yLDguOWMwLDMuNSwwLjMsNi45LDIuMiw4LjljMS4yLDEuMiwyLjgsMS45LDQuNywxLjkKCQljMS45LDAsMy42LTAuNyw0LjgtMS45YzItMiwyLjItNS40LDIuMi04LjljMC0zLjUtMC4zLTYuOS0yLjItOC45QzE0Ni4yLDE5LjMsMTQ0LjUsMTguNywxNDIuNiwxOC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkxLjMsNDAuM2M1LjksMCw2LjctNS4xLDYuNy0xMC44YzAtNS44LTAuOC0xMC44LTYuNy0xMC44Yy02LDAtNi44LDUtNi44LDEwLjgKCQlDODQuNSwzNS4yLDg1LjMsNDAuMyw5MS4zLDQwLjN6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTYyLjksMGgtNDQuMnYxMy4yaDYuM3Y1aC02LjN2MTguMmMwLDIuNCwxLjIsMy44LDMuNiwzLjhoMi43djUuNmgtMy45Yy02LjEsMC04LjktNC40LTguOS05VjE4LjJoLTMuNwoJCXYtNWgzLjdWMEg2LjdDMywwLDAsMywwLDYuN3Y0NS44YzAsMy43LDMsNi43LDYuNyw2LjdINzhWMTMuMmg2LjR2My41YzIuNC0zLDUuMS0zLjksOC42LTMuOWMzLjMsMCw2LjIsMS4xLDgsMi45CgkJYzMuMSwzLjIsMy43LDguNCwzLjcsMTMuN2MwLDUuMy0wLjUsMTAuNi0zLjcsMTMuOGMtMS44LDEuOC00LjYsMi45LTcuOSwyLjljLTMuNSwwLTYuMi0wLjgtOC41LTMuN3YxNi43aDc4LjQKCQljMy43LDAsNi43LTMsNi43LTYuN1Y2LjdDMTY5LjUsMywxNjYuNSwwLDE2Mi45LDB6IE0zOS43LDQ1LjhoLTYuNHYtMy4zYy0yLjIsMi40LTUuNCwzLjctOC43LDMuN2MtMy4zLDAtNi4xLTEuMS04LTMKCQljLTIuNS0yLjQtMy4zLTUuNS0zLjMtOS4yVjEzLjJoNi41djE5LjhjMCw1LjEsMi45LDcuMyw2LjUsNy4zYzMuNywwLDYuNy0yLjIsNi43LTcuM1YxMy4yaDYuNVY0NS44eiBNNTguNyw0Ni4xCgkJYy01LjMsMC05LjgtMC45LTEzLjctNC43bDQuMy00LjNjMi42LDIuNyw2LjIsMy40LDkuNCwzLjRjNCwwLDcuMS0xLjQsNy4xLTQuNWMwLTIuMi0xLjItMy41LTQuNC0zLjlsLTUuMi0wLjQKCQljLTYuMi0wLjYtOS42LTMuMy05LjYtOWMwLTYuNCw1LjUtOS45LDEyLjMtOS45YzQuOSwwLDksMSwxMi4xLDMuN2wtNC4xLDQuMmMtMi4xLTEuNy00LjktMi40LTgtMi40Yy00LDAtNS45LDEuNy01LjksNC4yCgkJYzAsMi4yLDEuMywzLjQsNC41LDMuN2w0LjYsMC40YzYuNywwLjYsMTAuMywzLjUsMTAuMyw5LjJDNzIuMiw0Mi42LDY2LjUsNDYuMSw1OC43LDQ2LjF6IE0xNTIuMyw0Mi4zYy0yLjEsMi4yLTUuMywzLjktOS44LDMuOQoJCWMtNC40LDAtNy42LTEuNy05LjctMy45Yy0zLjEtMy4yLTMuOS03LjMtMy45LTEyLjhjMC01LjUsMC44LTkuNiwzLjktMTIuOGMyLjEtMi4yLDUuMy0zLjksOS43LTMuOWM0LjQsMCw3LjYsMS43LDkuOCwzLjkKCQljMy4xLDMuMiwzLjksNy4zLDMuOSwxMi44QzE1Ni4yLDM1LDE1NS40LDM5LjEsMTUyLjMsNDIuM3oiLz4KPC9nPgo8L3N2Zz4=);
+    background-size: fit;
+    width: 2.868020305em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.pl-pattern-layouts {
+    img {
+        float: left;
+        @include rem(padding, 4px);
+        border: 2px solid $gray-47;
+        @include rem(border-radius, 2px);
+        @include rem(margin, 0 18px 18px 0);
+        vertical-align: middle;
+    }
+}

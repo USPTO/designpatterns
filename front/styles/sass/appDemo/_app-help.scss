@@ -1,0 +1,30 @@
+/* ========================================================================
+ * Help styles
+ * ======================================================================== */
+
+.breadcrumb {
+	margin-bottom: 10px;
+	padding-left: 0;
+}
+
+.topLink {
+	margin-bottom: 0;
+	text-align: right;
+}
+
+.help-topics {
+	background-color: #FFF;
+}
+
+.aside-help {
+    border-top: 1px solid #DDD;
+    display: block;
+    float: left;
+    width: 100%;
+    @media (min-width: 1024px) {
+    	border-top: none;
+		display: table-cell;
+		float: none;
+		width: 225px;
+	}
+}

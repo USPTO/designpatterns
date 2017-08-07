@@ -1,0 +1,113 @@
+// Styling to add a little flair
+// Contains optional styling to elements that may be added with .flair
+// For radio and check boxes
+// Beta v0.2
+
+
+// Options
+.flair-animation {
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+// Common
+.flair-common {
+    content: ''; font-family: Arial;
+    display: inline-block;
+    position: relative;
+    @include rem(margin-right, 10px);
+    vertical-align:bottom;
+    transform: scale(1.0);
+    @include rem(height, 20px);
+    @include rem(width, 20px);
+}
+
+.ico-r-flair {
+    background-image: url("@{images-path}/icons/radio-flair.png");
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+}
+
+.ico-c-flair {
+    background-image: url("@{images-path}/icons/checkbox-flair.png");
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+}
+
+
+// Flair
+.flair {
+
+    @include rem(margin-left, -20px);
+
+    //Flair styled checkboxes
+    input[type="checkbox"] {
+
+        display:none;
+
+        & + label {
+            @include rem(padding-bottom, 5px);
+        }
+
+        &:not(:checked) + label:before{
+            @extend .flair-common;
+            @extend .ico-c-flair;
+            background-position: 0px -20px;
+            opacity: .5;
+        }
+
+        &:checked + label:before{
+            @extend .flair-common;
+            @extend .ico-c-flair;
+            @extend .flair-animation;
+            background-position: 0px 0px;
+        }
+
+        &:disabled + label:before{
+            @extend .flair-common;
+            @extend .ico-c-flair;
+            background-position: 0px -20px;
+            opacity: .2;
+        }
+    }
+
+
+    //Flair styled radio buttons
+    input[type="radio"] {
+
+        display:none;
+
+        &:not(:checked) {
+            + label:before {
+                @extend .flair-common;
+                @extend .ico-r-flair;
+                background-position: 0px -20px;
+                opacity: .6;
+            }
+        }
+        &:checked + label:before{
+            @extend .flair-common;
+            @extend .ico-r-flair;
+            @extend .flair-animation;
+            background-position: 0px 0px;
+        }
+
+        &:disabled + label:before{
+            @extend .flair-common;
+            @extend .ico-r-flair;
+            background-position: 0px -20px;
+            opacity: .2;
+            cursor: not-allowed;
+        }
+    }
+
+
+
+
+    // Future enhancements
+
+
+}
+

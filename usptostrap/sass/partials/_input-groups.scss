@@ -1,0 +1,35 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+
+.input-group-addon {
+    @include rem(padding, $padding-base-vertical $padding-base-horizontal);
+    @include rem(font-size, $font-size-base);
+    @include rem(border-radius, $input-border-radius);
+
+    // Sizing
+    &.input-sm {
+        @include rem(padding, $padding-small-vertical $padding-small-horizontal);
+        @include rem(font-size, $font-size-small);
+        @include rem(border-radius, $input-border-radius-small);
+    }
+    &.input-lg {
+        @include rem(padding, $padding-large-vertical $padding-large-horizontal);
+        @include rem(font-size, $font-size-large);
+        @include rem(border-radius, $input-border-radius-large);
+    }
+
+}
+.input-group-btn {
+    > .btn {
+        + .btn {
+            @include rem(margin-left, -1px);
+        }
+    }
+
+    &, first-child, &, last-child {
+        > .btn,
+        > .btn-group {
+            @include rem(margin-right, -1px);
+        }
+    }
+
+}

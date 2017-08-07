@@ -1,0 +1,34 @@
+.form-createAcct {
+    margin-bottom: 50px;
+    h1 {
+        margin-bottom: 30px;
+        small {
+            display: block;
+        }
+    }
+    .nav-steps {
+        margin-bottom: 30px;
+    }
+    .alert {
+        margin: 10px 0 0;
+    }
+    @media (min-width: 768px) {
+        form {
+            width: 580px;
+        }
+    }
+    .link-helper {
+        display: inline-block;
+        margin: 5px 0 0;
+    }
+    @media (min-width: 768px) {
+        .link-helper {
+            float: right;
+            margin-top: -25px;
+        }
+    }
+    .form-ft {
+        margin-top: 30px;
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,16 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+
+.popover {
+    padding: 0;
+
+    .popover-title {
+        font-weight: 600;
+    }
+
+    &-toolbar {
+        display: inline-block;
+        width: 100%;
+        @include rem(padding, 9px 14px);
+        border-top: 1px solid $gray-46;
+    }
+}

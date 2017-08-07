@@ -1,0 +1,27 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/media";
+.media {
+    // Proper spacing between instances of .media
+    @include rem(margin-top, 15px);
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &-heading {
+        @include rem(margin-bottom, 5px);
+    }
+    &-body {
+        @include rem(width, 10000px);
+    }
+}
+
+.media-right,
+.media > .pull-right {
+    @include rem(padding-left, 10px);
+}
+
+.media-left,
+.media > .pull-left {
+    @include rem(padding-right, 10px);
+}
+
+

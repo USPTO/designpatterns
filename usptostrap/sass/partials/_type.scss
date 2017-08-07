@@ -1,0 +1,210 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type";
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-weight: $font-weight-lighter;
+    src: local("Segoe UI Light");
+}
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-weight: $font-weight-light;
+    src: local("Segoe UI Semilight");
+}
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-weight: $font-weight-normal;
+    src: local($font-family-segoe);
+}
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-weight: $font-weight-semi-bold;
+    src: local("Segoe UI Semibold");
+}
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-weight: $font-weight-bold;
+    src: local("Segoe UI Bold");
+}
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-style: italic;
+    font-weight: $font-weight-normal;
+    src: local("Segoe UI Italic");
+}
+
+@font-face {
+    font-family: $font-family-segoe;
+    font-style: italic;
+    font-weight: $font-weight-bold;
+    src: local("Segoe UI Bold Italic");
+}
+/* Allow REM values to percentage equal to 10px in modern browsers
+   Makes REM values divisible by 10.
+ */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+.black {
+    font-weight: $font-weight-bold;
+}
+
+dt {
+    font-weight: $font-weight-semi-bold;
+}
+
+dd {
+    @include rem(margin-bottom, 6px);
+}
+
+.dl-horizontal {
+    dd {
+        @media (min-width: $screen-sm) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.dl-inverse {
+    dt {
+        font-weight: normal;
+    }
+    dd {
+        font-weight: $font-weight-semi-bold;
+    }
+}
+
+.dl-inline {
+    @extend .clearfix;
+    dd, dt {
+        display: inline-block;
+        color: $gray-light;
+        float: left;
+        font-weight: $font-weight-normal;
+        @include rem(margin-right, 4px);
+        margin-bottom: 0;
+    }
+    dt {
+        &:after {
+            content: ":";
+            display: inline-block;
+        }
+    }
+    dd {
+        &:after {
+            @include rem(margin-left, 8px);
+            @include rem(margin-right, 4px);
+            display: inline-block;
+            content: "•";
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.subhead, .title, .headline, .display1, .display2, .display3 {
+    color: $headings-color;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3,
+.display2, .display1, .headline {
+    @include rem(margin-top, 32px);
+    @include rem(margin-bottom, 9px);
+}
+
+h4, h5, h6,
+.h4, .h5, .h6,
+.title, .subhead {
+    @include rem(margin-top, 18px);
+    @include rem(margin-bottom, 9px);
+}
+
+.caption {
+    @include rem(font-size, $font-size-base - 1);
+    color: $gray-light;
+}
+
+h6, .h6 {
+    font-weight: $font-weight-semi-bold;
+    @include rem(font-size, $font-size-base);
+}
+
+.subhead, h5, .h5 {
+    @include rem(font-size, 16px);
+    font-weight: $font-weight-semi-bold;
+}
+
+.title, h4, .h4 {
+    @include rem(font-size, 18px);
+    font-weight: $font-weight-semi-bold;
+}
+
+.headline, h3, .h3 {
+    @include rem(font-size, 20px);
+    font-weight: $font-weight-semi-bold;
+}
+
+.display1, h2, .h2 {
+    @include rem(font-size, 25px);
+    font-weight: $font-weight-semi-bold;
+}
+
+.display2, h1, .h1 {
+    @include rem(font-size, 40px);
+    font-weight: $font-weight-normal;
+}
+
+.display3 {
+    @include rem(font-size, 56px);
+    font-weight: $font-weight-normal;
+}
+
+.prose {
+    @include rem(font-size, $font-size-base + 1);
+    line-height: 1.8;
+}
+
+// Paragraph Links
+p {
+    a {
+        text-decoration: $paragraph-link;
+        &:visited {
+            color: $visited-color;
+        }
+        &.link-top {
+            text-decoration: none;
+        }
+    }
+}
+
+.bold {
+    font-weight: $font-weight-semi-bold;
+}
+
+.normal {
+    font-weight: $font-weight-normal;
+}
+
+.light {
+    font-weight: $font-weight-light;
+}
+
+.toolbar-text {
+    @include rem(padding, 8px 12px);
+    display: inline-block;
+    vertical-align: middle;
+}

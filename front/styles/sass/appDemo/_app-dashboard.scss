@@ -1,0 +1,65 @@
+/* ========================================================================
+ * Dashboard styles
+ * ======================================================================== */
+
+.aside {        
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    display: block;
+    float: left;
+    width: 100%;
+    &.collections {
+        border-left: none;        
+         @media (min-width: 1024px) {
+            border-left: 1px solid #DDD;
+        }
+    }
+    @media (min-width: 1024px) {
+        border-top: none;
+        display: table-cell;
+        float: none;
+        width: 225px;
+    }
+}
+
+.title-block {
+    .heading, .meta {
+        display: block;
+        vertical-align: top;
+    }
+    .heading {
+        width: 300px;
+    }
+    .meta {
+        margin-top: 15px;
+    }
+    .meta-filedApps {
+        clear: both;
+        float: none;        
+    }
+    @media (min-width: 480px) {
+        .heading, .meta {
+            display: table-cell;
+        }
+        .meta-filedApps { 
+            float: right;
+        }
+    }
+}
+
+.title-block.open .heading, .title-block.open .meta {
+    display: block;
+    .meta-filedApps {
+        float: none;
+    }    
+}
+
+.table--recentApps td:last-child {
+    white-space: nowrap;
+}
+
+.aside.dashboards {
+    .icon-external-link {
+        margin-left: 5px;
+    }
+}

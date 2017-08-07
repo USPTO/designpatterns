@@ -1,0 +1,11 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pager";
+.pager {
+    @include rem(margin, $line-height-computed 0);
+    li {
+        > a,
+        > span {
+            @include rem(padding, 5px 14px);
+            @include rem(border-radius, $pager-border-radius);
+        }
+    }
+}

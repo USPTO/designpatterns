@@ -1,0 +1,20 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_breadcrumbs";
+
+.breadcrumb {
+    @include rem(padding, 8px 16px);
+    > li {
+        + li {
+            &:before {
+
+                content: "";
+                @extend .icon;
+                @extend .icon-angle-right;
+                opacity: .8;
+                @include rem(left, 2px);
+                @include rem(margin-right, 4px);
+                @include rem(margin-left, 2px);
+                @include rem(top, 2px);
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+//
+// Carousel
+// --------------------------------------------------
+
+
+// Wrapper for the slide container and indicators
+.carousel-inner {
+
+    > .item {
+        // WebKit CSS3 transforms for supported devices
+        @media all and (transform-3d), (-webkit-transform-3d) {
+            @include perspective(1000px);
+        }
+    }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+
+    // Toggles
+    .icon-prev,
+    .icon-next,
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right {
+        @include rem(margin-top, -10px);
+    }
+    .icon-prev,
+    .glyphicon-chevron-left {
+        @include rem(margin-left, -10px);
+    }
+    .icon-next,
+    .glyphicon-chevron-right {
+        @include rem(margin-right, -10px);
+    }
+    .icon-prev,
+    .icon-next {
+        @include rem(width, 20px);
+        @include rem(height, 20px);
+        line-height: 1;
+        font-family: serif;
+    }
+}
+
+// Optional indicator pips
+//
+// Add an unordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+.carousel-indicators {
+    @include rem(bottom, 10px);
+
+    .active {
+        @include rem(width, 12px);
+        @include rem(height, 12px);
+    }
+}
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+.carousel-caption {
+    @include rem(bottom, 20px);
+    @include rem(padding-top, 20px);
+    @include rem(padding-bottom, 20px);
+    & .btn {
+        text-shadow: none; // No shadow for button elements in carousel-caption
+    }
+}
+
+
+// Scale up controls for tablets and up
+@media screen and (min-width: $screen-sm-min) {
+
+    // Show and left align the captions
+    .carousel-caption {
+        left: 20%;
+        right: 20%;
+        @include rem(padding-bottom, 20px);
+    }
+
+    // Move up the indicators
+    .carousel-indicators {
+        @include rem(bottom, 20px);
+    }
+}

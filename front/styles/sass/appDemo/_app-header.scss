@@ -1,0 +1,223 @@
+/* ========================================================================
+ * Application header/banner styles
+ * ======================================================================== */
+@mixin ex-btn__inverse(){
+    background: none;
+    border: none;
+    color: $white;
+    box-shadow: none;
+    @include rem(padding, 8px 8px);
+    vertical-align: middle;
+    border-radius: 0;
+    text-align: center;
+    &.btn {
+        &:hover {
+            background-color: rgba(255, 255, 255, .1);
+            color: $white;
+        }
+    }
+}
+.navbar-brand {
+    @include rem(font-size, 14px);
+    font-weight: 600;
+    small {
+        color: $white;
+        @include rem(margin-left, 3px);
+    }
+    @media (min-width: 360px) {
+        @include rem(font-size, 17px);
+    }
+}
+
+.uspto-logo-svg {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAXCAYAAAC/F5msAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAllJREFUeNrsWO1RwkAQTRj/mw5MB14HHBWIFRA7gAqIFYAVgBUEKghUAB0kVhCsIG703bied/lgEgfG7MxO4D52995ldx+4eZ4Lx3EiUt+5fNm5rjsqPlDceVs2SWcu2UuuBISugPi0O7giELoUOegx+JIeCMiNZXxGeiSdkAaG+RGeC1KhzW1It6QpvnukQ9jx2Lo16Sv2z0lfULgcpOtcS9sZm+cx6DGeYHvL/D9YzvEtuVkk5kLTJNsba1NBiR+vKMxsbYhxgc5l2hPpMRnW8BgPpL5lnSTNLOfN2wRiwQ4cwWmGNQHpSjMTMjs+5mM8PTbOJa64QL/C3vgvgCjdYxAOxKHkwHFNIFZsLimxl5iC6aJYnposRlroqSHVLZLsa5raqxQwUALJUmbTpFieIxMQniU5LYraGON3OKiw7PMs40IrjlWSVtjzsea9ayCKOvBGzyWBcUTX+VGsQOW9jjuhuAQeUbQ8VSBj1Itp8ZoTODu0wK4lbZNHnJXvPCe15z3pE4Gx5kWtwsexoU+/Agjl57bJGyFKCsv6DOBU+/qVFkij1PDjStka1gRiCHs7Qxwp/PDLqUWoeLsZo70lvCcbWlvA+jdvUZEiTFhjap8CtjJtvafFlWlEKma+MsYXBOwkmj3ZlEdYWSJngQyIzMb8tMNmBmbplzDLlSGuaQWz9Gr6rw1EjkAkM7RQ5AmqE6EIty5xmxJv1MpGqBj1Vft87Imr4oLqthMUaP4WhGUgFOK2/AdHE3mmvA0BdNz/DO//j7g8IE49DE46ANv7z2AUZ3/8EGAA+vX0k8tdeekAAAAASUVORK5CYII=);
+    background: none, url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTY5LjUgNTkuMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTY5LjUgNTkuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE0Mi42LDE4LjdjLTEuOSwwLTMuNSwwLjYtNC43LDEuOWMtMiwyLTIuMiw1LjQtMi4yLDguOWMwLDMuNSwwLjMsNi45LDIuMiw4LjljMS4yLDEuMiwyLjgsMS45LDQuNywxLjkKCQljMS45LDAsMy42LTAuNyw0LjgtMS45YzItMiwyLjItNS40LDIuMi04LjljMC0zLjUtMC4zLTYuOS0yLjItOC45QzE0Ni4yLDE5LjMsMTQ0LjUsMTguNywxNDIuNiwxOC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkxLjMsNDAuM2M1LjksMCw2LjctNS4xLDYuNy0xMC44YzAtNS44LTAuOC0xMC44LTYuNy0xMC44Yy02LDAtNi44LDUtNi44LDEwLjgKCQlDODQuNSwzNS4yLDg1LjMsNDAuMyw5MS4zLDQwLjN6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTYyLjksMGgtNDQuMnYxMy4yaDYuM3Y1aC02LjN2MTguMmMwLDIuNCwxLjIsMy44LDMuNiwzLjhoMi43djUuNmgtMy45Yy02LjEsMC04LjktNC40LTguOS05VjE4LjJoLTMuNwoJCXYtNWgzLjdWMEg2LjdDMywwLDAsMywwLDYuN3Y0NS44YzAsMy43LDMsNi43LDYuNyw2LjdINzhWMTMuMmg2LjR2My41YzIuNC0zLDUuMS0zLjksOC42LTMuOWMzLjMsMCw2LjIsMS4xLDgsMi45CgkJYzMuMSwzLjIsMy43LDguNCwzLjcsMTMuN2MwLDUuMy0wLjUsMTAuNi0zLjcsMTMuOGMtMS44LDEuOC00LjYsMi45LTcuOSwyLjljLTMuNSwwLTYuMi0wLjgtOC41LTMuN3YxNi43aDc4LjQKCQljMy43LDAsNi43LTMsNi43LTYuN1Y2LjdDMTY5LjUsMywxNjYuNSwwLDE2Mi45LDB6IE0zOS43LDQ1LjhoLTYuNHYtMy4zYy0yLjIsMi40LTUuNCwzLjctOC43LDMuN2MtMy4zLDAtNi4xLTEuMS04LTMKCQljLTIuNS0yLjQtMy4zLTUuNS0zLjMtOS4yVjEzLjJoNi41djE5LjhjMCw1LjEsMi45LDcuMyw2LjUsNy4zYzMuNywwLDYuNy0yLjIsNi43LTcuM1YxMy4yaDYuNVY0NS44eiBNNTguNyw0Ni4xCgkJYy01LjMsMC05LjgtMC45LTEzLjctNC43bDQuMy00LjNjMi42LDIuNyw2LjIsMy40LDkuNCwzLjRjNCwwLDcuMS0xLjQsNy4xLTQuNWMwLTIuMi0xLjItMy41LTQuNC0zLjlsLTUuMi0wLjQKCQljLTYuMi0wLjYtOS42LTMuMy05LjYtOWMwLTYuNCw1LjUtOS45LDEyLjMtOS45YzQuOSwwLDksMSwxMi4xLDMuN2wtNC4xLDQuMmMtMi4xLTEuNy00LjktMi40LTgtMi40Yy00LDAtNS45LDEuNy01LjksNC4yCgkJYzAsMi4yLDEuMywzLjQsNC41LDMuN2w0LjYsMC40YzYuNywwLjYsMTAuMywzLjUsMTAuMyw5LjJDNzIuMiw0Mi42LDY2LjUsNDYuMSw1OC43LDQ2LjF6IE0xNTIuMyw0Mi4zYy0yLjEsMi4yLTUuMywzLjktOS44LDMuOQoJCWMtNC40LDAtNy42LTEuNy05LjctMy45Yy0zLjEtMy4yLTMuOS03LjMtMy45LTEyLjhjMC01LjUsMC44LTkuNiwzLjktMTIuOGMyLjEtMi4yLDUuMy0zLjksOS43LTMuOWM0LjQsMCw3LjYsMS43LDkuOCwzLjkKCQljMy4xLDMuMiwzLjksNy4zLDMuOSwxMi44QzE1Ni4yLDM1LDE1NS40LDM5LjEsMTUyLjMsNDIuM3oiLz4KPC9nPgo8L3N2Zz4=);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2.868020305em;
+    height: 1em;
+}
+
+/* reset */
+
+.uspto-header__top {
+    background-color: #323232;
+    @include rem(padding, 8px 0);
+    &__logo {
+        @include rem(height, 23px);
+        @include rem(width, 66px);
+        float: left;
+        @include rem(margin, -1px 7px 0 0);
+        @media (min-width: $dpl-screen-xs) {
+            @include rem(margin-right, 10px);
+        }
+    }
+
+    &__links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        float: right;
+        @include rem(font-size, 13px);
+        line-height: 23px;
+        @include rem(margin-right, 8px);
+        > li {
+            display: inline-block;
+            @include rem(margin-left, 14px);
+
+            > a {
+                color: #ccc;
+                text-decoration: none;
+                &:hover {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.uspto-header--external {
+    h1 {
+        @include rem(margin-bottom, 30px);
+        small {
+            display: block;
+        }
+    }
+}
+
+.ex-sub-header {
+    background: #282930;
+    @include rem(height, 38px);
+    color: $white;
+    @include rem(padding-right, 4px);
+    .btn {
+        @include rem(border-radius, 2px);
+        @include rem(margin, 4px 0);
+        @include rem(padding, 6px);
+    }
+}
+
+.ex-header--icon-badge {
+    color: $white;
+    background: $dpl-orange;
+    @include rem(padding, 2px);
+    @include rem(border-radius, 20px);
+    text-align: center;
+    font-weight: 700;
+    @include rem(margin-left, -6px);
+    @include rem(margin-top, -6px);
+    border: 2px solid $dpl-blue-primary;
+    display: inline-block;
+    line-height: 11px;
+    @include rem(font-size, 11px);
+    @include rem(width, 20px);
+    @include rem(height, 20px);
+    vertical-align: top;
+    position: relative;
+}
+
+.ex-sub-header--gadgets {
+    float: left;
+    .btn {
+        @include rem(width, 34px);
+        .icon {
+            opacity: .3;
+        }
+    }
+
+    .ex-btn__inverse__active {
+        background: rgba(255, 255, 255, .05);
+        .icon {
+            opacity: 1;
+        }
+    }
+
+    .btn-search--mobile {
+        display: inline-block;
+        @media (min-width: $dpl-tablet-md) {
+            display: none;
+        }
+    }
+}
+
+.ex-btn__inverse {
+    @include ex-btn__inverse();
+}
+
+.ex-form-control__inverse,
+.ex-form-control__inverse:focus {
+    border: none;
+    background: rgba(0, 0, 0, .5);
+    display: inline-block;
+    @include rem(width, 200px);
+    @include rem(height, 30px);
+    @include rem(padding, 5px 12px);
+    @include rem(padding-right, 28px);
+    vertical-align: middle;
+    color: $white;
+}
+
+.search {
+    display: none;
+    @media (min-width: $dpl-tablet-md) {
+        background-color: transparent;
+        display: block;
+        float: right;
+        padding: 0;
+        position: static;
+        text-align: right;
+        width: auto;
+        .btn-search {
+        @include ex-btn__inverse();
+            background: rgba(255, 255, 255, 0.05) none repeat scroll 0 0;
+            @include rem(padding, 6px);
+            width: 3em;
+            &:active:focus {
+                background-color: $dpl-gray-dark;
+            }
+        }
+        .icon.icon-search::after {
+            background-image: url("../images/icons/white.svg");
+        }
+    }
+}
+
+.btn {
+    &-fixed,
+    &-fluid {
+        display: none;
+        @media (min-width: $dpl-screen-sm) {
+            display: inline-block;
+        }
+    }
+}
+
+.skipLinks {
+    text-align: center;
+    a {
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        &:hover,
+        &:focus,
+        &:active {
+            padding: 5px;
+            text-decoration: none;
+        }
+    }
+}
+
+.sr-only {
+    &.focusable {
+        &:active,
+        &:focus {
+            clip: auto;
+            height: auto;
+            margin: 0 auto;
+            overflow: visible;
+            position: static;
+            @include rem(width, 300px);
+        }
+    }
+}

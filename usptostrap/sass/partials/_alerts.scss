@@ -1,0 +1,114 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+
+.alert {
+    display: inline-block;
+    width: 100%;
+    @include rem(padding, $alert-padding $alert-padding*2);
+
+    .close {
+        @include rem(margin-top, -3px);
+        @include rem(margin-left, 8px);
+        @include rem(margin-right, -3px);
+        text-shadow: none;
+    }
+
+    .alert-icon {
+        @include rem(margin-right, 3px);
+        @include rem(width, 18px);
+        @include rem(margin-left, -4px);
+        text-align: center;
+        display: inline-block;
+    }
+
+    .btn {
+        @include rem(margin, -4px);
+        @include rem(margin-left, 10px);
+        text-decoration: underline;
+
+    }
+
+    &-dismissible {
+        @include rem(padding-right, 32px);
+
+        .close {
+            margin-top: 0;
+        }
+    }
+
+    &-icon-info,
+    &-icon-success,
+    &-icon-danger,
+    &-icon-warning {
+        &:after {
+            @extend .icon;
+        }
+    }
+
+    &-icon-info:after {
+        @extend .icon-info-circle;
+    }
+
+    &-icon-success:after {
+        @extend .icon-check;
+    }
+
+    &-icon-danger:after {
+        @extend .icon-times-circle:after;
+    }
+
+    &-icon-warning:after {
+        @extend .icon-warning:after;
+    }
+}
+
+.toast-list {
+    .toast {
+        position: relative;
+        border: 1px solid $gray-47;
+        border-left-width: 4px;
+        @include rem(border-radius, 2px);
+        @include rem(margin-bottom, 9px);
+        position: relative;
+        background: $white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+        @include rem(padding, $alert-padding*2);
+        &.toast {
+            &-info {
+                border-left-color: $brand-info;
+            }
+            &-primary {
+                border-left-color: $brand-primary;
+            }
+            &-success {
+                border-left-color: $brand-success;
+            }
+            &-danger {
+                border-left-color: $brand-danger;
+            }
+            &-warning {
+                border-left-color: $brand-warning;
+            }
+            &-actions {
+                @include rem(margin-top, $alert-padding);
+                padding-top: 0;
+                display: inline-block;
+                width: 100%;
+                > .btn-link {
+                    padding: 0;
+                    @include rem(margin-right, 8px);
+                }
+            }
+            &-footer {
+                background: $gray-lighter;
+                @include rem(margin, 10px -12px -12px -12px);
+                @include rem(padding, 8px 5px 8px 10px);
+            }
+            .close {
+                @include rem(margin-top, -3px);
+                @include rem(margin-left, 8px);
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,86 @@
+/* ========================================================================
+ * Base/global application styles
+ * ======================================================================== */
+body {
+    background-color: $dpl-white-faint;
+}
+
+main {
+    @include rem(padding-bottom, 100px);
+    width: 100%;
+}
+
+.main {
+    &-wrapper {
+        background-color: $white;
+    }
+    &-content {
+        display: block;
+        @media (min-width: $dpl-screen-md) {
+            display: table-cell;
+        }
+    }
+}
+
+.morrisChart svg {
+    width: 100%;
+}
+
+abbr {
+    &[title], &[data-original-title] {
+        border-bottom-width: 0;
+    }
+}
+
+.pg-header {
+    @include rem(padding, 18px 9px 9px);
+    h2 {
+        float: none;
+        @include rem(margin, 0 0 5px);
+        small {
+            color: $dpl-gray-medium;
+            display: block;
+            font-weight: $font-weight-normal;
+            @include rem(margin, 3px 0 0);
+        }
+    }
+    .actions, .share {
+        @include rem(margin, 10px 0 15px);
+    }
+    @media (min-width: $dpl-screen-sm) {
+        h2 {
+            float: left;
+        }
+        .actions, .share {
+            float: right;
+        }
+        .share {
+            margin: 0;
+        }
+    }
+}
+
+.pg-actions {
+    position: relative;
+}
+
+.table-sortable {
+    thead > tr > .sortable:hover {
+        background-color: $dpl-gray-dark;
+    }
+    th {
+        .icon {
+            @include rem(margin-left, 5px);
+        }
+    }
+}
+
+.table-inverse {
+    &.table-bordered > thead > tr > th {
+        border-bottom: none;
+    }
+    th a {
+        color: $white;
+    }
+}
+

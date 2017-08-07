@@ -1,0 +1,194 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+
+legend {
+    @include rem(font-size, ($font-size-base * 1.5));
+    @include rem(margin-bottom, $line-height-computed);
+}
+
+label {
+    @include rem(margin-bottom, 5px);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+    @include rem(margin, 4px 0 0);
+}
+
+// Adjust output element
+output {
+    @include rem(padding-top, ($padding-base-vertical + 1));
+    @include rem(font-size, $font-size-base);
+}
+
+.form-control {
+    @include rem(height, $input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    @include rem(padding, $padding-base-vertical $padding-base-horizontal);
+    @include rem(font-size, $font-size-base);
+    @include rem(border-radius, $input-border-radius); // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+}
+
+.form-group {
+    @include rem(margin-bottom, $form-group-margin-bottom);
+}
+
+.radio,
+.checkbox {
+    @include rem(margin-top, 10px);
+    @include rem(margin-bottom, 10px);
+
+    label {
+        @include rem(min-height, $line-height-computed); // Ensure the input doesn't jump when there is no text
+        @include rem(padding-left, 20px);
+    }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    @include rem(margin-left, -20px);
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+    @include rem(margin-top, -5px); // Move up sibling radios or checkboxes for tighter spacing
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+    @include rem(padding-left, 20px);
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    @include rem(margin-left, 10px); // space out consecutive inline controls
+}
+
+.form-control-static {
+    @include rem(padding-top, ($padding-base-vertical + 1));
+    @include rem(padding-bottom, ($padding-base-vertical + 1));
+    @include rem(min-height, ($line-height-computed + $font-size-base));
+}
+
+.form-group-sm {
+    .form-control {
+        @include rem(height, $input-height-small);
+        @include rem(padding, $padding-small-vertical $padding-small-horizontal);
+        @include rem(font-size, $font-size-small);
+        @include rem(border-radius, $input-border-radius-small);
+    }
+    select.form-control {
+        @include rem(height, $input-height-small);
+    }
+
+    .form-control-static {
+        @include rem(height, $input-height-small);
+        @include rem(min-height, ($line-height-computed + $font-size-small));
+        @include rem(padding, ($padding-small-vertical + 1) $padding-small-horizontal);
+        @include rem(font-size, $font-size-small);
+    }
+}
+
+.form-group-lg {
+    .form-control {
+        @include rem(height, $input-height-large);
+        @include rem(padding, $padding-large-vertical $padding-large-horizontal);
+        @include rem(font-size, $font-size-large);
+        @include rem(border-radius, $input-border-radius-large);
+    }
+    select.form-control {
+        @include rem(height, $input-height-large);
+    }
+    .form-control-static {
+        @include rem(height, $input-height-large);
+        @include rem(min-height, ($line-height-computed + $font-size-large));
+        @include rem(padding, ($padding-large-vertical + 1) $padding-large-horizontal);
+        @include rem(font-size, $font-size-large);
+    }
+}
+
+.has-feedback {
+    .form-control {
+        @include rem(padding-right, ($input-height-base * 1.25));
+    }
+}
+
+// Feedback icon (requires .glyphicon classes)
+.form-control-feedback {
+    @include rem(width, $input-height-base);
+    @include rem(height, $input-height-base);
+}
+
+.input-lg + .form-control-feedback,
+.input-group-lg + .form-control-feedback,
+.form-group-lg .form-control + .form-control-feedback {
+    @include rem(width, $input-height-large);
+    @include rem(height, $input-height-large);
+}
+
+.input-sm + .form-control-feedback,
+.input-group-sm + .form-control-feedback,
+.form-group-sm .form-control + .form-control-feedback {
+    @include rem(width, $input-height-small);
+    @include rem(height, $input-height-small);
+}
+
+.has-feedback label {
+    & ~ .form-control-feedback {
+        @include rem(top, ($line-height-computed + 5)); // Height of the `label` and its margin
+    }
+}
+
+.help-block {
+    @include rem(margin-top, 5px);
+    @include rem(margin-bottom, 10px);
+}
+
+.form-horizontal {
+    .radio,
+    .checkbox,
+    .radio-inline,
+    .checkbox-inline {
+        @include rem(padding-top, ($padding-base-vertical + 1)); // Default padding plus a border
+    }
+    .radio,
+    .checkbox {
+        @include rem(min-height, ($line-height-computed + ($padding-base-vertical + 1)));
+    }
+
+    .control-label {
+        @media (min-width: $screen-sm-min) {
+            @include rem(padding-top, ($padding-base-vertical + 1)); // Default padding plus a border
+        }
+    }
+
+    .has-feedback .form-control-feedback {
+        @include rem(right, floor(($grid-gutter-width / 2)));
+    }
+
+    .form-group {
+        &-lg, &-sm {
+            .control-label {
+                @media (min-width: $screen-sm-min) {
+                    @include rem(padding-top, ($padding-large-vertical + 1));
+                }
+            }
+        }
+        &-lg {
+            .control-label {
+                @media (min-width: $screen-sm-min) {
+                    @include rem(font-size, $font-size-large);
+                }
+            }
+        }
+        &-sm {
+            .control-label {
+                @media (min-width: $screen-sm-min) {
+                    @include rem(font-size, $font-size-small);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+
+//rewriting 10px as percentage to work with REM values
+html {
+    font-size: 62.5%;
+}
+
+
+hr {
+    @include rem(margin-top, $line-height-computed);
+    @include rem(margin-bottom, $line-height-computed);
+}

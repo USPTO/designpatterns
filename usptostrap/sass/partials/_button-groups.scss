@@ -1,0 +1,47 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+
+.btn-group {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        @include rem(margin-left, -1px);
+    }
+}
+
+.btn-toolbar {
+    margin-left: -5px; // Offset the first child's margin
+    > .btn,
+    > .btn-group,
+    > .input-group {
+        @include rem(margin-left, 5px);
+    }
+}
+
+
+.btn-group > .btn + .dropdown-toggle {
+    @include rem(padding-left, 8px);
+    @include rem(padding-right, 8px);
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+    @include rem(padding-left, 12px);
+    @include rem(padding-right, 12px);
+}
+
+.btn-group-vertical {
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group {
+        @include rem(margin-top, -1px);
+    }
+}
+
+.btn-group-vertical > .btn {
+    &:first-child:not(:last-child) {
+        @include rem(border-top-radius, $btn-border-radius-base);
+    }
+    &:last-child:not(:first-child) {
+        @include rem(border-bottom-radius,$btn-border-radius-base);
+    }
+}

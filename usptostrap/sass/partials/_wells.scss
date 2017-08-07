@@ -1,0 +1,17 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells";
+
+.well {
+    @include rem(min-height, 20px);
+    @include rem(padding, 19px);
+    @include rem(margin-bottom, 20px);
+    @include rem(border-radius, $border-radius-base);
+    // Sizes
+    &-lg {
+        @include rem(padding, 24px);
+        @include rem(border-radius, $border-radius-large);
+    }
+    &-sm {
+        @include rem(padding, 9px);
+        @include rem(border-radius, $border-radius-small);
+    }
+}

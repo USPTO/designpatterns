@@ -1,0 +1,40 @@
+/* ========================================================================
+ * Grid styles
+ * ======================================================================== */
+
+.container, .container-fluid {
+    transition: width 0.5s;
+}
+
+header {
+    .container {
+        @include rem(min-width, 240px);
+        &.container--full {
+            @media (min-width: $dpl-screen-sm) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    .container-fluid {
+        width: 100%;
+    }
+}
+
+main {
+    &.container--full {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.row-grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.col {
+    display: table-cell;
+    vertical-align: top;
+}

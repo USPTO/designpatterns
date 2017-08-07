@@ -1,0 +1,75 @@
+
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_grid";
+/*override bootstrap to use rem's*/
+.container {
+    @include container-fixed;
+    @include rem(padding-left, (($grid-gutter-width / 2)));
+    @include rem(padding-right, (($grid-gutter-width / 2)));
+
+    @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
+}
+
+.row {
+    @include make-row;
+    @include rem(margin-left, -8px);
+    @include rem(margin-right, -8px);
+}
+
+
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+    @for $i from (1 + 1) through $grid-columns {
+        $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+    }
+    #{$list} {
+        position: relative;
+        // Prevent columns from collapsing when empty
+        min-height: 1px;
+        // Inner gutter via padding
+        @include rem(padding-left, (($grid-gutter-width / 2)));
+        @include rem(padding-right, (($grid-gutter-width / 2)));
+    }
+}
+@include make-grid-columns;
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+    @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+    @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+    @include make-grid(lg);
+}

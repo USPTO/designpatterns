@@ -1,5 +1,5 @@
 // Paths for compilation.
-@bootstrap-path: "bootstrap/";
+@bootstrap-path: "C:\Users\rnugent\Websites\app\bower_components\bootstrap";
 @images-path: "../images/";
 
 // Core variables and mixins
@@ -71,3 +71,12 @@
 
 // Custom flair
 @import "_flair"; // @import flair styling file
+
+.form-control-feedback {
+    height: @line-height-computed + @padding-base-vertical * 2;
+    width: @line-height-computed;
+    top: @padding-base-vertical;
+    bottom: @padding-base-vertical * 2;
+    left: floor((@font-size-base * @line-height-base));
+
+}

@@ -1,0 +1,36 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+    @include rem(padding-top, $jumbotron-padding);
+    @include rem(padding-bottom, $jumbotron-padding);
+    @include rem(margin-bottom, $jumbotron-padding);
+    @media screen and (min-width: $screen-sm-min) {
+        @include rem(padding-top, ($jumbotron-padding * 1.6));
+        @include rem(padding-bottom, ($jumbotron-padding * 1.6));
+    }
+    h1,
+    .h1 {
+        @media screen and (min-width: $screen-sm-min) {
+            @include rem(font-size, $jumbotron-heading-font-size);
+        }
+    }
+
+    p {
+        @include rem(margin-bottom, ($jumbotron-padding / 2));
+        @include rem(font-size, $jumbotron-font-size);
+    }
+
+    .container &,
+    .container-fluid & {
+        @include rem(border-radius, $border-radius-large);
+        @include rem(padding-left, ($grid-gutter-width / 2));
+        @include rem(padding-right, ($grid-gutter-width / 2));
+        @media screen and (min-width: $screen-sm-min) {
+            @include rem(padding-left, ($jumbotron-padding * 2));
+        }
+    }
+}

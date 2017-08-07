@@ -1,36 +1,22 @@
 'use strict';
-
 module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
-
     var config = grunt.file.readYAML('./_config.yml');
-
     // Configurable paths
     var paths = {
         tmp: '.tmp',
         assets: 'generated',
-        downloads: 'downloads'
+        downloads: 'downloads',
+        usptostrap: 'usptostrap',
+        front: 'front/'
     };
-
     grunt.initConfig({
 
         // Project settings
         paths: paths,
         config: config,
-
-        // Watches files for changes and runs tasks based on the changed files
-        watch: {
-            js: {
-                files: ['front/scripts/{,*/}*.js'],
-                tasks: ['jshint', 'concat:mainjs', 'concat:appDemojs']
-            },
-            less: {
-                files: ['usptostrap/less/**/*.less', 'front/styles/**/*.less'],
-                tasks: ['less', 'usebanner', 'concat:maincss', 'autoprefixer']
-            }
-        },
 
         // Clean out gen'd folders
         clean: {
@@ -43,9 +29,54 @@ module.exports = function (grunt) {
                         '<%= paths.downloads %>'
                     ]
                 }]
-            },
+            }
         },
+        // Copies remaining files to places other tasks can use
+        copy: {
+            dist: {
+                files: [{// htmlshiv and matchMedia polyfill for <= IE9
+                    dot: true,
+                    expand: true,
+                    cwd: 'front/vendor/',
+                    src: ['html5shiv/*.*', 'matchMedia/*.*'],
+                    dest: '<%= paths.assets %>/vendor/'
+                }, {// icon sprite and png to assets folder
+                    dot: true,
+                    expand: true,
+                    cwd: 'usptostrap/images/icons',
+                    src: ['*.svg', '*.png'],
+                    dest: '<%= paths.assets %>/images/icons'
+                }, {// favicon sprite to assets folder
+                    dot: true,
+                    expand: true,
+                    cwd: 'front/',
+                    src: 'favicon.ico',
+                    dest: '<%= paths.assets %>/'
+                }, {// copy vendor files
+                    dot: true,
+                    expand: true,
+                    cwd: 'generated/styles',
+                    src: 'vendor.css',
+                    dest: '<%= paths.downloads %>/vendor'
+                }, {// usptostrap src to downloads folder
+                    dot: false,
+                    expand: true,
+                    cwd: 'usptostrap',
+                    src: '**/*',
+                    dest: '<%= paths.downloads %>/'
+                }, {// minified css to downloads folders
 
+                }]
+            },
+            release: {
+                files: [{// Do things for a full release
+                    cwd: '_site/',
+                    src: ['**/*', '!**/1.x/**'],
+                    dest: '1.x/',
+                    expand: true
+                }]
+            }
+        },
         // Lint LESS
         lesslint: {
             src: ['usptostrap/less/**/*.less', 'front/styles/**/*.less'],
@@ -60,7 +91,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         // Lint JS
         jshint: {
             options: {
@@ -72,7 +102,6 @@ module.exports = function (grunt) {
                 'front/scripts{,*/}*.js'
             ]
         },
-
         // LESS -> CSS
         less: {
             options: {
@@ -102,7 +131,30 @@ module.exports = function (grunt) {
                 }]
             }
         },
-
+        sass: {
+            dev: {
+                options: {
+                    outputStyle: 'extend',
+                    sourceMap: false
+                },
+                files: {
+                    '<%= paths.downloads %>/css/usptostrap.css': '<%= paths.usptostrap %>/sass/usptostrap.scss',
+                    '<%= paths.assets %>/styles/pattern-library.css': '<%= paths.front %>styles/sass/pattern-library.scss',
+                    '<%= paths.assets %>/styles/appDemo.css': '<%= paths.front %>styles/sass/appDemo/appDemo.scss'
+                }
+            },
+            dist: {
+                options: {
+                    outputStyle: 'compressed',
+                    sourceMap: false
+                },
+                files: {
+                    '<%= paths.downloads %>/css/usptostrap.min.css': '<%= paths.usptostrap %>/sass/usptostrap.scss',
+                    '<%= paths.assets %>/styles/pattern-library.css': '<%= paths.front %>styles/sass/pattern-library.scss',
+                    '<%= paths.assets %>/styles/appDemo.min.css': '<%= paths.front %>styles/sass/appDemo/appDemo.scss'
+                }
+            }
+        },
         // Add vendor prefixed styles to CSS
         autoprefixer: {
             options: {
@@ -118,11 +170,10 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= paths.downloads %>/css/',
                     src: 'usptostrap.min.css',
-                    dest: '<%= paths.downloads %>/css/',
+                    dest: '<%= paths.downloads %>/css/'
                 }]
             }
         },
-
         // Compress images
         imagemin: {
             dist: {
@@ -134,7 +185,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-
         // Bundle JS/CSS files
         concat: {
             // bootstrap plugins
@@ -150,7 +200,7 @@ module.exports = function (grunt) {
                     'bower_components/bootstrap/js/carousel.js',
                     'bower_components/bootstrap/js/scrollspy.js',
                     'bower_components/bootstrap/js/collapse.js',
-                    'bower_components/bootstrap/js/tab.js',],
+                    'bower_components/bootstrap/js/tab.js'],
                 dest: '<%= paths.assets %>/scripts/plugins.js'
             },
             // misc vendor
@@ -195,7 +245,6 @@ module.exports = function (grunt) {
                 dest: '<%= paths.assets %>/styles/main.css'
             }
         },
-
         // Add a banner to the top of the generated LESS file.
         usebanner: {
             taskName: {
@@ -205,55 +254,19 @@ module.exports = function (grunt) {
                     linebreak: true
                 },
                 files: {
-                    src: ['<%= paths.downloads %>/css/usptostrap.min.css'],
+                    src: ['<%= paths.downloads %>/css/usptostrap.min.css']
                 }
             }
         },
-
-        // Copies remaining files to places other tasks can use
-        copy: {
-            dist: {
-                files: [{ // htmlshiv and matchMedia polyfill for <= IE9
-                    dot: true,
-                    expand: true,
-                    cwd: 'front/vendor/',
-                    src: ['html5shiv/*.*', 'matchMedia/*.*'],
-                    dest: '<%= paths.assets %>/vendor/'
-                }, { // icon sprite and png to assets folder
-                    dot: true,
-                    expand: true,
-                    cwd: 'usptostrap/images/icons',
-                    src: ['*.svg', '*.png'],
-                    dest: '<%= paths.assets %>/images/icons'
-                }, { // favicon sprite to assets folder
-                    dot: true,
-                    expand: true,
-                    cwd: 'front/',
-                    src: 'favicon.ico',
-                    dest: '<%= paths.assets %>/'
-                }, { // copy vendor files
-                    dot: true,
-                    expand: true,
-                    cwd: 'generated/styles',
-                    src: 'vendor.css',
-                    dest: '<%= paths.downloads %>/vendor'
-                }, { // usptostrap src to downloads folder
-                    dot: false,
-                    expand: true,
-                    cwd: 'usptostrap',
-                    src: '**/*',
-                    dest: '<%= paths.downloads %>/'
-                }, { // minified css to downloads folders
-
-                }]
+        // Watches files for changes and runs tasks based on the changed files
+        watch: {
+            js: {
+                files: ['front/scripts/{,*/}*.js'],
+                tasks: ['jshint', 'concat:mainjs', 'concat:appDemojs']
             },
-            release: {
-                files: [{ // Do things for a full release
-                    cwd: '_site/',
-                    src: ['**/*', '!**/1.x/**'],
-                    dest: '1.x/',
-                    expand:true
-                }]
+            less: {
+                files: ['usptostrap/less/**/*.less', 'front/styles/**/*.less'],
+                tasks: ['less', 'usebanner', 'concat:maincss', 'autoprefixer']
             }
         },
 
@@ -261,17 +274,15 @@ module.exports = function (grunt) {
         zip: {
             '<%= paths.downloads %>/usptostrap-<%= config.version %>.zip': ['<%= paths.downloads %>/**/*']
         },
-
         //Jekyll Tasks
         jekyll: {
-            release : {
-                options : {
+            release: {
+                options: {
                     config: '_config_release.yml'
                 }
             }
         }
     });
-
     grunt.registerTask('build', [
         'clean:dist',
         'jshint',
@@ -283,7 +294,35 @@ module.exports = function (grunt) {
         'copy:dist',
         'zip'
     ]);
+    grunt.registerTask('buildSass', function (target) {
 
+        if (target === 'dev') {
+            return grunt.task.run([
+                'clean:dist',
+                'jshint',
+                'sass:dev',
+                'imagemin',
+                'usebanner',
+                'concat',
+                'autoprefixer',
+                'copy:dist',
+                'zip'
+            ]);
+        } else {
+            return grunt.task.run([
+                'clean:dist',
+                'jshint',
+                'sass:dist',
+                'imagemin',
+                'usebanner',
+                'concat',
+                'autoprefixer',
+                'copy:dist',
+                'zip'
+            ]);
+        }
+    });
+    grunt.registerTask('buildSassDist', []);
     // Use caution, this will overwrite files.
     //This will overwrite the 1x folder
     grunt.registerTask('doversionedrelease', [
@@ -300,7 +339,6 @@ module.exports = function (grunt) {
         'copy:release'
 
     ]);
-
     grunt.registerTask('default', [
         'build'
     ]);

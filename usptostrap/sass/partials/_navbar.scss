@@ -1,0 +1,18 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+
+.navbar {
+    border: none;
+    font-weight: $font-weight-semi-bold;
+
+    .navbar-toggle {
+        color: $white;
+        border: none;
+        @include navbar-vertical-align(36px);
+    }
+}
+
+.navbar-inverse {
+    &.navbar-clear {
+        background: transparent;
+    }
+}

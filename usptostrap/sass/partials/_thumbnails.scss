@@ -1,0 +1,11 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+
+.thumbnail {
+    @include rem(padding, $thumbnail-padding);
+    @include rem(margin-bottom, $line-height-computed);
+    @include rem(border-radius, $thumbnail-border-radius);
+
+    .caption {
+    @include rem(padding, $thumbnail-caption-padding);
+    }
+}

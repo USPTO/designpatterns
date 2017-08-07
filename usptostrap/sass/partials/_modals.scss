@@ -1,0 +1,36 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+
+.modal {
+    &-footer {
+        background-color: $gray-5;
+        border-top: 1px solid $gray-47;
+
+        &:last-child {
+            @include rem(border-radius, 0 0 2px 2px);
+        }
+    }
+    &-header {
+        background: $gray-5;
+        border-bottom: 1px solid $gray-47;
+
+        .close {
+            margin-top: 1px;
+        }
+    }
+
+    &-center {
+        .modal-header, .modal-body {
+            text-align: center;
+        }
+    }
+
+    &-content {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+        border: none;
+        display: inline-block;
+        width: 100%;
+        @media (min-width: $screen-sm-min) {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+        }
+    }
+}

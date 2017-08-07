@@ -1,0 +1,129 @@
+@import '../_dpl-variables';
+
+/* CUSTOM MIXINS */
+@mixin background($start, $end, $percentTop: 0%, $percentBottom: 100%, $filter: true) {
+    background: -moz-linear-gradient(top, $start $percentTop, $end $percentBottom);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($percentTop, $start), color-stop($percentBottom, $end));
+    background: -webkit-linear-gradient(top, $start $percentTop, $end $percentBottom);
+    background: -o-linear-gradient(top, $start $percentTop, $end $percentBottom);
+    background: -ms-linear-gradient(top, $start $percentTop, $end $percentBottom);
+    background: linear-gradient(to bottom, $start $percentTop, $end $percentBottom);
+
+    @if $filter == true {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start)}', endColorstr='#{ie-hex-str($end)}', GradientType=0);
+
+        /* IE6-9 */
+    }
+    background-repeat: no-repeat;
+}
+
+@mixin opacity($value) {
+    $IEValue: $value*100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
+}
+
+//Mixin to use rems with pixel fall back on any property.
+// use pixel values in SASS files
+/* example usages
+p{
+    @include rem(font-size, 16px);
+}
+
+p{
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+------
+
+p{
+    @include rem(margin, 16px);
+}
+
+p{
+    margin: 16px;
+    margin: 1.6rem;
+}
+
+------
+p{
+    @include rem(margin, 16px 4px 5px 6px);
+}
+
+p{
+    margin: 16px 4px 5px 6px;
+    margin: 1.6rem .4rem .5rem .6rem;
+}
+
+
+------
+end of examples*/
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+    $px: ();
+    $rem: ();
+
+    @each $value in $values {
+
+        @if $value == 0 or $value == auto {
+            $px: append($px, $value);
+            $rem: append($rem, $value);
+        } @else {
+            $unit: unit($value);
+            $val: parseInt($value);
+            @if $unit == "px" {
+                $px: append($px, $value);
+                $rem: append($rem, $val / 10 * 1rem);
+            }
+            @if $unit == "rem" {
+                $px: append($px, $val * 10 * 1px);
+                $rem: append($rem, $value);
+            }
+        }
+    }
+    #{$property}: $px;
+    #{$property}: $rem;
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    @include rem(padding, $padding-vertical $padding-horizontal);
+    @include rem(font-size, $font-size);
+    line-height: $line-height;
+    @include rem(border-radius, $border-radius);
+}
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholderText {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+@mixin faux-block() {
+    @extend .clearfix;
+    display: block;
+}

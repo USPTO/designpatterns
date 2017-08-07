@@ -1,0 +1,85 @@
+.app-sidebar {
+    display: table-cell;
+    overflow: hidden;
+    transition: width 0.5s;
+    vertical-align: top;
+    width: 0;
+    &.open {
+        width: 305px;
+        &+.col {
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        // @media (min-width: 480px) {
+        //     width: 250px;
+        // }
+    }
+    &.dashboards, &.help-topics {
+        &.open {
+            @media (min-width: 480px) {
+                width: 175px;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 175px;
+        }
+    }
+    &.userSettings, &.master-list {
+        &.open {
+            @media (min-width: 480px) {
+                width: 200px;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 200px;
+        }
+    }
+    &.filters {
+        &.open {
+            @media (min-width: 480px) {
+                width: 250px;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 250px;
+        }
+    }
+    &.master-list {
+        &.open {
+            @media (min-width: 480px) {
+                width: 200px;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 250px;
+        }
+        @media (min-width: 992px) {
+            width: 350px;
+        }
+    }
+}
+
+.ex-sub-header .btn-sidebar {
+    margin-right: 10px;
+}
+
+
+.link-sidebar {
+    display: inline-block;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    .icon {
+        margin-right: 5px;
+    }
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.close-sidebar {
+    padding: 2px;
+    display: block;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
