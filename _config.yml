@@ -49,11 +49,11 @@ repository:
   url: https://github.com/uspto/designpatterns
 
 # The latest stable version
-version: 1.6.5
+version: 1.6.6
 
 # The list of all versions, which are referenced on the home page
 versions:
-  - name: 1.6.5
+  - name: 1.6.6
     url: /designpatterns/1.x/docs
   - name: future
     url: /designpatterns/docs

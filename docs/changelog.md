@@ -9,7 +9,16 @@ layout: pattern
 <div class="pl-versions">
 
 <div class="pl-panel">
-        <h4>1.6.6- December 11, 2018 <a href="{{site.repository.url}}/releases/tag/v1.6.5">(Download)</a></h4>        
+        <h4>1.6.6- December 12, 2018 <a href="{{site.repository.url}}/releases/tag/v1.6.6">(Download)</a></h4>        
+        <span class="label subtle label-success">PATCHED</span>
+        <ul>
+            <li>SASS bug fixes</li>
+            <li>Updates to label colors (info and success) for WCAG AA</li>
+        </ul>
+</div>
+
+<div class="pl-panel">
+        <h4>1.6.5- December 11, 2018 <a href="{{site.repository.url}}/releases/tag/v1.6.5">(Download)</a></h4>        
         <span class="label subtle label-success">PATCHED</span>
         <ul>
             <li>Updates to SASS</li>

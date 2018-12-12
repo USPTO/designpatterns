@@ -12,15 +12,20 @@
 
     &-success {
         &.subtle {
-            color: $state-success-text;
+            //Note- Modification from brand for WCAG AA
+            color: #007A37;
             background-color: $state-success-bg;
             border: 1px solid $state-success-border;
         }
     }
 
     &-info {
+        //Note- Modification from brand for WCAG AA
+        background-color: #0076A8;
+
         &.subtle {
-            color: $state-info-text;
+          //Note- Modification from brand for WCAG AA
+            color: #0076A8;
             background-color: $state-info-bg;
             border: 1px solid $state-info-border;
         }
@@ -51,4 +56,3 @@
         }
     }
 }
-
