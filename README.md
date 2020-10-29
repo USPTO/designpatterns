@@ -1,6 +1,10 @@
 USPTO UI Design Library
 ==============
 
+
+**Interested in trying the latest beta of the USPTO Design System v2?**  Our new library is located [https://github.com/USPTO/USPTO-DS-Theme](https://github.com/USPTO/USPTO-DS-Theme)
+
+
 - [View the UI Design Library](https://uspto.github.io/designpatterns/)
 - [Contributing](CONTRIBUTING.md)
 - [How-to: Using the UI Design Library in your project](howto.md)
