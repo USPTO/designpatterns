@@ -5,20 +5,17 @@ layout: general
 <div class="pl-hero">
     <div class="container">
         <h1 class="text-center"><b>USPTO</b> UI Design Library</h1>
-        <h3 class="text-center">An open source UI style guide, pattern library, and Bootstrap theme.</h3>
+        <h3 class="text-center">An open source UI style guide, pattern library, and Bootstrap 3 theme.</h3>
         <div class="row">
             <div class="col-sm-12 text-center">
                 <div style="margin-top: 30px; margin-bottom: 15px;">
-                    <a href="{{site.versions[0].url}}/index.html" class="btn btn-lg btn-default">View Library</a>
+                    <a href="{{site.versions[0].url}}/index.html" class="btn btn-lg btn-default">View Library (v1.x)</a>
                     <a href="{{site.versions[0].url}}/resources.html" class="btn btn-lg btn-primary">Download </a>
+                    <a href="https://github.com/USPTO/USPTO-DS-Theme" target="_blank" class="btn btn-lg btn-primary">Version 2.0 Theme (Beta) </a>
                     <div class="small" style="opacity: .5; margin-top: 30px; color: #fff;">Current version: {{site.version}}</div>
                     <div class="small" style="color: #fff;">
                         <span style="opacity: .5;">Other versions:</span>
-                            {% for v in site.versions %}
-                                {% if v.name != site.version %}
-                                    <a href="{{v.url}}" style="color: #fff;">{{v.name}}</a> &nbsp;
-                                {% endif %}
-                            {% endfor %}
+                            <a href="https://github.com/USPTO/USPTO-DS-Theme" style="color:#fff;">v2.0 (Beta)</a>
                     </div>
                 </div>
             </div>
